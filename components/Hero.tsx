@@ -15,7 +15,7 @@ const Hero = () => {
 
     return (
         <div className="pb-0 pt-0">
-            <div className="mt-[15rem] mb-[5rem] h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+            <div className="mt-[15rem] mb-[5rem] h-[10rem] w-full  flex flex-col items-center justify-center overflow-hidden rounded-md">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center text-white relative z-10 mt-5">
                     MatWeb Innovation
                 </h1>
