@@ -27,8 +27,12 @@ import {
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from "react-icons/tb";
 import { IconType } from "react-icons";
-import { ReactNode } from "react";
-import Image from "next/image";
+import {
+    IconClipboardCopy,
+    IconFileBroken,
+    IconSignature,
+    IconTableColumn,
+} from "@tabler/icons-react";
 
 export const navItems = [
     {
@@ -258,93 +262,6 @@ export const CompetencesList: Competence[] = [
     },
 ];
 
-export interface ServiceItem {
-    title: string;
-    description: string;
-    content: ReactNode;
-}
-
-export const ServiceContent: ServiceItem[] = [
-    {
-        title: "Gestion de projet web",
-        description:
-            "Site vitrine, Évènementiel, E-commerce, Application Web, Landing-page, Portfolio.",
-        content: (
-            <div className="h-full w-full  flex items-center justify-center text-white">
-                <Image
-                    src="/gest.svg"
-                    width={500}
-                    height={500}
-                    className="object-cover"
-                    alt="linear board demo"
-                />
-            </div>
-        ),
-    },
-    {
-        title: "Intégration WEB",
-        description: "Intégration HTML/CSS/REACT respectueuses des standards du Web.",
-        content: (
-            <div className="h-full w-full  flex items-center justify-center text-white">
-                <Image
-                    src="/int.svg"
-                    width={500}
-                    height={500}
-                    className="object-cover"
-                    alt="linear board demo"
-                />
-            </div>
-        ),
-    },
-    {
-        title: "Référencement Naturel",
-        description:
-            "Affichage sémantique des informations, des pages propres pour un référencement optimal sur le Web.",
-        content: (
-            <div className="h-full w-full  flex items-center justify-center text-white">
-                <Image
-                    src="/seo.svg"
-                    width={500}
-                    height={500}
-                    className=" object-cover"
-                    alt="linear board demo"
-                />
-            </div>
-        ),
-    },
-    {
-        title: "Responsive Design",
-        description: "Compatible tous supports, mobile, tablet, desktop.",
-        content: (
-            <div className="h-full w-full  flex items-center justify-center text-white">
-                <Image
-                    src="/resp.svg"
-                    width={500}
-                    height={500}
-                    className=" object-cover"
-                    alt="linear board demo"
-                />
-            </div>
-        ),
-    },
-    {
-        title: "Dynamisme des pages",
-        description:
-            "Des pages dynamiques et interactives non intrusives pour embellir votre projet.",
-        content: (
-            <div className="h-full w-full  flex items-center justify-center text-white">
-                <Image
-                    src="/dyna.svg"
-                    width={500}
-                    height={500}
-                    className=" object-cover"
-                    alt="linear board demo"
-                />
-            </div>
-        ),
-    },
-];
-
 export const Processus = [
     {
         title: "Etape 1",
@@ -402,4 +319,45 @@ export const slugs = [
     "tailwindcss",
     "framer",
     "javascript",
+];
+
+export const items = [
+    {
+        title: "Intégration WEB",
+        description: "Intégration HTML/CSS/REACT respectueuses des standards du Web.",
+        header: (
+            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
+        ),
+        className: "md:col-span-2 ",
+        icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+        title: "Dynamisme des pages",
+        description:
+            "Des pages dynamiques et interactives non intrusives pour embellir votre projet.",
+        header: (
+            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
+        ),
+        className: "md:col-span-1",
+        icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+        title: "Référencement Naturel",
+        description:
+            "Affichage sémantique des informations, des pages propres pour un référencement optimal sur le Web.",
+        header: (
+            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
+        ),
+        className: "md:col-span-1",
+        icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+        title: "Responsive Design",
+        description: "Compatible tous supports, mobile, tablet, desktop.",
+        header: (
+            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
+        ),
+        className: "md:col-span-2",
+        icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    },
 ];

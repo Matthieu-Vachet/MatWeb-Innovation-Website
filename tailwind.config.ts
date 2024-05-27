@@ -158,6 +158,7 @@ const config = {
                     },
                 },
             },
+
             animation: {
                 "scroll-top-arrow": "arrow-scroll 1s infinite",
                 "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",

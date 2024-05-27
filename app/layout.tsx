@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "./provider";
+// import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+// import { GeistMono } from "geist/font/mono";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "MatWeb Innovation",
@@ -17,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={GeistSans.className}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"

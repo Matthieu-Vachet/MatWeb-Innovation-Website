@@ -1,9 +1,11 @@
+import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+
 import { PiNotePencilFill, PiCoffeeBold, PiPencil, PiCodeBold } from "react-icons/pi";
 import { BsSendCheck } from "react-icons/bs";
 import { SiTestinglibrary } from "react-icons/si";
+
 export const HoverEffect = ({
     items,
     className,
@@ -45,7 +47,6 @@ export const HoverEffect = ({
                             />
                         )}
                     </AnimatePresence>
-
                     <Card>
                         <CardTitle>{item.title}</CardTitle>
                         <CardIcons className="absolute top-0 right-0">

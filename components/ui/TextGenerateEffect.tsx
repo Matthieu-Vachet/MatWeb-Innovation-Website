@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
+
+import React, { useEffect, useRef } from "react";
 import { cn } from "@/utils/cn";
+import { motion, stagger, useAnimate } from "framer-motion";
 
 export const TextGenerateEffect = ({ words, className }: { words: string; className?: string }) => {
     const [scope, animate] = useAnimate();
