@@ -6,7 +6,6 @@ const PreLoader = () => {
     useEffect(() => {
         const tl = gsap.timeline();
 
-        // Preloader Animation
         const preLoaderAnim = () => {
             tl.to(".texts-container", {
                 duration: 0,
@@ -68,7 +67,7 @@ const PreLoader = () => {
         };
 
         preLoaderAnim();
-    }, []); // Empty dependency array to run the animation only on mount
+    }, []);
 
     return (
         <div

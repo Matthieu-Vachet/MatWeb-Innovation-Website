@@ -1,13 +1,17 @@
 import React from "react";
 import { CompetencesList, iconMap, Competence } from "@/data";
 import { Button } from "./ui/MovingBorders";
-import AnimatedTitle from "./ui/AnimatedTitle";
+import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+
 
 const Competences = () => {
     return (
         <div id="Competences" className="py-20 w-full h-full">
             <div className="heading mb-20 ">
-                <AnimatedTitle title="Experience" />
+                <TextGenerateEffect
+                    className="text-center "
+                    words="Mes compétences à votre service"
+                />
             </div>
 
             <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -29,25 +33,25 @@ const Competences = () => {
                                 <h1 className="text-start text-2xl font-bold uppercase">
                                     {card.title}
                                 </h1>
-                                <p className="text-start text-white-100 mt-3 font-semibold">
+                                <p className="text-start text-white-100 mt-3 font-semibold text-xs">
                                     {card.desc}
                                 </p>
-                                <div className="flex flex-wrap mt-4">
+                                <div className="flex flex-wrap mt-3">
                                     {card.skills.map((skill, index) => {
                                         const IconComponent = iconMap[skill.img];
                                         return (
                                             <div
                                                 key={index}
-                                                className="flex items-center  mr-4 mb-2 border border-neutral-200 dark:border-slate-800 rounded-lg py-2 px-3 hover:dark:border-white-100 hover:scale-110 transition-all"
+                                                className="flex items-center  mr-2   mb-2 border border-neutral-200 dark:border-slate-800 rounded-lg py-1 px-2 hover:dark:border-white-100 hover:scale-110 transition-all"
                                             >
                                                 {IconComponent ? (
                                                     <IconComponent
-                                                        className="w-10 h-10 mr-2 text-gray"
+                                                        className="w-5 h-5 mr-1 text-gray"
                                                         aria-label={skill.alt}
                                                     />
                                                 ) : (
                                                     <span
-                                                        className="w-10 h-10 mr-2 "
+                                                        className="w-5 h-5 mr-1 "
                                                         aria-label={skill.alt}
                                                     >
                                                         ?
