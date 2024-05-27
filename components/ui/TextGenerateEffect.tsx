@@ -1,24 +1,49 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const TextGenerateEffect = ({ words, className }: { words: string; className?: string }) => {
     const [scope, animate] = useAnimate();
+    const containerRef = useRef<HTMLDivElement | null>(null);
     let wordsArray = words.split(" ");
+
     useEffect(() => {
-        console.log(wordsArray);
-        animate(
-            "span",
-            {
-                opacity: 1,
+        const container = containerRef.current;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animate(
+                            "span",
+                            {
+                                opacity: 1,
+                            },
+                            {
+                                duration: 2,
+                                delay: stagger(0.2),
+                            },
+                        );
+                        observer.unobserve(entry.target);
+                    }
+                });
             },
             {
-                duration: 2,
-                delay: stagger(0.2),
+                threshold: 0.1,
             },
         );
-    }, [scope.current]);
+
+        if (container) {
+            observer.observe(container);
+        }
+
+        return () => {
+            if (container) {
+                observer.disconnect();
+            }
+        };
+    }, [animate]);
 
     const renderWords = () => {
         return (
@@ -27,8 +52,7 @@ export const TextGenerateEffect = ({ words, className }: { words: string; classN
                     return (
                         <motion.span
                             key={word + idx}
-                            // change here if idx is greater than 3, change the text color to #CBACF9
-                            className={` ${
+                            className={`${
                                 idx > 2 ? "text-purple" : "dark:text-white text-black"
                             } opacity-0`}
                         >
@@ -41,11 +65,9 @@ export const TextGenerateEffect = ({ words, className }: { words: string; classN
     };
 
     return (
-        <div className={cn("font-bold", className)}>
-            {/* mt-4 to my-4 */}
+        <div className={cn("font-bold", className)} ref={containerRef}>
             <div className="my-4">
-                {/* remove  text-2xl from the original */}
-                <div className=" dark:text-white text-black leading-snug tracking-wide">
+                <div className="dark:text-white text-black leading-snug tracking-wide">
                     {renderWords()}
                 </div>
             </div>
