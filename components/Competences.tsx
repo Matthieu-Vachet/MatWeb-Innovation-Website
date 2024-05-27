@@ -3,7 +3,6 @@ import { CompetencesList, iconMap, Competence } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 
-
 const Competences = () => {
     return (
         <div id="Competences" className="py-20 w-full h-full">
@@ -13,7 +12,6 @@ const Competences = () => {
                     words="Mes compétences à votre service"
                 />
             </div>
-
             <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
                 {CompetencesList.map((card: Competence) => (
                     <Button

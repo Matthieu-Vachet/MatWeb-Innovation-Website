@@ -1,9 +1,9 @@
 "use client";
+
 import React, { useRef } from "react";
+import { cn } from "@/utils/cn";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
-import { cn } from "@/utils/cn";
-// import { BorderBeam } from "./Border-Beam";
 
 export const StickyScroll = ({
     content,
@@ -45,7 +45,6 @@ export const StickyScroll = ({
             className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 shadow-[0_10px_40px_rgba(8,_112,_184,_0.3)]"
             ref={ref}
         >
-            {/* <BorderBeam size={250} duration={12} delay={9} /> */}
             <div className="div relative flex items-start px-3">
                 <div className="max-w-2xl">
                     {content.map((item, index) => (

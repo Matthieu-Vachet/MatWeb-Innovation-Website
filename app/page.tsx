@@ -1,9 +1,9 @@
-import Hero from "@/components/Hero";
-// import PreLoader from "@/components/Preloader";
-import Service from "@/components/Service";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Competences from "@/components/Competences";
 import { navItems } from "@/data";
+// import PreLoader from "@/components/Preloader";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import Hero from "@/components/Hero";
+import Service from "@/components/Service";
+import Competences from "@/components/Competences";
 
 export default function Home() {
     return (

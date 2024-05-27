@@ -1,17 +1,21 @@
 "use client";
+
 import React from "react";
-import { StickyScroll } from "../components/ui/StickyScrollReveal";
 import dynamic from "next/dynamic";
+import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { GlobeConfig, GlobeDatas } from "../utils/GlobeConfig";
 import { HoverEffect } from "./ui/CardsHoverEffect";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { Processus, ServiceContent } from "@/data";
+import { Processus, items, slugs } from "@/data";
 import IconCloud from "@/components/ui/IconCloud";
-import { slugs } from "@/data";
 
 const World = dynamic(() => import("../components/ui/Globe").then((m) => m.World), {
     ssr: false,
 });
+
+const Skeleton = () => (
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+);
 
 const Service = () => {
     return (
@@ -25,10 +29,18 @@ const Service = () => {
             <div className="flex absolute w-full h-[30rem] md:h-[50rem] lg:h-[60rem] top-[66rem] md:top-[60rem] lg:top-[54rem] xl:top-[55rem] 2xl:top-[50rem]  right-1 z-0">
                 <World data={GlobeDatas} globeConfig={GlobeConfig} />
             </div>
-
-            <div className="p-5">
-                <StickyScroll content={ServiceContent} />
-            </div>
+            <BentoGrid className="relative max-w-5xl mx-auto md:auto-rows-[20rem] z-50">
+                {items.map((item, i) => (
+                    <BentoGridItem
+                        key={i}
+                        title={item.title}
+                        description={item.description}
+                        header={item.header}
+                        className={item.className}
+                        icon={item.icon}
+                    />
+                ))}
+            </BentoGrid>
             <h2 className="flex flex-col text-center text-white text-bold text-2xl md:text-4xl pb-10 pt-14 ">
                 Processus de Conception et Développement <br />
                 <span className="text-purple text-xl md:text-3xl">
