@@ -1,3 +1,4 @@
+import { DEFAULT } from "@react-three/fiber/dist/declarations/src/core/utils";
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
@@ -32,14 +33,19 @@ const config = {
                     300: "rgba(255, 255, 255, 0.125)",
                 },
                 white: {
-                    DEFAULT: "#FFF",
+                    // Saesheel #EFEFEF
+                    DEFAULT: "#EFEFEF",
                     100: "#BEC1DD",
                     200: "#C1C2D3",
                 },
-                blue: {
-                    "100": "#E4ECFF",
+                purple: {
+                    // indigo: "#905BF4",
+                    DEFAULT: "#905BF4",
+                    // midnight: "#0F032D",
+                    100: "#0F032D",
+                    // heart: "#4E2BCC",
+                    200: "#4E2BCC",
                 },
-                purple: "#CBACF9",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
@@ -80,6 +86,18 @@ const config = {
                 sm: "calc(var(--radius) - 4px)",
             },
             keyframes: {
+                grid: {
+                    "0%": { transform: "translateY(-50%)" },
+                    "100%": { transform: "translateY(0)" },
+                },
+                meteor: {
+                    "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+                    "70%": { opacity: "1" },
+                    "100%": {
+                        transform: "rotate(215deg) translateX(-500px)",
+                        opacity: "0",
+                    },
+                },
                 "arrow-scroll": {
                     "0%, 100%": {
                         transform: "translateY(0)",
@@ -160,6 +178,8 @@ const config = {
             },
 
             animation: {
+                grid: "grid 15s linear infinite",
+                meteor: "meteor 5s linear infinite",
                 "scroll-top-arrow": "arrow-scroll 1s infinite",
                 "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
                 "accordion-down": "accordion-down 0.2s ease-out",

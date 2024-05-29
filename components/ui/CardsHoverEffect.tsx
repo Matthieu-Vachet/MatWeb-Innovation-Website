@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { BorderBeam } from "./BorderBeam";
 import { PiNotePencilFill, PiCoffeeBold, PiPencil, PiCodeBold } from "react-icons/pi";
 import { BsSendCheck } from "react-icons/bs";
 import { SiTestinglibrary } from "react-icons/si";
@@ -66,7 +66,7 @@ export const HoverEffect = ({
                                 <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
                             )}
                             {item.icon === "SiTestinglibrary" && (
-                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-10 hover:opacity-100 transition-all" />
                             )}
                         </CardIcons>
                         <CardSubtitle>{item.subtitle}</CardSubtitle>
@@ -88,7 +88,7 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-black-100 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-50 shadow-[0_0px_60px_rgba(8,_112,_184,_0.3)]",
+                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-black-100 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-50 shadow-[0_0px_60px_rgba(8,_112,_184,_0.3)] ",
                 className,
             )}
         >
@@ -106,7 +106,7 @@ export const CardTitle = ({
     children: React.ReactNode;
 }) => {
     return (
-        <h4 className={cn("text-white-100 text-lg font-semibold tracking-wide mt-4", className)}>
+        <h4 className={cn("text-white text-lg font-normal tracking-wide mt-3", className)}>
             {children}
         </h4>
     );
@@ -132,7 +132,7 @@ export const CardSubtitle = ({
     return (
         <h5
             className={cn(
-                " text-center uppercase text-purple text-xl font-bold tracking-wide mt-4",
+                " text-center text-purple-200 text-2xl font-semibold tracking-wide mt-4",
                 className,
             )}
         >
@@ -149,7 +149,12 @@ export const CardDescription = ({
     children: React.ReactNode;
 }) => {
     return (
-        <p className={cn("mt-6 text-White-100 tracking-wide leading-relaxed text-sm", className)}>
+        <p
+            className={cn(
+                "mt-6 text-white-200 tracking-wide leading-relaxed text-sm lg:text-md",
+                className,
+            )}
+        >
             {children}
         </p>
     );

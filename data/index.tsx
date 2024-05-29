@@ -27,21 +27,15 @@ import {
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from "react-icons/tb";
 import { IconType } from "react-icons";
-import {
-    IconClipboardCopy,
-    IconFileBroken,
-    IconSignature,
-    IconTableColumn,
-} from "@tabler/icons-react";
+import { IconBrandJavascript } from "@tabler/icons-react";
 
 export const navItems = [
     {
-        name: "Home",
-        link: "/",
-    },
-    {
         name: "Services",
         link: "#Service",
+        icon: (
+            <SiTailwindcss className="text-2xl text-neutral-500 dark:text-white dark:hover:text-white-200" />
+        ),
     },
     {
         name: "Competences",
@@ -323,41 +317,70 @@ export const slugs = [
 
 export const items = [
     {
+        id: 1,
         title: "Intégration WEB",
         description: "Intégration HTML/CSS/REACT respectueuses des standards du Web.",
-        header: (
-            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
-        ),
-        className: "md:col-span-2 ",
-        icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+        className: "md:col-span-3 md:row-span-2 ",
+        imgClassName:
+            "absolute right-2 bottom-2 w-[11rem] lg:w-[30%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-50 hover:opacity-100 z-10",
+        titleClassName:
+            "text-3xl md:text-2xl lg:text-3xl font-bold gap-2 lg:gap-5 w-[55%] md:w-[65%] lg:flex lg:justify-center lg:text-start z-50",
+        spareImgClassName: "",
+        descriptionClassName: "",
+        img: "/integration.png",
+        spareImg: "",
+        icon: "",
     },
     {
+        id: 2,
         title: "Dynamisme des pages",
         description:
             "Des pages dynamiques et interactives non intrusives pour embellir votre projet.",
-        header: (
-            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
+        className: "md:col-span-1 md:row-span-2",
+        imgClassName: "",
+        titleClassName:
+            " text-3xl md:text-2xl md:gap-4 lg:text-3xl xl:text-4xl w-[80%] md:w-full font-bold justify-center md:text-center z-50",
+        spareImgClassName: "",
+        descriptionClassName: "md:flex md:justify-center md:items-center md:text-center md:w-full",
+        img: "",
+        spareImg: "",
+        icon: (
+            <IconBrandJavascript className="h-[13rem] w-[13rem] md:h-[10rem] md:w-[10rem] lg:h-[15rem] lg:w-[15rem] text-black-200 z-20 opacity-85 hover:opacity-100" />
         ),
-        className: "md:col-span-1",
-        icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
+
     {
+        id: 3,
         title: "Référencement Naturel",
         description:
             "Affichage sémantique des informations, des pages propres pour un référencement optimal sur le Web.",
-        header: (
-            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
-        ),
-        className: "md:col-span-1",
-        icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+        className: "md:col-span-2 md:row-span-2",
+        imgClassName:
+            "absolute right-2 bottom-2 w-[11rem] lg:w-[50%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-50 hover:opacity-100 z-10",
+        titleClassName:
+            "text-3xl md:text-2xl lg:text-3xl font-bold max-w-[55%] lg:max-w-[50%] gap-2 lg:gap-5",
+        spareImgClassName: "",
+        descriptionClassName: "",
+        img: "/referencement.png",
+        spareImg: "",
+        icon: "",
     },
     {
+        id: 4,
         title: "Responsive Design",
-        description: "Compatible tous supports, mobile, tablet, desktop.",
-        header: (
-            <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-100 dark:bg-black"></div>
-        ),
-        className: "md:col-span-2",
-        icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+        description: `Compatible tous supports, 
+        mobile, 
+        tablet, 
+        desktop.`,
+        className: "md:col-span-2 md:row-span-2",
+        imgClassName:
+            "absolute right-2 bottom-2 w-auto lg:w-[50%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-60 hover:opacity-100 z-10",
+        titleClassName:
+            "text-3xl md:text-2xl lg:text-3xl font-bold max-w-[55%] lg:max-w-[50%] gap-2 lg:gap-5",
+        spareImgClassName: "",
+        descriptionClassName: "",
+        img: "/windows-dark.avif",
+        spareImg: "",
+        icon: "",
     },
 ];

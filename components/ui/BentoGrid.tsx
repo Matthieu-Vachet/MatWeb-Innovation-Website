@@ -1,4 +1,11 @@
+import Image from "next/image";
+import React from "react";
 import { cn } from "@/utils/cn";
+import { GridPattern } from "./GridPattern";
+import { DotPattern } from "./DotPattern";
+import Meteors from "./Meteor";
+import RetroGrid from "./RetroGrid";
+import { FadeText } from "./FadeText";
 
 export const BentoGrid = ({
     className,
@@ -10,7 +17,7 @@ export const BentoGrid = ({
     return (
         <div
             className={cn(
-                "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+                "grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-4 lg:gap-8 mx-auto ",
                 className,
             )}
         >
@@ -21,32 +28,111 @@ export const BentoGrid = ({
 
 export const BentoGridItem = ({
     className,
+    id,
     title,
     description,
-    header,
     icon,
+    img,
+    imgClassName,
+    titleClassName,
+    spareImgClassName,
+    descriptionClassName,
+    spareImg,
 }: {
     className?: string;
+    id: number;
     title?: string | React.ReactNode;
     description?: string | React.ReactNode;
-    header?: React.ReactNode;
     icon?: React.ReactNode;
+    img?: string;
+    imgClassName?: string;
+    titleClassName?: string;
+    spareImgClassName?: string;
+    descriptionClassName?: string;
+    spareImg?: string;
 }) => {
     return (
         <div
             className={cn(
-                "row-span-1 rounded-xl group/bento p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 shadow-[0_0px_60px_rgba(8,_112,_184,_0.3)] hover:shadow-[0_0px_60px_rgba(8,_112,_184,_0.7)] transition duration-200",
+                "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
                 className,
             )}
+            style={{
+                background: "rgb(4,7,29)",
+                backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+            }}
         >
-            {header}
-            <div className="group-hover/bento:translate-x-2 transition duration-300">
-                {icon}
-                <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-                    {title}
+            {/* add img divs */}
+            <div className=" h-full">
+                <div className="w-full h-full absolute">
+                    {img && (
+                        <Image
+                            src={img}
+                            alt={img}
+                            quality={100}
+                            width={500}
+                            height={500}
+                            className={cn(imgClassName, "object-cover object-center")}
+                        />
+                    )}
                 </div>
-                <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
-                    {description}
+                <div className={`absolute right-0 bottom-0`}>
+                    {spareImg && (
+                        <Image
+                            src={spareImg}
+                            alt={spareImg}
+                            quality={100}
+                            width={500}
+                            height={500}
+                            className={cn(spareImgClassName)}
+                        />
+                    )}
+                </div>
+                <div className={`absolute -right-10 -bottom-10 z-50  `}>{icon && <>{icon}</>}</div>
+                {id === 1 && <RetroGrid />}
+                {id === 2 && (
+                    <div className="absolute top-0 flex h-full w-full items-center justify-center overflow-hidden opacity-50">
+                        <Meteors number={30} />
+                    </div>
+                )}
+                {id === 3 && (
+                    <DotPattern
+                        className={cn(
+                            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] opacity-50",
+                        )}
+                    />
+                )}
+                {id === 4 && (
+                    <GridPattern
+                        squares={[
+                            [4, 4],
+                            [5, 1],
+                            [8, 2],
+                            [6, 6],
+                            [10, 5],
+                            [13, 3],
+                        ]}
+                        className={cn(
+                            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
+                            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 opacity-50",
+                        )}
+                    />
+                )}
+                <div
+                    className={cn(
+                        titleClassName,
+                        "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+                    )}
+                >
+                    <div className="z-10">{title}</div>
+                    <div
+                        className={cn(
+                            "font-base  lg:text-base text-sm md:text-sm text-white-200 z-10",
+                            descriptionClassName,
+                        )}
+                    >
+                        {description}
+                    </div>
                 </div>
             </div>
         </div>
