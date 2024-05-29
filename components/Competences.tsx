@@ -40,22 +40,22 @@ const Competences = () => {
                                         return (
                                             <div
                                                 key={index}
-                                                className="flex items-center  mr-2   mb-2 border border-neutral-200 dark:border-slate-800 rounded-lg py-1 px-2 hover:dark:border-white-100 hover:scale-110 transition-all"
+                                                className="flex items-center mr-2 mb-2 border border-neutral-200 dark:border-slate-800 rounded-lg py-1 px-2 hover:dark:border-white  hover:scale-110 transition-all"
                                             >
                                                 {IconComponent ? (
                                                     <IconComponent
-                                                        className="w-5 h-5 mr-1 text-gray"
+                                                        className="w-5 h-5 mr-1 text-black dark:text-white hover:dark:text-white-100"
                                                         aria-label={skill.alt}
                                                     />
                                                 ) : (
                                                     <span
-                                                        className="w-5 h-5 mr-1 "
+                                                        className="w-5 h-5 mr-1"
                                                         aria-label={skill.alt}
                                                     >
                                                         ?
                                                     </span>
                                                 )}
-                                                <span className="text-white">{skill.name}</span>
+                                                <span>{skill.name}</span>
                                             </div>
                                         );
                                     })}
