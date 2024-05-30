@@ -80,7 +80,10 @@
 
 @layer utilities {
     .heading {
-        @apply font-bold text-4xl md:text-5xl text-center;
+        @apply font-bold text-3xl md:text-4xl lg:text-5xl text-center;
+    }
+    .heading-bottom-spacing {
+        @apply pb-[5rem] pt-[5rem];
     }
 }
 

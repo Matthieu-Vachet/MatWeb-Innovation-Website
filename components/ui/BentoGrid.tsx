@@ -5,7 +5,6 @@ import { GridPattern } from "./GridPattern";
 import { DotPattern } from "./DotPattern";
 import Meteors from "./Meteor";
 import RetroGrid from "./RetroGrid";
-import { FadeText } from "./FadeText";
 
 export const BentoGrid = ({
     className,
@@ -17,7 +16,7 @@ export const BentoGrid = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-4 lg:gap-8 mx-auto ",
+                "grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-4 lg:gap-8 mx-auto  ",
                 className,
             )}
         >
@@ -54,7 +53,7 @@ export const BentoGridItem = ({
     return (
         <div
             className={cn(
-                "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+                "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 ",
                 className,
             )}
             style={{
@@ -63,7 +62,7 @@ export const BentoGridItem = ({
             }}
         >
             {/* add img divs */}
-            <div className=" h-full">
+            <div className=" h-full ">
                 <div className="w-full h-full absolute">
                     {img && (
                         <Image

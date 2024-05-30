@@ -22,18 +22,18 @@ const Service = () => {
     return (
         <section
             id="Service"
-            className="bg-black-100 pt-[15rem] max-w-[90vw] md:max-w-[80vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto"
+            className="bg-black-100 pt-[15rem] max-w-[90vw] md:max-w-[90vw] lg:max-w-[80vw] imac:max-w-[60vw] flex flex-col items-center justify-center mx-auto"
         >
-            <h1 className="relative heading text-white pb-10 z-20">
+            <h1 className="relative heading text-white heading-bottom-spacing z-20">
                 <TextGenerateEffect
-                    className="text-center "
+                    className="text-center"
                     words="Des prestations adaptées à vos besoins"
                 />
             </h1>
-            <div className="flex absolute w-full h-[30rem] md:h-[50rem] lg:h-[60rem] top-[66rem] md:top-[60rem] lg:top-[54rem] xl:top-[55rem] 2xl:top-[50rem]  right-1 -z-1 opacity-75">
+            <div className="hidden md:flex absolute w-full md:h-[40rem] lg:h-[60rem] md:top-[57rem] lg:top-[54rem] xl:top-[55rem] 2xl:top-[50rem]  right-1 -z-1 opacity-75">
                 <World data={GlobeDatas} globeConfig={GlobeConfig} />
             </div>
-            <BentoGrid className="relative w-full py-5 rounded-3xl border border-white/[0.1] p-5 dark:bg-black-100 z-100    ">
+            <BentoGrid className="relative w-full rounded-3xl border border-white/[0.1] p-5 dark:bg-black-100 z-100 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]">
                 <BorderBeam size={250} duration={12} delay={9} />
                 {items.map((item, i) => (
                     <BentoGridItem
@@ -50,23 +50,23 @@ const Service = () => {
                     />
                 ))}
             </BentoGrid>
-            <h2 className="flex flex-col text-center text-white-100 text-bold text-4xl md:text-5xl pb-10 pt-14 ">
+            <h2 className=" heading flex flex-col text-center text-white text-bold text-2xl md:text-3xl lg:text-4xl heading-bottom-spacing ">
                 Processus de Conception et Développement <br />
-                <span className="text-purple text-xl md:text-3xl">
+                <span className="text-purple text-xl md:text-3xl pt-1">
                     Une Tasse de Café et Six Étapes
                 </span>
             </h2>
-            <div className="max-w-5xl mx-auto px-8">
+            <div className="max-w-[90vw] mx-auto">
                 <HoverEffect items={Processus} />
             </div>
-            <div className="relative flex items-center justify-between overflow-hidden bg-transparent pt-8 gap-1 lg:px-20 pb-30 flex-wrap ">
-                <div className="flex w-full lg:max-w-[50%] ">
+            <div className="relative flex items-center justify-between overflow-hidden bg-transparent gap-1 lg:px-20 flex-wrap ">
+                <div className="flex max-w-[90vw] lg:max-w-[50%] heading-bottom-spacing ">
                     <TextGenerateEffect
-                        className="text-center lg:text-start text-4xl"
+                        className="text-center text-white-100 text-bold text-2xl md:text-3xl lg:text-4xl"
                         words="Des technologie qui n'ont plus à faire leurs preuves ..."
                     />
                 </div>
-                <div className="flex lg:max-w-[40%]">
+                <div className="flex md:max-w-[50%] md:items-center md:mx-auto lg:max-w-[40%]">
                     <IconCloud iconSlugs={slugs} />
                 </div>
             </div>
