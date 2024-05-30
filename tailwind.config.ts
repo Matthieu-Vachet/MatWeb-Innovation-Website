@@ -25,6 +25,9 @@ const config = {
             },
         },
         extend: {
+            screens: {
+                imac: "1700px",
+            },
             colors: {
                 black: {
                     DEFAULT: "#000",

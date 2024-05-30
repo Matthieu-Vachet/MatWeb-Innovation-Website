@@ -20,8 +20,11 @@ const Skeleton = () => (
 
 const Service = () => {
     return (
-        <section id="Service" className="bg-black-100 pt-[15rem] ">
-            <h1 className="relative heading text-white pb-10 z-20   ">
+        <section
+            id="Service"
+            className="bg-black-100 pt-[15rem] max-w-[90vw] md:max-w-[80vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto"
+        >
+            <h1 className="relative heading text-white pb-10 z-20">
                 <TextGenerateEffect
                     className="text-center "
                     words="Des prestations adaptées à vos besoins"
