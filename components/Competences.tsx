@@ -5,14 +5,17 @@ import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 
 const Competences = () => {
     return (
-        <div id="Competences" className="py-20 w-full h-full">
-            <div className="heading mb-20 ">
+        <div
+            id="Competences"
+            className="bg-black-100 max-w-[90vw] md:max-w-[90vw] lg:max-w-[80vw] imac:max-w-[60vw] flex flex-col items-center justify-center mx-auto"
+        >
+            <div className="heading heading-bottom-spacing">
                 <TextGenerateEffect
                     className="text-center "
                     words="Mes compétences à votre service"
                 />
             </div>
-            <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+            <div className="w-full grid lg:grid-cols-4 grid-cols-1 gap-10">
                 {CompetencesList.map((card: Competence) => (
                     <Button
                         key={card.id}
@@ -31,7 +34,7 @@ const Competences = () => {
                                 <h1 className="text-start text-2xl font-bold uppercase">
                                     {card.title}
                                 </h1>
-                                <p className="text-start text-white-100 mt-3 font-semibold text-xs">
+                                <p className="text-start text-white-100 mt-3 font-semibold text-sm md:text-sm lg:text-[1rem] opacity-80">
                                     {card.desc}
                                 </p>
                                 <div className="flex flex-wrap mt-3">

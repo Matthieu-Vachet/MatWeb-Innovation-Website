@@ -6,7 +6,7 @@ export const GlobeConfig = {
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
-    shininess: 0.9,
+    shininess: 0,
     polygonColor: "rgba(255,255,255,0.7)",
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
@@ -23,14 +23,4 @@ export const GlobeConfig = {
 
 export const GlobeColors = ["#06b6d4", "#3b82f6", "#6366f1"];
 
-export const GlobeDatas = [
-    {
-        order: 1,
-        startLat: -19.885592,
-        startLng: -43.951191,
-        endLat: -22.9068,
-        endLng: -43.1729,
-        arcAlt: 0.1,
-        color: GlobeColors[Math.floor(Math.random() * (GlobeColors.length - 1))],
-    },
-];
+export const GlobeDatas = [];
