@@ -16,7 +16,7 @@ export default function AnimatedElement({
     const ctrls = useAnimation();
 
     const [ref, inView] = useInView({
-        threshold: 1,
+        threshold: 0.1,
         triggerOnce: true,
     });
 
@@ -39,7 +39,7 @@ export default function AnimatedElement({
             y: `0em`,
             transition: {
                 delay: delay,
-                duration: 0.4,
+                duration: 0.5,
                 ease: [0.9, 0.9, 0.9, 0.9],
                 delaychildren: 0.5,
                 staggerChildren: 0.5,

@@ -2,6 +2,7 @@ import React from "react";
 import { CompetencesList, iconMap, Competence } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import { ProjetTabs } from "./ui/ProjetTabs";
 
 const Competences = () => {
     return (

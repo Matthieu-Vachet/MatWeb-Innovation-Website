@@ -9,6 +9,8 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { Processus, items, slugs } from "@/data";
 import IconCloud from "@/components/ui/IconCloud";
 import { BorderBeam } from "./ui/BorderBeam";
+import AnimatedElement from "./ui/AnimatedElements";
+import WordRotate from "./ui/WordRotate";
 
 const World = dynamic(() => import("../components/ui/Globe").then((m) => m.World), {
     ssr: false,
@@ -33,23 +35,25 @@ const Service = () => {
             <div className="hidden md:flex absolute w-full md:h-[40rem] lg:h-[60rem] md:top-[57rem] lg:top-[54rem] xl:top-[55rem] 2xl:top-[50rem]  right-1 -z-1 opacity-75">
                 <World data={GlobeDatas} globeConfig={GlobeConfig} />
             </div>
-            <BentoGrid className="relative w-full rounded-3xl border border-white/[0.1] p-5 dark:bg-black-100 z-100 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]">
-                <BorderBeam size={250} duration={12} delay={9} />
-                {items.map((item, i) => (
-                    <BentoGridItem
-                        id={item.id}
-                        key={i}
-                        title={item.title}
-                        description={item.description}
-                        className={item.className}
-                        icon={item.icon}
-                        img={item.img}
-                        imgClassName={item.imgClassName}
-                        titleClassName={item.titleClassName}
-                        spareImg={item.spareImg}
-                    />
-                ))}
-            </BentoGrid>
+            <AnimatedElement delay={0.5}>
+                <BentoGrid className="relative w-full rounded-3xl border border-white/[0.1] p-5 dark:bg-black-100 z-100 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]">
+                    <BorderBeam size={250} duration={12} delay={9} />
+                    {items.map((item, i) => (
+                        <BentoGridItem
+                            id={item.id}
+                            key={i}
+                            title={item.title}
+                            description={item.description}
+                            className={item.className}
+                            icon={item.icon}
+                            img={item.img}
+                            imgClassName={item.imgClassName}
+                            titleClassName={item.titleClassName}
+                            spareImg={item.spareImg}
+                        />
+                    ))}
+                </BentoGrid>
+            </AnimatedElement>
             <h2 className=" heading flex flex-col text-center text-white text-bold text-2xl md:text-3xl lg:text-4xl heading-bottom-spacing ">
                 Processus de Conception et Développement <br />
                 <span className="text-purple text-xl md:text-3xl pt-1">
@@ -59,11 +63,24 @@ const Service = () => {
             <div className="max-w-[90vw] mx-auto">
                 <HoverEffect items={Processus} />
             </div>
-            <div className="relative flex items-center justify-between overflow-hidden bg-transparent gap-1 lg:px-20 flex-wrap ">
-                <div className="flex max-w-[90vw] lg:max-w-[50%] heading-bottom-spacing ">
-                    <TextGenerateEffect
-                        className="text-center text-white-100 text-bold text-2xl md:text-3xl lg:text-4xl"
-                        words="Des technologie qui n'ont plus à faire leurs preuves ..."
+            <div className="relative flex items-center justify-between overflow-hidden bg-transparent gap-1 lg:px-20 flex-wrap lg:mt-5 ">
+                <div className="flex max-w-[90vw] lg:max-w-[50%] heading-bottom-spacing flex-col items-center gap-5">
+                    <h2 className="heading text-center text-white text-bold text-2xl md:text-3xl lg:text-4xl">
+                        Des technologie qui n&apos;ont plus à faire leurs preuves ...
+                    </h2>
+
+                    <WordRotate
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-purple"
+                        words={[
+                            "Javascript",
+                            "Typescript",
+                            "React.js",
+                            "Next.js",
+                            "Vite",
+                            "Redux",
+                            "Tailwind CSS",
+                            "Framer Motion",
+                        ]}
                     />
                 </div>
                 <div className="flex md:max-w-[50%] md:items-center md:mx-auto lg:max-w-[40%]">
