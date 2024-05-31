@@ -48,7 +48,7 @@ const Hero = () => {
             <div className="flex justify-center relative z-10">
                 <div className="max-w-[90vw] md:max-w-[80vw] lg:max-w-[80vw] flex flex-col items-center justify-center">
                     <AnimatedElement delay={1}>
-                        <h2 className="pt-[8rem] md:pt-[15rem] uppercase tracking-widest text-sm md:text-lg text-center text-white-200">
+                        <h2 className="pt-[8rem] md:pt-[10rem] imac:pt-[17rem] uppercase tracking-widest text-sm md:text-lg text-center text-white-200">
                             Matthieu Vachet
                         </h2>
                     </AnimatedElement>
