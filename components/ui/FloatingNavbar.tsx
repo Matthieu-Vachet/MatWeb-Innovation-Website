@@ -5,6 +5,7 @@ import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { FaHome } from "react-icons/fa";
+// import { ModeToggle } from "./ToggleMode";
 
 export const FloatingNav = ({
     navItems,
@@ -80,6 +81,8 @@ export const FloatingNav = ({
                         </span>
                     </Link>
                 ))}
+
+                {/* <ModeToggle /> */}
 
                 {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
                     <span>Login</span>

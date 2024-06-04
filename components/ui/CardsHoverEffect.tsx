@@ -50,22 +50,22 @@ export const HoverEffect = ({
                         <CardTitle>{item.title}</CardTitle>
                         <CardIcons className="absolute top-0 right-0">
                             {item.icon === "PiNotePencilFill" && (
-                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
                             )}
                             {item.icon === "PiCoffeeBold" && (
-                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
                             )}
                             {item.icon === "PiPencil" && (
-                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
                             )}
                             {item.icon === "PiCodeBold" && (
-                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
                             )}
                             {item.icon === "BsSendCheck" && (
-                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
                             )}
                             {item.icon === "SiTestinglibrary" && (
-                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-10 hover:opacity-100 transition-all" />
+                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-5" />
                             )}
                         </CardIcons>
                         <CardSubtitle>{item.subtitle}</CardSubtitle>
@@ -105,7 +105,7 @@ export const CardTitle = ({
     children: React.ReactNode;
 }) => {
     return (
-        <h4 className={cn("text-white text-lg font-normal tracking-wide mt-3", className)}>
+        <h4 className={cn("text-white text-xl font-normal tracking-wide mt-3", className)}>
             {children}
         </h4>
     );
@@ -131,7 +131,7 @@ export const CardSubtitle = ({
     return (
         <h5
             className={cn(
-                " text-center text-purple-200 text-2xl font-semibold tracking-wide mt-4",
+                " text-center text-purple-200 text-2xl font-normal tracking-wide mt-4",
                 className,
             )}
         >
