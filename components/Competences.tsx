@@ -2,13 +2,12 @@ import React from "react";
 import { CompetencesList, iconMap, Competence } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
-import { ProjetTabs } from "./ui/ProjetTabs";
 
 const Competences = () => {
     return (
         <div
             id="Competences"
-            className="bg-black-100 max-w-[90vw] md:max-w-[90vw] lg:max-w-[80vw] imac:max-w-[60vw] flex flex-col items-center justify-center mx-auto"
+            className="bg-black-100 max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto"
         >
             <div className="heading heading-bottom-spacing">
                 <TextGenerateEffect
