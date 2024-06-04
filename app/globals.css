@@ -83,7 +83,7 @@
         @apply font-bold text-3xl md:text-4xl lg:text-5xl text-center;
     }
     .heading-bottom-spacing {
-        @apply pb-[5rem] pt-[5rem];
+        @apply pb-[3rem] md:pb-[4rem] pt-[5rem] md:pt-[10rem];
     }
 }
 

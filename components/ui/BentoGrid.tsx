@@ -90,14 +90,14 @@ export const BentoGridItem = ({
                 <div className={`absolute -right-10 -bottom-10 z-50  `}>{icon && <>{icon}</>}</div>
                 {id === 1 && <RetroGrid />}
                 {id === 2 && (
-                    <div className="absolute top-0 flex h-full w-full items-center justify-center overflow-hidden opacity-50">
+                    <div className="absolute top-0 flex h-full w-full items-center justify-center overflow-hidden opacity-30">
                         <Meteors number={30} />
                     </div>
                 )}
                 {id === 3 && (
                     <DotPattern
                         className={cn(
-                            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] opacity-50",
+                            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] opacity-30",
                         )}
                     />
                 )}
@@ -113,7 +113,7 @@ export const BentoGridItem = ({
                         ]}
                         className={cn(
                             "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
-                            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 opacity-50",
+                            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 opacity-30",
                         )}
                     />
                 )}

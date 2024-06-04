@@ -28,6 +28,7 @@ import {
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from "react-icons/tb";
 import { IconType } from "react-icons";
 import { IconBrandJavascript } from "@tabler/icons-react";
+import { link } from "fs";
 
 export const navItems = [
     {
@@ -40,6 +41,10 @@ export const navItems = [
     {
         name: "Competences",
         link: "#Competences",
+    },
+    {
+        name: "Projets",
+        link: "#Projets",
     },
 ];
 
@@ -322,9 +327,9 @@ export const items = [
         description: "Intégration HTML/CSS/REACT respectueuses des standards du Web.",
         className: "md:col-span-3 md:row-span-2 ",
         imgClassName:
-            "absolute right-2 bottom-2 w-[11rem] lg:w-[30%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-50 hover:opacity-100 z-10",
+            "absolute right-2 bottom-2 w-[11rem] lg:w-[30%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-50",
         titleClassName:
-            "text-3xl md:text-2xl lg:text-3xl font-bold gap-2 lg:gap-5 w-[55%] md:w-[65%] lg:flex lg:justify-center lg:text-start z-50",
+            "text-2xl md:text-2xl lg:text-3xl font-bold gap-2 lg:gap-5 w-[55%] md:w-[65%] lg:flex lg:justify-center lg:text-start z-50",
         spareImgClassName: "",
         descriptionClassName: "",
         img: "/integration.png",
@@ -339,13 +344,13 @@ export const items = [
         className: "md:col-span-1 md:row-span-2",
         imgClassName: "",
         titleClassName:
-            " text-3xl md:text-2xl md:gap-4 lg:text-3xl xl:text-4xl w-[80%] md:w-full font-bold justify-center md:text-center z-50",
+            " text-2xl md:text-2xl md:gap-4 lg:text-2xl xl:text-4xl w-[90%] md:w-[100%] font-bold justify-center z-50 gap-2",
         spareImgClassName: "",
         descriptionClassName: "md:flex md:justify-center md:items-center md:text-center md:w-full",
         img: "",
         spareImg: "",
         icon: (
-            <IconBrandJavascript className="h-[13rem] w-[13rem] md:h-[10rem] md:w-[10rem] lg:h-[15rem] lg:w-[15rem] text-black-200 z-20 opacity-85 hover:opacity-100" />
+            <IconBrandJavascript className="h-[13rem] w-[13rem] md:h-[10rem] md:w-[10rem] lg:h-[15rem] lg:w-[15rem] text-black-200 z-20 opacity-50" />
         ),
     },
 
@@ -356,9 +361,9 @@ export const items = [
             "Affichage sémantique des informations, des pages propres pour un référencement optimal sur le Web.",
         className: "md:col-span-2 md:row-span-2",
         imgClassName:
-            "absolute right-2 bottom-2 w-[11rem] lg:w-[50%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-50 hover:opacity-100 z-10",
+            "absolute right-2 bottom-2 w-[11rem] lg:w-[50%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-50",
         titleClassName:
-            "text-3xl md:text-2xl lg:text-3xl font-bold max-w-[55%] lg:max-w-[50%] gap-2 lg:gap-5",
+            "text-2xl md:text-2xl lg:text-3xl font-bold max-w-[55%] lg:max-w-[50%] gap-2 lg:gap-5",
         spareImgClassName: "",
         descriptionClassName: "",
         img: "/referencement.png",
@@ -374,13 +379,93 @@ export const items = [
         desktop.`,
         className: "md:col-span-2 md:row-span-2",
         imgClassName:
-            "absolute right-2 bottom-2 w-auto lg:w-[50%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-60 hover:opacity-100 z-10",
+            "absolute right-2 bottom-2 w-auto lg:w-[50%] border dark:border-white/10 p-3 rounded-2xl dark:bg-black-100 opacity-60 z-10",
         titleClassName:
-            "text-3xl md:text-2xl lg:text-3xl font-bold max-w-[55%] lg:max-w-[50%] gap-2 lg:gap-5",
+            "text-2xl md:text-2xl lg:text-3xl font-bold max-w-[55%] lg:max-w-[50%] gap-2 lg:gap-5",
         spareImgClassName: "",
         descriptionClassName: "",
         img: "/windows-dark.avif",
         spareImg: "",
         icon: "",
+    },
+];
+
+export const projets = [
+    {
+        id: 1,
+        title: "Portfolio",
+        cat: "Portfolio",
+        des: "Portfolio personnel développé avec React, Vite.js et Framer Motion, offre une expérience immersive et dynamique. Intégration web et animation mises en valeur.",
+        img: "/p1.svg",
+        iconLists: [
+            "/Sass.svg",
+            "/React.svg",
+            "/ViteJs.svg",
+            "/MongoDb.svg",
+            "/ExpressJs.svg",
+            "/NodeJS.svg",
+            "/FramerMotion.svg",
+        ],
+        link: "https://matthieu-vachet-portfolio.vercel.app",
+    },
+    {
+        id: 2,
+        title: "Projet 724Events",
+        cat: "Débuguage",
+        des: "Analyser et résoudre les problèmes d'un site d'agence d'événementiel, finaliser le code, compléter le cahier de recette avec des tests.",
+        img: "/p2.svg",
+        iconLists: [
+            "/Css.svg",
+            "/Html.svg",
+            "/Javascript.svg",
+            "/Sass.svg",
+            "/React.svg",
+            "/Jest.svg",
+            "/TestingLibrary.svg",
+        ],
+        link: "https://projet-10-openclassrooms-debuggez-une-application-react.vercel.app",
+    },
+    {
+        id: 3,
+        title: "Projet Nina",
+        cat: "Optimisation, SEO",
+        des: "Optimiser complètement le site web en termes de performances, SEO, référencement local, métadonnées pour les réseaux sociaux et accessibilité avec rapport.",
+        img: "/p3.svg",
+        iconLists: ["/Css.svg", "/Html.svg", "/Javascript.svg"],
+        link: "https://matthieu-vachet.github.io/Projet-9-Openclassrooms-Projet-Optimisation-Nina-Carducci",
+    },
+    {
+        id: 4,
+        title: "Projet Kasa",
+        cat: "Site Web",
+        des: "Application React complète pour Kasa, permettant la location d'appartements entre particuliers.",
+        img: "/p4.svg",
+        iconLists: [
+            "/Css.svg",
+            "/Html.svg",
+            "/Sass.svg",
+            "/Javascript.svg",
+            "/React.svg",
+            "/ViteJs.svg",
+        ],
+        link: "https://projet-8-openclassrooms-projet-kasa.vercel.app",
+    },
+    {
+        id: 5,
+        title: "Projet Sophie Bluel",
+        cat: "Portfolio",
+        des: "Créer une page web dynamique avec JavaScript, présentant les travaux d'un architecte, une page de connexion pour l'administrateur du site, et une modale pour uploader de nouveaux médias.",
+        img: "/p5.svg",
+        iconLists: ["/Css.svg", "/Html.svg", "/Sass.svg", "/Javascript.svg"],
+        link: "https://github.com/Matthieu-Vachet/Projet-6-openclassrooms-Portfolio-Javascript",
+    },
+    {
+        id: 6,
+        title: "Projet Booki",
+        cat: "Site Web",
+        des: "Développer un site Internet pour la société Booki, permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leurs choix.",
+        img: "/p6.svg",
+        iconLists: ["/Css.svg", "/Html.svg"],
+        link: "https://matthieu-vachet.github.io/Projet-3-openclassrooms-Integrateur_Web-/#",
     },
 ];

@@ -24,7 +24,7 @@ const Service = () => {
     return (
         <section
             id="Service"
-            className="bg-black-100 pt-[15rem] max-w-[90vw] md:max-w-[90vw] lg:max-w-[80vw] imac:max-w-[60vw] flex flex-col items-center justify-center mx-auto"
+            className="bg-black-100 pt-[15rem] max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto"
         >
             <h1 className="relative heading text-white heading-bottom-spacing z-20">
                 <TextGenerateEffect
@@ -35,7 +35,7 @@ const Service = () => {
             <div className="hidden md:flex absolute w-full md:h-[40rem] lg:h-[60rem] md:top-[57rem] lg:top-[54rem] xl:top-[55rem] 2xl:top-[50rem]  right-1 -z-1 opacity-75">
                 <World data={GlobeDatas} globeConfig={GlobeConfig} />
             </div>
-            <AnimatedElement delay={0.5}>
+            <AnimatedElement delay={0}>
                 <BentoGrid className="relative w-full rounded-3xl border border-white/[0.1] p-5 dark:bg-black-100 z-100 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]">
                     <BorderBeam size={250} duration={12} delay={9} />
                     {items.map((item, i) => (
@@ -63,12 +63,11 @@ const Service = () => {
             <div className="max-w-[90vw] mx-auto">
                 <HoverEffect items={Processus} />
             </div>
-            <div className="relative flex items-center justify-between overflow-hidden bg-transparent gap-1 lg:px-20 flex-wrap lg:mt-5 ">
-                <div className="flex max-w-[90vw] lg:max-w-[50%] heading-bottom-spacing flex-col items-center gap-5">
+            <div className="relative flex items-center justify-center lg:justify-between overflow-hidden bg-transparent gap-1  flex-wrap heading-bottom-spacing  ">
+                <div className="flex max-w-[90vw] lg:max-w-[50%] flex-col items-center gap-5">
                     <h2 className="heading text-center text-white text-bold text-2xl md:text-3xl lg:text-4xl">
                         Des technologie qui n&apos;ont plus à faire leurs preuves ...
                     </h2>
-
                     <WordRotate
                         className="text-2xl md:text-3xl lg:text-4xl font-bold text-black dark:text-purple"
                         words={[
