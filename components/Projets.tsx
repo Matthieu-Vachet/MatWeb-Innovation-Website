@@ -22,7 +22,7 @@ export const Projets = () => {
                         key={item.id}
                     >
                         <PinContainer title={item.title} href={item.link}>
-                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-auto mb-10">
+                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-auto mb-10 rounded-xl">
                                 <div
                                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                                     style={{ backgroundColor: "#13162D" }}

@@ -28,7 +28,7 @@ export const PinContainer = ({
 
     return (
         <div
-            className={cn("relative group/pin z-50  cursor-pointer", containerClassName)}
+            className={cn("relative group/pin z-50", containerClassName)}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
@@ -69,7 +69,7 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                             {title}
                         </span>
 
-                        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>
+                        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40 "></span>
                     </a>
                 </div>
 

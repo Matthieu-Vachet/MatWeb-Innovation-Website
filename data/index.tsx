@@ -34,9 +34,6 @@ export const navItems = [
     {
         name: "Services",
         link: "#Service",
-        icon: (
-            <SiTailwindcss className="text-2xl text-neutral-500 dark:text-white dark:hover:text-white-200" />
-        ),
     },
     {
         name: "Competences",
