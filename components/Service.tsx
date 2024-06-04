@@ -35,7 +35,7 @@ const Service = () => {
             <div className="hidden md:flex absolute w-full md:h-[40rem] lg:h-[60rem] md:top-[57rem] lg:top-[54rem] xl:top-[55rem] 2xl:top-[50rem]  right-1 -z-1 opacity-75">
                 <World data={GlobeDatas} globeConfig={GlobeConfig} />
             </div>
-            <AnimatedElement delay={0.5}>
+            <AnimatedElement delay={0}>
                 <BentoGrid className="relative w-full rounded-3xl border border-white/[0.1] p-5 dark:bg-black-100 z-100 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]">
                     <BorderBeam size={250} duration={12} delay={9} />
                     {items.map((item, i) => (

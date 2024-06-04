@@ -48,23 +48,23 @@ const Hero = () => {
             </div>
             <div className="flex justify-center relative z-10">
                 <div className="max-w-[90vw] md:max-w-[80vw] lg:max-w-[80vw] flex flex-col items-center justify-center">
-                    <AnimatedElement delay={1}>
+                    <AnimatedElement delay={0}>
                         <h2 className="pt-[8rem] md:pt-[10rem] imac:pt-[17rem] uppercase tracking-widest text-sm md:text-lg text-center text-black dark:text-white-200">
                             Matthieu Vachet
                         </h2>
                     </AnimatedElement>
-                    <AnimatedElement delay={1.5}>
+                    <AnimatedElement delay={0.5}>
                         <h3 className="text-center font-bold text-3xl md:text-5xl lg:text-6xl pt-5">
                             Développeur Web Front-End{" "}
                             <span className="text-purple">Indépendant</span>
                         </h3>
                     </AnimatedElement>
-                    <AnimatedElement delay={2}>
+                    <AnimatedElement delay={1}>
                         <p className="text-3xl md:text-4xl lg:text-5xl pt-10 md:pt-16 font-normal text-black-100 dark:text-white-200 text-center">
                             Création de site et d&apos;application Web
                         </p>
                     </AnimatedElement>
-                    <AnimatedElement delay={2.5}>
+                    <AnimatedElement delay={1.5}>
                         <div className="text-sm md:text-lg lg:text-xl text-black-200 dark:text-white-200 text-center mt-5 opacity-80">
                             <p>Vitrine, Landing-Page, Portfolio, E-commerce</p>
                         </div>
@@ -72,7 +72,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.4, delay: 3, ease: "easeInOut" }}
+                        transition={{ duration: 0.3, delay: 2, ease: "easeInOut" }}
                         className="flex items-center justify-center gap-5 mt-10 rounded-lg"
                     >
                         {socialMedias.map((media) => (
@@ -96,7 +96,7 @@ const Hero = () => {
                     <motion.a
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.4, delay: 3.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.3, delay: 2.5, ease: "easeInOut" }}
                         href="#about"
                         className="mt-10 lg:hover:scale-110 duration-200 transition-all"
                     >
