@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import { PinContainer } from "./ui/Pin";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 import Image from "next/image";
@@ -6,9 +6,9 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 import { projets } from "@/data";
 
-export const Projets = () => {
+const Projets = () => {
     return (
-        <div
+        <section
             id="Projets"
             className="bg-black-100 max-w-[90vw] lg:max-w-[80vw] imac:max-w-[75vw] flex flex-col items-center justify-center mx-auto"
         >
@@ -32,6 +32,7 @@ export const Projets = () => {
                                         alt="Image de fond photo des projets"
                                         width={552}
                                         height={330}
+                                        loading="lazy"
                                     />
                                 </div>
                                 <Image
@@ -39,6 +40,7 @@ export const Projets = () => {
                                     alt="cover"
                                     width={350}
                                     height={350}
+                                    loading="lazy"
                                     className="z-10 absolute bottom-0 rounded-xl"
                                 />
                             </div>
@@ -69,6 +71,7 @@ export const Projets = () => {
                                                 alt="icon5"
                                                 width={100}
                                                 height={100}
+                                                loading="lazy"
                                                 className="p-2"
                                             />
                                         </div>
@@ -91,7 +94,7 @@ export const Projets = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

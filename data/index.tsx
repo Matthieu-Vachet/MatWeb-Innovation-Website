@@ -12,7 +12,6 @@ import {
 } from "react-icons/di";
 import {
     SiVite,
-    SiJest,
     SiTestinglibrary,
     SiRedux,
     SiSwagger,
@@ -28,7 +27,6 @@ import {
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from "react-icons/tb";
 import { IconType } from "react-icons";
 import { IconBrandJavascript } from "@tabler/icons-react";
-import { link } from "fs";
 
 export const navItems = [
     {
@@ -42,6 +40,10 @@ export const navItems = [
     {
         name: "Projets",
         link: "#Projets",
+    },
+    {
+        name: "A propos",
+        link: "#About",
     },
 ];
 

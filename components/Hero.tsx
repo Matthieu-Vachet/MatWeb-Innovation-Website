@@ -13,7 +13,7 @@ import { IoIosMail } from "react-icons/io";
 
 const Hero = () => {
     return (
-        <div className="pb-0 pt-0">
+        <section className="pb-0 pt-0">
             <Image
                 src="/mInnovationWhite.webp"
                 alt="hero"
@@ -21,7 +21,7 @@ const Hero = () => {
                 height={100}
                 className="absolute top-10 z-[50] opacity-70 w-[4rem] h-[4rem]"
             />
-            <div className="relative flex z-10 flex-row justify-center md:justify-end gap-5 pt-2 opacity-50 ">
+            <div className="relative flex z-10 flex-row justify-center md:justify-end gap-5 pt-2 opacity-50">
                 <div className="flex flex-row gap-1 items-center">
                     <FaPhoneAlt className="text-black-100 dark:text-white-200 text-xs lg:text-sm" />
                     <span className=" text-black-100 dark:text-white-200 text-xs lg:text-sm">
@@ -105,7 +105,7 @@ const Hero = () => {
                 </div>
             </div>
             <TopToScroll />
-        </div>
+        </section>
     );
 };
 

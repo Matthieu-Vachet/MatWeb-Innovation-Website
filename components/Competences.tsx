@@ -5,7 +5,7 @@ import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 
 const Competences = () => {
     return (
-        <div
+        <section
             id="Competences"
             className="bg-black-100 max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto"
         >
@@ -68,7 +68,7 @@ const Competences = () => {
                     </Button>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

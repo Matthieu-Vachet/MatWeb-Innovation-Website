@@ -1,6 +1,7 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import { cn } from "@/utils/cn";
+
 import { GridPattern } from "./GridPattern";
 import { DotPattern } from "./DotPattern";
 import Meteors from "./Meteor";
