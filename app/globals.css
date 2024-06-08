@@ -106,3 +106,8 @@
 .no-visible-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+.glassmorphism {
+    border-color: rgba(241, 245, 249, 0.2);
+    background-color: rgba(226, 232, 240, 0.1);
+}

@@ -52,12 +52,12 @@ export const FloatingNav = ({
                     duration: 0.2,
                 }}
                 className={cn(
-                    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-3 py-3 rounded-lg border-black-300 border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+                    "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-3 py-3 rounded-lg border-black-300 border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-2 md:space-x-4",
                     className,
                 )}
                 style={{
                     backdropFilter: "blur(16px) saturate(180%)",
-                    backgroundColor: "rgba(17, 25, 40, 0.5)",
+                    backgroundColor: "rgba(17, 25, 40, 0.1)",
                     borderRadius: "12px",
                     border: "1px solid rgba(255, 255, 255, 0.125)",
                 }}
@@ -75,16 +75,14 @@ export const FloatingNav = ({
                             "relative dark:text-white items-center  flex space-x-1 text-neutral-600 dark:hover:text-white-200 hover:text-neutral-500",
                         )}
                     >
-                        <span className="block text-lg cursor-pointer ">{navItem.name}</span>
+                        <span className="hidden md:block text-lg cursor-pointer ">
+                            {navItem.name}
+                        </span>
+                        <span className="block md:hidden text-xl dark:text-white dark:hover:text-white-200">
+                            {navItem.icon}
+                        </span>
                     </Link>
                 ))}
-
-                {/* <ModeToggle /> */}
-
-                {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-                    <span>Login</span>
-                    <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-                </button> */}
             </motion.div>
         </AnimatePresence>
     );

@@ -27,7 +27,7 @@ export default function TopToScroll() {
     }, []);
 
     return (
-        <div className="fixed bottom-[10px] right-[10px] cursor-pointer text-white z-50">
+        <div className="fixed bottom-[10px] right-[10px] cursor-pointer text-white z-[100]">
             {visible && (
                 <div onClick={scrollToTop} aria-label="Flêche pour remonter au début de la page">
                     <MdKeyboardDoubleArrowUp className="text-[4rem] animate-scroll-top-arrow transition-all  hover:text-purple" />

@@ -13,7 +13,7 @@ import { IoIosMail } from "react-icons/io";
 
 const Hero = () => {
     return (
-        <section className="pb-0 pt-0">
+        <section className="pb-0 pt-0 px-4 bg-gradient-to-b from-purple-100 to-black-100">
             <Image
                 src="/mInnovationWhite.webp"
                 alt="hero"
@@ -43,8 +43,8 @@ const Hero = () => {
                 <Spotlight className=" top-10 left-80 h-[50vh] w-[70vw]" fill="white" />
             </div>
             {/* Background Grid */}
-            <div className="h-[75vh]  w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.03] flex items-center justify-center absolute top-0 left-0 mt-0 mb-0 pt-0 pb-0">
-                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+            <div className="h-[80vh]  w-full dark:bg-gradient-to-b from-purple-100 to-black-100   dark:bg-dot-white/[0.2] flex items-center justify-center absolute top-0 left-0 mt-0 mb-0 pt-0 pb-0">
+                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-gradient-to-b from-purple-100 to-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,purple)]" />
             </div>
             <div className="flex justify-center relative z-10">
                 <div className="max-w-[90vw] md:max-w-[80vw] lg:max-w-[80vw] flex flex-col items-center justify-center">
@@ -56,7 +56,9 @@ const Hero = () => {
                     <AnimatedElement delay={0.5}>
                         <h3 className="text-center font-bold text-3xl md:text-5xl lg:text-6xl pt-5">
                             Développeur Web Front-End{" "}
-                            <span className="text-purple">Indépendant</span>
+                            <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
+                                Indépendant
+                            </span>
                         </h3>
                     </AnimatedElement>
                     <AnimatedElement delay={1}>

@@ -10,21 +10,21 @@ const Projets = () => {
     return (
         <section
             id="Projets"
-            className="bg-black-100 max-w-[90vw] lg:max-w-[80vw] imac:max-w-[75vw] flex flex-col items-center justify-center mx-auto"
+            className="bg-black-100 max-w-[90vw] lg:max-w-[80vw] imac:max-w-[75vw] flex flex-col items-center justify-center mx-auto px-4"
         >
             <div className="heading heading-bottom-spacing">
                 <TextGenerateEffect className="text-center " words="Une partie de mes projets" />
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-24 ">
+            <div className="flex flex-wrap items-center justify-center gap-24  ">
                 {projets.map((item) => (
                     <div
-                        className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+                        className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "
                         key={item.id}
                     >
                         <PinContainer title={item.title} href={item.link}>
-                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-auto mb-10 rounded-xl">
+                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-auto mb-10 rounded-xl   ">
                                 <div
-                                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                                    className="relative w-full h-full overflow-hidden lg:rounded-sm opacity-50  "
                                     style={{ backgroundColor: "#13162D" }}
                                 >
                                     <Image
@@ -41,7 +41,7 @@ const Projets = () => {
                                     width={350}
                                     height={350}
                                     loading="lazy"
-                                    className="z-10 absolute bottom-0 rounded-xl"
+                                    className="z-10 absolute bottom-0 rounded-sm"
                                 />
                             </div>
                             <h1 className="font-bold lg:text-1xl text-xl  line-clamp-1">
