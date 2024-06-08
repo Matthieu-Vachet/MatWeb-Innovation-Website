@@ -27,23 +27,30 @@ import {
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from "react-icons/tb";
 import { IconType } from "react-icons";
 import { IconBrandJavascript } from "@tabler/icons-react";
+import { GrServices, GrProjects } from "react-icons/gr";
+import { GiSkills } from "react-icons/gi";
+import { IoPerson } from "react-icons/io5";
 
 export const navItems = [
     {
         name: "Services",
         link: "#Service",
+        icon: <GrServices />,
     },
     {
         name: "Competences",
         link: "#Competences",
+        icon: <GiSkills />,
     },
     {
         name: "Projets",
         link: "#Projets",
+        icon: <GrProjects />,
     },
     {
         name: "A propos",
         link: "#About",
+        icon: <IoPerson />,
     },
 ];
 

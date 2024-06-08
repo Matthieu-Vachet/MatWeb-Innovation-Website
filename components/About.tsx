@@ -15,7 +15,7 @@ const About = () => {
     return (
         <section
             id="About"
-            className="bg-black-100 mt-[3rem]  max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto"
+            className="bg-black-100 mt-[3rem]  max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto px-4"
         >
             <h1 className="heading heading-bottom-spacing">
                 <TextGenerateEffect className="text-center " words="À propos de moi" />
@@ -24,7 +24,7 @@ const About = () => {
             <div
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                className="h-auto flex flex-col relative  overflow-hidden items-center justify-center w-full mx-auto p-10 md:px-20 border border-white/[0.1] rounded-2xl gap-16 shadow-2xl shadow-blue-500/20 z-20  "
+                className="h-auto flex flex-col relative  overflow-hidden items-center justify-center w-full mx-auto p-10 md:px-20 border border-white/[0.1] rounded-2xl gap-16 shadow-[0px_5px_30px_5px_rgba(165,_39,_255,_0.30)] z-20  "
             >
                 <div className="flex flex-col  w-full justify-items-start items-start text-left gap-5 Z-20 ">
                     <h3 className="text-2xl lg:text-3xl font-bold text-white Z-20">
@@ -81,20 +81,20 @@ const About = () => {
                             className="h-full w-full absolute inset-0 opacity-10"
                         >
                             <CanvasRevealEffect
-                                animationSpeed={5}
+                                animationSpeed={1.5}
                                 containerClassName="bg-transparent"
                                 colors={[
                                     [59, 130, 246],
                                     [139, 92, 246],
                                 ]}
-                                opacities={[0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 0.7]}
-                                dotSize={2}
+                                opacities={[0, 0.1, 0.2, 0.2, 0.2, 0.4, 0.4, 0.4, 0.4, 0.8]}
+                                dotSize={1}
                             />
                         </motion.div>
                     )}
                 </AnimatePresence>
             </div>
-            <div className="flex flex-col md:flex-row flex-wrap py-10 md:py-16 gap-20">
+            <div className="flex flex-col md:flex-row flex-wrap py-14 md:py-24 imac:py-32 gap-20 imac:gap-40">
                 <div className="flex flex-col justify-center items-center">
                     <GaugeCircle
                         max={100}
