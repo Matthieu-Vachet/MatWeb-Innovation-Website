@@ -5,7 +5,6 @@ import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { FaHome } from "react-icons/fa";
-// import { ModeToggle } from "./ToggleMode";
 
 export const FloatingNav = ({
     navItems,

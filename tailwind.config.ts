@@ -1,4 +1,3 @@
-import { DEFAULT } from "@react-three/fiber/dist/declarations/src/core/utils";
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
@@ -39,19 +38,16 @@ const config = {
                     300: "rgba(255, 255, 255, 0.125)",
                 },
                 white: {
-                    // Saesheel #EFEFEF
                     DEFAULT: "#EFEFEF",
                     100: "#BEC1DD",
                     200: "#C1C2D3",
                 },
                 purple: {
-                    // indigo: "#905BF4",
                     DEFAULT: "#905BF4",
-                    // midnight: "#0F032D",
                     100: "#0F032D",
-                    // heart: "#4E2BCC",
                     200: "#4E2BCC",
                 },
+                blue: "#6062e8",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
@@ -91,7 +87,15 @@ const config = {
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
             },
+            backgroundImage: {
+                "glass-gradient":
+                    "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+            },
             keyframes: {
+                "fade-in": {
+                    from: { opacity: "0", transform: "translateY(-10px)" },
+                    to: { opacity: "1", transform: "none" },
+                },
                 grid: {
                     "0%": { transform: "translateY(-50%)" },
                     "100%": { transform: "translateY(0)" },
@@ -117,14 +121,6 @@ const config = {
                         "offset-distance": "100%",
                     },
                 },
-                "accordion-down": {
-                    from: { height: "0" },
-                    to: { height: "var(--radix-accordion-content-height)" },
-                },
-                "accordion-up": {
-                    from: { height: "var(--radix-accordion-content-height)" },
-                    to: { height: "0" },
-                },
                 spotlight: {
                     "0%": {
                         opacity: "0",
@@ -135,47 +131,6 @@ const config = {
                         transform: "translate(-50%,-40%) scale(1)",
                     },
                 },
-                shimmer: {
-                    from: {
-                        backgroundPosition: "0 0",
-                    },
-                    to: {
-                        backgroundPosition: "-200% 0",
-                    },
-                },
-                moveHorizontal: {
-                    "0%": {
-                        transform: "translateX(-50%) translateY(-10%)",
-                    },
-                    "50%": {
-                        transform: "translateX(50%) translateY(10%)",
-                    },
-                    "100%": {
-                        transform: "translateX(-50%) translateY(-10%)",
-                    },
-                },
-                moveInCircle: {
-                    "0%": {
-                        transform: "rotate(0deg)",
-                    },
-                    "50%": {
-                        transform: "rotate(180deg)",
-                    },
-                    "100%": {
-                        transform: "rotate(360deg)",
-                    },
-                },
-                moveVertical: {
-                    "0%": {
-                        transform: "translateY(-50%)",
-                    },
-                    "50%": {
-                        transform: "translateY(50%)",
-                    },
-                    "100%": {
-                        transform: "translateY(-50%)",
-                    },
-                },
                 scroll: {
                     to: {
                         transform: "translate(calc(-50% - 0.5rem))",
@@ -184,19 +139,12 @@ const config = {
             },
 
             animation: {
+                "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
                 grid: "grid 15s linear infinite",
                 meteor: "meteor 5s linear infinite",
                 "scroll-top-arrow": "arrow-scroll 1s infinite",
                 "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-                "accordion-down": "accordion-down 0.2s ease-out",
-                "accordion-up": "accordion-up 0.2s ease-out",
                 spotlight: "spotlight 2s ease .75s 1 forwards",
-                shimmer: "shimmer 2s linear infinite",
-                first: "moveVertical 30s ease infinite",
-                second: "moveInCircle 20s reverse infinite",
-                third: "moveInCircle 40s linear infinite",
-                fourth: "moveHorizontal 40s ease infinite",
-                fifth: "moveInCircle 20s ease infinite",
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
             },
         },

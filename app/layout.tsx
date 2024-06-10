@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "./provider";
-// import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
-// import { GeistMono } from "geist/font/mono";
 
 import "./globals.css";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "MatWeb Innovation",
