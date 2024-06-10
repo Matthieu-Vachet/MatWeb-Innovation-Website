@@ -1,21 +1,28 @@
-import React, { lazy } from "react";
+"use client";
+
+import React from "react";
 import { PinContainer } from "./ui/Pin";
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 import Image from "next/image";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { Features } from "./feature";
 
 import { projets } from "@/data";
 
 const Projets = () => {
     return (
-        <section
-            id="Projets"
-            className="bg-black-100 max-w-[90vw] lg:max-w-[80vw] imac:max-w-[75vw] flex flex-col items-center justify-center mx-auto px-4"
-        >
-            <div className="heading heading-bottom-spacing">
-                <TextGenerateEffect className="text-center " words="Une partie de mes projets" />
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-24  ">
+        <section id="Projets" className="bg-black-100">
+            <Features color="204,107,254" colorDark="53,20,100">
+                <Features.Main
+                    title="Projets"
+                    text={
+                        <p>
+                            Une partie de{" "}
+                            <span className="text-purple uppercase font-bold">mes projets</span>
+                        </p>
+                    }
+                />
+            </Features>
+            <div className="flex flex-wrap items-center justify-center gap-24 max-w-[90vw] lg:max-w-[80vw] imac:max-w-[75vw] mx-auto -mt-[8rem] md:-mt-[15rem] ">
                 {projets.map((item) => (
                     <div
                         className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "

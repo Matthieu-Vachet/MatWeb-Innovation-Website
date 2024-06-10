@@ -1,21 +1,24 @@
+"use client";
+
 import React from "react";
 import { CompetencesList, iconMap, Competence } from "@/data";
 import { Button } from "./ui/MovingBorders";
-import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import { Features } from "./feature";
 
 const Competences = () => {
     return (
-        <section
-            id="Competences"
-            className="bg-gradient-to-b from-purple-100/[0.5] to-black-100  flex flex-col items-center justify-center mx-auto px-4"
-        >
-            <div className="max-w-[90vw] imac:max-w-[70vw]">
-                <div className="heading heading-bottom-spacing">
-                    <TextGenerateEffect
-                        className="text-center "
-                        words="Mes compétences à votre service"
-                    />
-                </div>
+        <section id="Competences" className="bg-black-100">
+            <Features color="204,107,254" colorDark="53,42,95">
+                <Features.Main
+                    title="Mes compétences"
+                    text={
+                        <p>
+                            à votre <span className="text-purple uppercase font-bold">service</span>
+                        </p>
+                    }
+                />
+            </Features>
+            <div className="max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-[8rem] md:-mt-[15rem]">
                 <div className="w-full grid lg:grid-cols-4 grid-cols-1 gap-10">
                     {CompetencesList.map((card: Competence) => (
                         <Button
