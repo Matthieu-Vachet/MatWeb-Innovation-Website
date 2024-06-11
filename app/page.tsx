@@ -1,13 +1,20 @@
-// import PreLoader from "@/components/Preloader";
+import React, { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
-import Hero from "@/components/sections/Hero";
-import Service from "@/components/sections/Service";
-import Competences from "@/components/sections/Competences";
-import Projets from "@/components/sections/Projets";
-import About from "@/components/sections/About";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
+
+import Hero from "@/components/sections/Hero";
+const Service = lazy(() => import("@/components/sections/Service"));
+const Competences = lazy(() => import("@/components/sections/Competences"));
+const Projets = lazy(() => import("@/components/sections/Projets"));
+const About = lazy(() => import("@/components/sections/About"));
+const Contact = lazy(() => import("@/components/sections/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
+
+const Loader = () => (
+    <div className="flex justify-center items-center h-full">
+        <p>Loading...</p>
+    </div>
+);
 
 export default function Home() {
     return (
@@ -16,12 +23,14 @@ export default function Home() {
             <div className="w-full">
                 <Header />
                 <Hero />
-                <Service />
-                <Competences />
-                <Projets />
-                <About />
-                <Contact />
-                <Footer />
+                <Suspense fallback={<Loader />}>
+                    <Service />
+                    <Competences />
+                    <Projets />
+                    <About />
+                    <Contact />
+                    <Footer />
+                </Suspense>
                 <Toaster
                     richColors
                     position="top-right"

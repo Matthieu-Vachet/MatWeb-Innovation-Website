@@ -11,6 +11,7 @@ const Footer = () => {
                     alt="grid"
                     width={100}
                     height={100}
+                    loading="lazy"
                     className="w-full h-full opacity-50 "
                 />
             </div>
@@ -40,7 +41,13 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
                         >
-                            <Image src={media.img} alt={media.name} width={20} height={20} />
+                            <Image
+                                src={media.img}
+                                alt={media.name}
+                                width={40}
+                                height={40}
+                                loading="lazy"
+                            />
                         </a>
                     ))}
                 </div>
