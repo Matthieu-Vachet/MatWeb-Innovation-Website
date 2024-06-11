@@ -78,7 +78,7 @@ export const Header = () => {
                         >
                             <li>
                                 <Link href="#Home" onClick={handleLinkClick}>
-                                    Home
+                                    Acceuil
                                 </Link>
                             </li>
                             <li>

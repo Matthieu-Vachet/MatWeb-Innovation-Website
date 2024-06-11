@@ -8,6 +8,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Toaster } from "sonner";
 
 export default function Home() {
     return (
@@ -22,6 +23,14 @@ export default function Home() {
                 <About />
                 <Contact />
                 <Footer />
+                <Toaster
+                    richColors
+                    position="top-right"
+                    toastOptions={{
+                        closeButton: true,
+                        className: "my-toast",
+                    }}
+                />
             </div>
         </main>
     );
