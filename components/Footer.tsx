@@ -1,4 +1,4 @@
-import { socialMedias } from "@/data";
+import { socialMedias } from "@/data/Hero-data";
 import Image from "next/image";
 
 const Footer = () => {

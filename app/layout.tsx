@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "./provider";
 import { GeistSans } from "geist/font/sans";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 
@@ -16,16 +17,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </head>
             <body className={GeistSans.className}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    // defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    {children}
-                </ThemeProvider>
+                {children}
+                <SpeedInsights />
+                <Analytics />
             </body>
         </html>
     );

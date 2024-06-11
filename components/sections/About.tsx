@@ -3,7 +3,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import GaugeCircle from "@/components/ui/GaugeCircle";
-import { Features } from "./feature";
+import { Features } from "@/components/feature";
 
 const About = () => {
     const [hovered, setHovered] = React.useState(false);
