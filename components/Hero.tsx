@@ -7,10 +7,9 @@ import MagicButton from "./MagicButton";
 import { socialMedias } from "@/data";
 import TopToScroll from "./TopToScroll";
 
-
 const Hero = () => {
     return (
-        <section className="pb-0 pt-0 px-4 bg-gradient-to-b from-purple-100 to-black-100">
+        <section id="Home" className="pb-0 pt-0 px-4 bg-gradient-to-b from-purple-100 to-black-100">
             <div>
                 <Spotlight
                     className=" -top-40 -left-10 md:-left-32 md:-top-20 h-screen "

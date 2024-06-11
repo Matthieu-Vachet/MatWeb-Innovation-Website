@@ -70,7 +70,7 @@ export const Header = () => {
                             )}
                         >
                             <li>
-                                <Link href="#" onClick={handleLinkClick}>
+                                <Link href="#Home" onClick={handleLinkClick}>
                                     Home
                                 </Link>
                             </li>
