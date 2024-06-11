@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/utils/cn";
-import { Textarea } from "./textarea";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
 export function ContactForm() {
@@ -261,14 +261,14 @@ export function ContactForm() {
                 </LabelInputContainer>
 
                 <button
-                    className="bg-gradient-to-br text-lg relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] mb-4"
+                    className="bg-gradient-to-br text-lg relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] mb-4"
                     type="submit"
                 >
                     Envoyer &rarr;
                     <BottomGradient />
                 </button>
                 <button
-                    className="bg-gradient-to-br text-lg relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                    className="bg-gradient-to-br text-lg relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="button"
                     onClick={handleReset}
                 >

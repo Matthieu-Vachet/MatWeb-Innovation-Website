@@ -100,14 +100,6 @@ const config = {
                     "0%": { transform: "translateY(-50%)" },
                     "100%": { transform: "translateY(0)" },
                 },
-                meteor: {
-                    "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-                    "70%": { opacity: "1" },
-                    "100%": {
-                        transform: "rotate(215deg) translateX(-500px)",
-                        opacity: "0",
-                    },
-                },
                 "arrow-scroll": {
                     "0%, 100%": {
                         transform: "translateY(0)",
@@ -136,16 +128,24 @@ const config = {
                         transform: "translate(calc(-50% - 0.5rem))",
                     },
                 },
+                ripple: {
+                    "0%, 100%": {
+                        transform: "translate(-50%, -50%) scale(1)",
+                    },
+                    "50%": {
+                        transform: "translate(-50%, -50%) scale(0.9)",
+                    },
+                },
             },
 
             animation: {
                 "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
                 grid: "grid 15s linear infinite",
-                meteor: "meteor 5s linear infinite",
                 "scroll-top-arrow": "arrow-scroll 1s infinite",
                 "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
                 spotlight: "spotlight 2s ease .75s 1 forwards",
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+                ripple: "ripple 3400ms ease infinite",
             },
         },
     },
@@ -158,16 +158,6 @@ const config = {
                     "bg-grid": (value: any) => ({
                         backgroundImage: `url("${svgToDataUri(
                             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100" height="100" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
-                        )}")`,
-                    }),
-                    "bg-grid-small": (value: any) => ({
-                        backgroundImage: `url("${svgToDataUri(
-                            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
-                        )}")`,
-                    }),
-                    "bg-dot": (value: any) => ({
-                        backgroundImage: `url("${svgToDataUri(
-                            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`,
                         )}")`,
                     }),
                 },

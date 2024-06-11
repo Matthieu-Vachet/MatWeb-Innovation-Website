@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import { HoverEffect } from "./ui/CardsHoverEffect";
-import { Processus, items, slugs } from "@/data";
+import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
+import { HoverEffect } from "@/components/ui/CardsHoverEffect";
+import { Processus, items, slugs } from "@/data/Services-data";
 import IconCloud from "@/components/ui/IconCloud";
-import WordRotate from "./ui/WordRotate";
-import { Features } from "./feature";
+import WordRotate from "@/components/ui/WordRotate";
+import { Features } from "@/components/feature";
 
 const Service = () => {
     return (
