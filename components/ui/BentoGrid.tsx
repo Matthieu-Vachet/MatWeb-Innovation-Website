@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { cn } from "@/utils/cn";
 
-import { GridPattern } from "./GridPattern";
-import { DotPattern } from "./DotPattern";
-import Meteors from "./Meteor";
 import RetroGrid from "./RetroGrid";
+import Globe from "./Globe";
+import Ripple from "./Ripple";
+import { VelocityScroll } from "./ScrollVelocity";
 
 export const BentoGrid = ({
     className,
@@ -54,12 +54,14 @@ export const BentoGridItem = ({
     return (
         <div
             className={cn(
-                "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 ",
+                "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 justify-between flex flex-col space-y-4 ",
                 className,
             )}
             style={{
-                background: "rgb(4,7,29)",
-                backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+                background:
+                    "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                backgroundColor:
+                    "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
             }}
         >
             {/* add img divs */}
@@ -91,33 +93,12 @@ export const BentoGridItem = ({
                 <div className={`absolute -right-10 -bottom-10 z-50  `}>{icon && <>{icon}</>}</div>
                 {id === 1 && <RetroGrid />}
                 {id === 2 && (
-                    <div className="absolute top-0 flex h-full w-full items-center justify-center overflow-hidden opacity-30">
-                        <Meteors number={30} />
+                    <div className="absolute top-0 flex h-full w-full items-center justify-center opacity-30">
+                        <Ripple />
                     </div>
                 )}
-                {id === 3 && (
-                    <DotPattern
-                        className={cn(
-                            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] opacity-30",
-                        )}
-                    />
-                )}
-                {id === 4 && (
-                    <GridPattern
-                        squares={[
-                            [4, 4],
-                            [5, 1],
-                            [8, 2],
-                            [6, 6],
-                            [10, 5],
-                            [13, 3],
-                        ]}
-                        className={cn(
-                            "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
-                            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 opacity-30",
-                        )}
-                    />
-                )}
+                {id === 3 && <Globe className="top-10 opacity-40" />}
+
                 <div
                     className={cn(
                         titleClassName,
@@ -127,12 +108,19 @@ export const BentoGridItem = ({
                     <div className="z-10">{title}</div>
                     <div
                         className={cn(
-                            "font-base  lg:text-base text-sm md:text-sm text-white-200 z-10",
                             descriptionClassName,
+                            "font-base lg:text-base text-sm md:text-sm text-white-200 z-10",
                         )}
                     >
                         {description}
                     </div>
+                    {id === 4 && (
+                        <VelocityScroll
+                            text="Large Desktop - Desktop - Tablette - Mobile - "
+                            default_velocity={2}
+                            className="flex items-center pb-5 text-5xl font-bold tracking-[-0.02em] drop-shadow-sm text-white-200 opacity-30"
+                        />
+                    )}
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ export const PinContainer = ({
 
     return (
         <div
-            className={cn("relative group/pin z-50", containerClassName)}
+            className={cn("relative group/pin z-40", containerClassName)}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >

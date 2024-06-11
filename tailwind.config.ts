@@ -1,4 +1,3 @@
-import { DEFAULT } from "@react-three/fiber/dist/declarations/src/core/utils";
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
@@ -25,6 +24,9 @@ const config = {
             },
         },
         extend: {
+            boxShadow: {
+                input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
+            },
             screens: {
                 imac: "1700px",
             },
@@ -36,19 +38,16 @@ const config = {
                     300: "rgba(255, 255, 255, 0.125)",
                 },
                 white: {
-                    // Saesheel #EFEFEF
                     DEFAULT: "#EFEFEF",
                     100: "#BEC1DD",
                     200: "#C1C2D3",
                 },
                 purple: {
-                    // indigo: "#905BF4",
                     DEFAULT: "#905BF4",
-                    // midnight: "#0F032D",
                     100: "#0F032D",
-                    // heart: "#4E2BCC",
                     200: "#4E2BCC",
                 },
+                blue: "#6062e8",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
@@ -88,18 +87,18 @@ const config = {
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
             },
+            backgroundImage: {
+                "glass-gradient":
+                    "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+            },
             keyframes: {
+                "fade-in": {
+                    from: { opacity: "0", transform: "translateY(-10px)" },
+                    to: { opacity: "1", transform: "none" },
+                },
                 grid: {
                     "0%": { transform: "translateY(-50%)" },
                     "100%": { transform: "translateY(0)" },
-                },
-                meteor: {
-                    "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
-                    "70%": { opacity: "1" },
-                    "100%": {
-                        transform: "rotate(215deg) translateX(-500px)",
-                        opacity: "0",
-                    },
                 },
                 "arrow-scroll": {
                     "0%, 100%": {
@@ -114,14 +113,6 @@ const config = {
                         "offset-distance": "100%",
                     },
                 },
-                "accordion-down": {
-                    from: { height: "0" },
-                    to: { height: "var(--radix-accordion-content-height)" },
-                },
-                "accordion-up": {
-                    from: { height: "var(--radix-accordion-content-height)" },
-                    to: { height: "0" },
-                },
                 spotlight: {
                     "0%": {
                         opacity: "0",
@@ -132,69 +123,29 @@ const config = {
                         transform: "translate(-50%,-40%) scale(1)",
                     },
                 },
-                shimmer: {
-                    from: {
-                        backgroundPosition: "0 0",
-                    },
-                    to: {
-                        backgroundPosition: "-200% 0",
-                    },
-                },
-                moveHorizontal: {
-                    "0%": {
-                        transform: "translateX(-50%) translateY(-10%)",
-                    },
-                    "50%": {
-                        transform: "translateX(50%) translateY(10%)",
-                    },
-                    "100%": {
-                        transform: "translateX(-50%) translateY(-10%)",
-                    },
-                },
-                moveInCircle: {
-                    "0%": {
-                        transform: "rotate(0deg)",
-                    },
-                    "50%": {
-                        transform: "rotate(180deg)",
-                    },
-                    "100%": {
-                        transform: "rotate(360deg)",
-                    },
-                },
-                moveVertical: {
-                    "0%": {
-                        transform: "translateY(-50%)",
-                    },
-                    "50%": {
-                        transform: "translateY(50%)",
-                    },
-                    "100%": {
-                        transform: "translateY(-50%)",
-                    },
-                },
                 scroll: {
                     to: {
                         transform: "translate(calc(-50% - 0.5rem))",
                     },
                 },
+                ripple: {
+                    "0%, 100%": {
+                        transform: "translate(-50%, -50%) scale(1)",
+                    },
+                    "50%": {
+                        transform: "translate(-50%, -50%) scale(0.9)",
+                    },
+                },
             },
 
             animation: {
+                "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
                 grid: "grid 15s linear infinite",
-                meteor: "meteor 5s linear infinite",
                 "scroll-top-arrow": "arrow-scroll 1s infinite",
                 "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-                "accordion-down": "accordion-down 0.2s ease-out",
-                "accordion-up": "accordion-up 0.2s ease-out",
                 spotlight: "spotlight 2s ease .75s 1 forwards",
-                shimmer: "shimmer 2s linear infinite",
-                first: "moveVertical 30s ease infinite",
-                second: "moveInCircle 20s reverse infinite",
-                third: "moveInCircle 40s linear infinite",
-                fourth: "moveHorizontal 40s ease infinite",
-                fifth: "moveInCircle 20s ease infinite",
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+                ripple: "ripple 3400ms ease infinite",
             },
         },
     },
@@ -207,16 +158,6 @@ const config = {
                     "bg-grid": (value: any) => ({
                         backgroundImage: `url("${svgToDataUri(
                             `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100" height="100" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
-                        )}")`,
-                    }),
-                    "bg-grid-small": (value: any) => ({
-                        backgroundImage: `url("${svgToDataUri(
-                            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`,
-                        )}")`,
-                    }),
-                    "bg-dot": (value: any) => ({
-                        backgroundImage: `url("${svgToDataUri(
-                            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`,
                         )}")`,
                     }),
                 },
