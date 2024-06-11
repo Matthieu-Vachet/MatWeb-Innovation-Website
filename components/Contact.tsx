@@ -24,7 +24,7 @@ const Contact = () => {
             </Features>
             {/* Titre Tablette / Desktop */}
             <div className="flex mt-10">
-                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-[100] gap-10 md:gap-0 max-w-[95vw] lg:max-w-[70vw] imac:max-w-[60vw] mx-auto px-4 -mt-[10rem] md:-mt-[17rem]">
+                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[95vw] lg:max-w-[70vw] imac:max-w-[60vw] mx-auto px-4 -mt-[10rem] md:-mt-[17rem]">
                     {/* Conteneur pour le BoxReveal */}
                     <div className="w-full md:w-[50%] flex flex-col z-50 lg:pl-10">
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
