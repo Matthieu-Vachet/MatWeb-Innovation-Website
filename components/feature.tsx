@@ -13,7 +13,7 @@ type FeaturesProps = {
 };
 
 export const Features = ({ children, color, colorDark }: FeaturesProps) => {
-    const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: false });
+    const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: false });
 
     useEffect(() => {
         console.log("Features props:", { color, colorDark });
