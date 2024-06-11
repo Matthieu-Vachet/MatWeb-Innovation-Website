@@ -27,14 +27,14 @@ const Hero = () => {
                         Matthieu Vachet
                     </p>
 
-                    <h1 className="text-center font-bold text-3xl md:text-5xl lg:text-6xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+                    <h1 className="text-center font-semibold text-3xl md:text-5xl lg:text-6xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] lg:max-w-[75vw]">
                         Développeur Web Front-End{" "}
                         <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
                             Indépendant
                         </span>
                     </h1>
 
-                    <p className="text-3xl md:text-4xl lg:text-5xl pt-10 md:pt-16 font-normal text-black-100 dark:text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+                    <p className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 font-normal text-black-100 dark:text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
                         Création de site et d&apos;application Web
                     </p>
                     <div className="text-sm md:text-lg lg:text-xl text-black-200 dark:text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
@@ -47,14 +47,14 @@ const Hero = () => {
                                 href={media.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-white dark:bg-black-200 rounded-xl border-black-200 black:border-black-300 border hover:bg-black-300 hover:scale-110 transition-all"
+                                className="w-[3rem] h-[3rem] md:w-[3rem] md:h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-white dark:bg-black-200 rounded-xl border-black-200 black:border-black-300 border hover:bg-black-300 hover:scale-110 transition-all"
                             >
                                 <Image
                                     src={media.img}
                                     alt={media.name}
                                     width={30}
                                     height={30}
-                                    className="md:w-[2.5rem] md:h-[2.5rem] md:opacity-80 hover:opacity-100"
+                                    className="md:w-[2rem] md:h-[2rem] md:opacity-80 hover:opacity-100"
                                 />
                             </a>
                         ))}
