@@ -37,8 +37,8 @@ const Projets = () => {
                                     <Image
                                         src="/bg.png"
                                         alt="Image de fond photo des projets"
-                                        width={552}
-                                        height={330}
+                                        width={400}
+                                        height={250}
                                         loading="lazy"
                                     />
                                 </div>
@@ -46,7 +46,7 @@ const Projets = () => {
                                     src={item.img}
                                     alt="cover"
                                     width={350}
-                                    height={350}
+                                    height={200}
                                     loading="lazy"
                                     className="z-10 absolute bottom-0 rounded-sm"
                                 />
@@ -76,8 +76,8 @@ const Projets = () => {
                                             <Image
                                                 src={icon}
                                                 alt="icon5"
-                                                width={100}
-                                                height={100}
+                                                width={40}
+                                                height={40}
                                                 loading="lazy"
                                                 className="p-2"
                                             />

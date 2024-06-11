@@ -51,8 +51,9 @@ const Hero = () => {
                                 <Image
                                     src={media.img}
                                     alt={media.name}
-                                    width={30}
-                                    height={30}
+                                    width={40}
+                                    height={40}
+                                    priority
                                     className="md:w-[2rem] md:h-[2rem] md:opacity-80 hover:opacity-100"
                                 />
                             </a>
