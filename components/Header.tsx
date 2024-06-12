@@ -1,11 +1,13 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Image from "next/image";
+import classNames from "classnames";
+
 import { Container } from "@/components/Container";
 import { HamburgerIcon } from "@/components/icons/Hamburger";
-import classNames from "classnames";
-import Image from "next/image";
+
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
@@ -40,8 +42,8 @@ export const Header = () => {
             <Container className="flex justify-between items-center">
                 <Link className="flex items-center text-md gap-3" href="/">
                     <Image
-                        src="/minnovationWhite.webp"
-                        alt="logo"
+                        src="/LogoWhite.webp"
+                        alt="Logo Matweb-innovation développeur web indépendant"
                         width={50}
                         height={50}
                         priority
