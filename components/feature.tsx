@@ -1,7 +1,7 @@
 "use client";
 
 // feature.tsx
-import React, { useEffect } from "react";
+import React from "react";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 import { Container } from "./Container";
@@ -14,10 +14,6 @@ type FeaturesProps = {
 
 export const Features = ({ children, color, colorDark }: FeaturesProps) => {
     const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: false });
-
-    useEffect(() => {
-        console.log("Features props:", { color, colorDark });
-    }, [color, colorDark]);
 
     return (
         <div
@@ -49,10 +45,6 @@ type MainFeatureProps = {
 };
 
 const MainFeature = ({ text, title, imageSize = "small" }: MainFeatureProps) => {
-    useEffect(() => {
-        console.log("MainFeature props:", { text, title, imageSize });
-    }, [text, title, imageSize]);
-
     return (
         <>
             <div className="relative before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_50%_50%_at_center,rgba(var(--feature-color),0.01),transparent)]">
