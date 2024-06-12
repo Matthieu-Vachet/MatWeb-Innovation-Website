@@ -1,6 +1,8 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
+
 import { Spotlight } from "@/components/ui/Spotlight";
 import MagicButton from "@/components/MagicButton";
 import { socialMedias } from "@/data/Hero-data";
@@ -46,7 +48,7 @@ const Hero = () => {
                                 href={media.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-[3rem] h-[3rem] md:w-[3rem] md:h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-xl border-black-300 border hover:bg-black-300 hover:scale-110 transition-all"
+                                className="w-[3rem] h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-xl border-black-300 border hover:bg-black-300 hover:scale-110 transition-all"
                             >
                                 <Image
                                     src={media.img}
@@ -54,7 +56,7 @@ const Hero = () => {
                                     width={40}
                                     height={40}
                                     priority
-                                    className="md:w-[2rem] md:h-[2rem] md:opacity-80 hover:opacity-100"
+                                    className="w-[1.5rem] h-[1.5rem] md:w-[2rem] md:h-[2rem] md:opacity-80 hover:opacity-100"
                                 />
                             </a>
                         ))}

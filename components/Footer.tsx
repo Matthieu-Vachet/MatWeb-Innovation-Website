@@ -39,7 +39,7 @@ const Footer = () => {
                             href={media.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                            className="w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
                         >
                             <Image
                                 src={media.img}
@@ -47,6 +47,7 @@ const Footer = () => {
                                 width={40}
                                 height={40}
                                 loading="lazy"
+                                className="w-[1.5rem] h-[1.5rem] md:w-[2rem] md:h-[2rem] md:opacity-80 hover:opacity-100"
                             />
                         </a>
                     ))}
