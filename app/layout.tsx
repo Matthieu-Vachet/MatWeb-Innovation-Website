@@ -16,6 +16,10 @@ export default function RootLayout({
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta
+                    name="google-site-verification"
+                    content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ"
+                />
                 <SEO />
             </head>
             <body className={GeistSans.className}>
