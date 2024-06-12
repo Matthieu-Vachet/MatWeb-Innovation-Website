@@ -1,151 +1,38 @@
-// components/SEO.tsx
-
 import Head from "next/head";
 import JSONLD from "./JSONLD";
 
-interface SEOProps {
-    title?: string;
-    description?: string;
-    keywords?: string[];
-    openGraph?: {
-        title?: string;
-        description?: string;
-        url?: string;
-        siteName?: string;
-        images?: {
-            url: string;
-            width?: number;
-            height?: number;
-            alt?: string;
-        }[];
-        locale?: string;
-        type?: string;
-    };
-    twitter?: {
-        card?: string;
-        title?: string;
-        description?: string;
-        url?: string;
-        siteName?: string;
-        images?: {
-            url: string;
-            width?: number;
-            height?: number;
-            alt?: string;
-        }[];
-        locale?: string;
-        type?: string;
-        creator?: string;
-        creatorId?: string;
-    };
-    structuredData?: object;
-}
-
-const defaultProps: SEOProps = {
-    title: "MatWeb Innovation",
-    description:
-        "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
-    keywords: [
-        "Matweb-Innovation",
-        "Matweb innovation",
-        "Matthieu Vachet",
-        "Vachet",
-        "freelance",
-        "developpeur",
-        "developer",
-        "intégrateur",
-        "freelance developer",
-        "developpeur freelance",
-        "frontend",
-        "nextjs",
-        "tailwind",
-        "react",
-        "frontend developer",
-        "developpeur frontend",
-        "creative",
-        "creative developer",
-        "tech",
-        "france",
-        "aisne",
-        "développeur freelance Aisne",
-        "software developer",
-        "portfolio",
-        "landing page",
-        "frontend developer portfolio",
-        "developpeur frontend portfolio",
-        "creative developer portfolio",
-    ],
-    openGraph: {
-        title: "Vachet Matthieu Developpeur Freelance indépendant",
-        description:
-            "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
-        url: "https://mat-web-innovation-website.vercel.app/",
-        siteName: "MatWeb Innovation",
-        images: [
-            {
-                url: "/LogoWhite.webp",
-                width: 1200,
-                height: 630,
-                alt: "Vachet Matthieu - Developpeur Freelance indépendant",
-            },
-        ],
-        locale: "fr-FR",
-        type: "website",
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Vachet Matthieu - Developpeur Freelance indépendant",
-        description:
-            "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
-        url: "https://mat-web-innovation-website.vercel.app/",
-        siteName: "MatWeb Innovation",
-        images: [
-            {
-                url: "/LogoWhite.webp",
-                width: 1200,
-                height: 630,
-                alt: "Vachet Matthieu - Developpeur Freelance indépendant",
-            },
-        ],
-        locale: "fr-FR",
-        type: "website",
-        creator: "Vachet Matthieu",
-    },
-    structuredData: {
+const SEO = () => {
+    const structuredData = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        name: "Matthieu Vachet",
-        url: "https://mat-web-innovation-website.vercel.app/",
-        logo: "/LogoWhite.webp",
-        contactPoint: {
-            "@type": "ContactPoint",
-            telephone: "+33744890831",
-            email: "matweb_innovation@icloud.com",
-            address: {
-                "@type": "PostalAddress",
-                streetAddress: "10 rue de Marle",
-                addressLocality: "Puisieux et Clanlieu",
-                addressRegion: "Haut de France",
-                postalCode: "02120",
-                addressCountry: "France",
-            },
-            openingHoursSpecification: [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                    opens: "09:00",
-                    closes: "18:00",
-                },
-            ],
-            contactType: "customer service",
+        "name": "Matthieu Vachet",
+        "url": "https://mat-web-innovation-website.vercel.app/",
+        "logo": "/LogoWhite.webp",
+        "telephone": "+33744890831",
+        "email": "matweb_innovation@icloud.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10 rue de Marle",
+            "addressLocality": "Puisieux et Clanlieu",
+            "addressRegion": "Haut de France",
+            "postalCode": "02120",
+            "addressCountry": "FR"
         },
-        priceRange: "€€",
-        image: "/LogoWhite.webp",
-    },
-};
-
-const SEO: React.FC<SEOProps> = (props) => {
-    const seo = { ...defaultProps, ...props };
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+33744890831",
+            "email": "matweb_innovation@icloud.com",
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        },
+        "priceRange": "€€",
+        "image": "/LogoWhite.webp"
+    };
 
     return (
         <>
@@ -156,10 +43,10 @@ const SEO: React.FC<SEOProps> = (props) => {
                 <meta name="generator" content="Next.js" />
                 <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />
                 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-                <title>{seo.title}</title>
-                <meta name="description" content={seo.description} />
+                <title>MatWeb Innovation</title>
+                <meta name="description" content="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS." />
                 <meta name="application-name" content="MatWeb Innovation" />
-                <meta name="keywords" content={seo.keywords?.join(", ")} />
+                <meta name="keywords" content="Matweb-Innovation, Matweb innovation, Matthieu Vachet, Vachet, freelance, developpeur, developer, intégrateur, freelance developer, developpeur freelance, frontend, nextjs, tailwind, react, frontend developer, developpeur frontend, creative, creative developer, tech, france, aisne, développeur freelance Aisne, software developer, portfolio, landing page, frontend developer portfolio, developpeur frontend portfolio, creative developer portfolio" />
 
                 {/* Balises de Geolocalisation */}
                 <meta name="geo.region" content="FR-HDF" />
@@ -168,28 +55,24 @@ const SEO: React.FC<SEOProps> = (props) => {
                 <meta name="ICBM" content="49.5521, 3.7048" />
 
                 {/* Balises OpenGraph */}
-                <meta property="og:title" content={seo.openGraph?.title} />
-                <meta property="og:description" content={seo.openGraph?.description} />
-                <meta property="og:url" content={seo.openGraph?.url} />
-                <meta property="og:site_name" content={seo.openGraph?.siteName} />
-                {seo.openGraph?.images?.map((image, index) => (
-                    <meta key={index} property="og:image" content={image.url} />
-                ))}
-                <meta property="og:locale" content={seo.openGraph?.locale} />
-                <meta property="og:type" content={seo.openGraph?.type} />
+                <meta property="og:title" content="Vachet Matthieu - Developpeur Freelance indépendant" />
+                <meta property="og:description" content="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS." />
+                <meta property="og:url" content="https://mat-web-innovation-website.vercel.app/" />
+                <meta property="og:site_name" content="MatWeb Innovation" />
+                <meta property="og:image" content="/LogoWhite.webp" />
+                <meta property="og:locale" content="fr-FR" />
+                <meta property="og:type" content="website" />
 
                 {/* Balises Twitter */}
-                <meta name="twitter:card" content={seo.twitter?.card} />
-                <meta name="twitter:title" content={seo.twitter?.title} />
-                <meta name="twitter:description" content={seo.twitter?.description} />
-                <meta name="twitter:url" content={seo.twitter?.url} />
-                <meta name="twitter:site_name" content={seo.twitter?.siteName} />
-                {seo.twitter?.images?.map((image, index) => (
-                    <meta key={index} name="twitter:image" content={image.url} />
-                ))}
-                <meta name="twitter:locale" content={seo.twitter?.locale} />
-                <meta name="twitter:type" content={seo.twitter?.type} />
-                <meta name="twitter:creator" content={seo.twitter?.creator} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Vachet Matthieu - Developpeur Freelance indépendant" />
+                <meta name="twitter:description" content="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS." />
+                <meta name="twitter:url" content="https://mat-web-innovation-website.vercel.app/" />
+                <meta name="twitter:site_name" content="MatWeb Innovation" />
+                <meta name="twitter:image" content="/LogoWhite.webp" />
+                <meta name="twitter:locale" content="fr-FR" />
+                <meta name="twitter:type" content="website" />
+                <meta name="twitter:creator" content="Vachet Matthieu" />
 
                 {/* Icons */}
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -201,12 +84,7 @@ const SEO: React.FC<SEOProps> = (props) => {
                 <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
                 <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="192x192"
-                    href="/android-icon-192x192.png"
-                />
+                <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -215,20 +93,13 @@ const SEO: React.FC<SEOProps> = (props) => {
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="robots" content="index, follow" />
                 <meta name="bingbot" content="index, follow" />
-                <meta
-                    name="googlebot"
-                    content="index, follow, noimageindex, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
-                />
+                <meta name="googlebot" content="index, follow, noimageindex, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
                 <meta name="revisit-after" content="1 days" />
 
                 {/* Balises outils verification */}
-                <meta
-                    name="google-site-verification"
-                    content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ"
-                />
-                {/* <meta name="msvalidate.01" content="VotreCodeDeVérificationBing" />  */}
+                <meta name="google-site-verification" content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ" />
             </Head>
-            {seo.structuredData && <JSONLD data={seo.structuredData} />}
+            <JSONLD data={structuredData} />
         </>
     );
 };
