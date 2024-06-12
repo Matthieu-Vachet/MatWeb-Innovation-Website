@@ -18,10 +18,7 @@ export default function RootLayout({
                     name="google-site-verification"
                     content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ"
                 />
-                <SEO
-                    title="MatWeb Innovation"
-                    description="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS."
-                />
+                <SEO />
             </head>
             <body className={GeistSans.className}>
                 <ThemeProvider
