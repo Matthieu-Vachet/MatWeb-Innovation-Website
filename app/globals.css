@@ -80,13 +80,13 @@
 
 @layer utilities {
     .heading {
-        @apply text-gradient translate-y-[40%] text-center text-4xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-5 md:mt-14 mb-28 md:mb-40;
+        @apply text-gradient translate-y-[40%] text-center text-4xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-16 md:mt-14 mb-28 md:mb-40;
     }
     .subtitle {
         @apply bg-clip-text text-center text-2xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-3xl [.is-visible_&]:translate-y-0 mt-5;
     }
     .heading-bottom-spacing {
-        @apply pb-[3rem] md:pb-[4rem] pt-[5rem] md:pt-[10rem];
+        @apply pb-[2rem] md:pb-[4rem] pt-[2rem] md:pt-[10rem];
     }
 }
 

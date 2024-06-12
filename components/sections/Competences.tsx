@@ -7,7 +7,7 @@ import { Features } from "@/components/feature";
 
 const Competences = () => {
     return (
-        <section id="Competences" className="bg-black-100">
+        <section id="Competences" className="bg-black-100 ">
             <Features color="204,107,254" colorDark="53,42,95">
                 <Features.Main
                     title="Mes compétences"
