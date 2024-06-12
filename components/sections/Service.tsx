@@ -10,7 +10,7 @@ import { Features } from "@/components/feature";
 
 const Service = () => {
     return (
-        <section id="Service" className="bg-black-100 pt-[10rem]">
+        <section id="Service" className="bg-black-100 pt-0   md:pt-[10rem]">
             <Features color="204,107,254" colorDark="53,42,79">
                 <Features.Main
                     title="Service"
@@ -39,7 +39,7 @@ const Service = () => {
                         />
                     ))}
                 </BentoGrid>
-                <h2 className="heading flex flex-col text-center    ">
+                <h2 className="heading flex flex-col text-center">
                     Processus de Conception et Développement <br />
                     <span className="text-purple subtitle">Une Tasse de Café et Six Étapes</span>
                 </h2>

@@ -1,11 +1,13 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Image from "next/image";
+import classNames from "classnames";
+
 import { Container } from "@/components/Container";
 import { HamburgerIcon } from "@/components/icons/Hamburger";
-import classNames from "classnames";
-import Image from "next/image";
+
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
@@ -40,14 +42,14 @@ export const Header = () => {
             <Container className="flex justify-between items-center">
                 <Link className="flex items-center text-md gap-3" href="/">
                     <Image
-                        src="/minnovationWhite.webp"
-                        alt="logo"
+                        src="/LogoWhite.webp"
+                        alt="Logo Matweb-innovation développeur web indépendant"
                         width={50}
                         height={50}
                         priority
                         className="w-8 h-8 md:w-10 md:h-10"
                     />
-                    <p>Matweb-Innovation</p>
+                    <p className="hidden md:flex">Matweb-Innovation</p>
                 </Link>
 
                 <div
@@ -73,7 +75,7 @@ export const Header = () => {
                         <ul
                             className={classNames(
                                 "flex h-full flex-col md:flex-row md:items-center md:[&_li]:border-none text-3xl",
-                                "ease-in [&_a:hover]:text-purple [&_a:hover]:scale-110 gap-5 [&_a]:flex [&_a]:w-full [&_a]:translate-y-0  [&_a]:justify-center [&_a]:text-5xl [&_a]:transition-[color,transform] [&_a]:duration-300 md:[&_a]:translate-y-0 md:[&_a]:text-xl md:hover:[&_a]:text-purple [&_a]:md:transition-colors",
+                                "ease-in [&_a:hover]:text-purple [&_a:hover]:scale-110 gap-5 [&_a]:flex [&_a]:w-full [&_a]:translate-y-0  [&_a]:justify-center [&_a]:text-3xl [&_a]:transition-[color,transform] [&_a]:duration-300 md:[&_a]:translate-y-0 md:[&_a]:text-sm lg:[&_a]:text-lg md:hover:[&_a]:text-purple [&_a]:md:transition-colors",
                                 hamburgerMenuIsOpen && "[&_a]:translate-y-0",
                             )}
                         >
@@ -107,20 +109,6 @@ export const Header = () => {
                                     Contact
                                 </Link>
                             </li>
-                            <div className="flex z-10 flex-col justify-center items-center md:hidden pt-5 gap-2">
-                                <div className="flex flex-row gap-2 items-center">
-                                    <FaPhoneAlt className="text-white-200 text-xs" />
-                                    <span className=" text-white-200 text-xs">
-                                        (+33) 7.44.89.08.31
-                                    </span>
-                                </div>
-                                <div className="flex flex-row gap-2 items-center">
-                                    <IoIosMail className="text-white-200 text-xs" />
-                                    <span className="text-white-200 text-xs">
-                                        matweb_innovation@icloud.com
-                                    </span>
-                                </div>
-                            </div>
                         </ul>
                     </nav>
                 </div>
