@@ -83,7 +83,7 @@ const defaultProps: SEOProps = {
         siteName: "MatWeb Innovation",
         images: [
             {
-                url: "",
+                url: "/LogoWhite.webp",
                 width: 1200,
                 height: 630,
                 alt: "Vachet Matthieu - Developpeur Freelance indépendant",
@@ -101,7 +101,7 @@ const defaultProps: SEOProps = {
         siteName: "MatWeb Innovation",
         images: [
             {
-                url: "",
+                url: "/LogoWhite.webp",
                 width: 1200,
                 height: 630,
                 alt: "Vachet Matthieu - Developpeur Freelance indépendant",
@@ -125,9 +125,9 @@ const defaultProps: SEOProps = {
                 "@type": "PostalAddress",
                 streetAddress: "10 rue de Marle",
                 addressLocality: "Puisieux et Clanlieu",
-                addressCountry: "FR",
                 addressRegion: "Haut de France",
                 postalCode: "02120",
+                addressCountry: "France",
             },
             openingHoursSpecification: [
                 {
@@ -139,6 +139,8 @@ const defaultProps: SEOProps = {
             ],
             contactType: "customer service",
         },
+        priceRange: "€€",
+        image: "/LogoWhite.webp",
     },
 };
 

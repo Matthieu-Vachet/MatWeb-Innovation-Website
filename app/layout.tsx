@@ -14,13 +14,14 @@ export default function RootLayout({
     return (
         <html lang="fr">
             <head>
-                <meta charSet="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta
                     name="google-site-verification"
                     content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ"
                 />
-                <SEO />
+                <SEO
+                    title="MatWeb Innovation"
+                    description="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS."
+                />
             </head>
             <body className={GeistSans.className}>
                 <ThemeProvider
