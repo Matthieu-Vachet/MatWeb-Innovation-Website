@@ -76,7 +76,7 @@ const defaultProps: SEOProps = {
         "creative developer portfolio",
     ],
     openGraph: {
-        title: "Vachet Matthieu - Developpeur Freelance indépendant",
+        title: "Vachet Matthieu Developpeur Freelance indépendant",
         description:
             "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
         url: "https://mat-web-innovation-website.vercel.app/",
@@ -119,23 +119,24 @@ const defaultProps: SEOProps = {
         logo: "/LogoWhite.webp",
         contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+33-7-44-89-08-31",
+            telephone: "+33744890831",
             email: "matweb_innovation@icloud.com",
             address: {
                 "@type": "PostalAddress",
                 streetAddress: "10 rue de Marle",
                 addressLocality: "Puisieux et Clanlieu",
+                addressCountry: "FR",
                 addressRegion: "Haut de France",
-                addressCountry: "France",
                 postalCode: "02120",
             },
-            openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: {
-                    "@type": "DayOfWeek",
-                    name: "Lundi au Dimanche",
+            openingHoursSpecification: [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    opens: "09:00",
+                    closes: "18:00",
                 },
-            },
+            ],
             contactType: "customer service",
         },
     },
