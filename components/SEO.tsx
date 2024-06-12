@@ -219,8 +219,11 @@ const SEO: React.FC<SEOProps> = (props) => {
                 <meta name="revisit-after" content="1 days" />
 
                 {/* Balises outils verification */}
-                {/* <meta name="google-site-verification" content="VotreCodeDeVérificationGoogle" />
-                <meta name="msvalidate.01" content="VotreCodeDeVérificationBing" /> */}
+                <meta
+                    name="google-site-verification"
+                    content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ"
+                />
+                {/* <meta name="msvalidate.01" content="VotreCodeDeVérificationBing" />  */}
             </Head>
             {seo.structuredData && <JSONLD data={seo.structuredData} />}
         </>
