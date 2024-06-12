@@ -49,7 +49,7 @@ export const Header = () => {
                         priority
                         className="w-8 h-8 md:w-10 md:h-10"
                     />
-                    <p>Matweb-Innovation</p>
+                    <p className="hidden md:flex">Matweb-Innovation</p>
                 </Link>
 
                 <div
