@@ -90,26 +90,6 @@
     }
 }
 
-.h1-animated {
-    display: inline-block;
-    white-space: nowrap;
-}
-
-.animated-title-span {
-    display: inline-block;
-    overflow: hidden;
-}
-
-.no-visible-scrollbar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-}
-
-.no-visible-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
 .text-gradient {
     background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
     background-clip: text;
