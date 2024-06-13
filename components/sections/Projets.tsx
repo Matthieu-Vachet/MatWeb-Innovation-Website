@@ -91,6 +91,7 @@ const Projets = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex justify-center items-center text-center gap-2 "
+                                        aria-label="Lien vers le projet"
                                     >
                                         <FaGithub className="ms-2" color="white" fontSize={30} />
                                         <FaGlobe className="ms-2" color="white" fontSize={30} />

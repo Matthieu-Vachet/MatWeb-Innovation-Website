@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 
-import { Spotlight } from "@/components/ui/Spotlight";
 import MagicButton from "@/components/MagicButton";
 import { socialMedias } from "@/data/Hero-data";
 import TopToScroll from "@/components/TopToScroll";
@@ -11,13 +10,6 @@ import TopToScroll from "@/components/TopToScroll";
 const Hero = () => {
     return (
         <section id="Home" className="pb-0 pt-0 px-4 bg-gradient-to-b from-purple-100 to-black-100">
-            <div>
-                <Spotlight
-                    className=" -top-40 -left-10 md:-left-32 md:-top-20 h-screen "
-                    fill="white"
-                />
-                <Spotlight className=" top-10 left-80 h-[50vh] w-[70vw]" fill="white" />
-            </div>
             {/* Background Grid */}
             <div className="h-[80vh]  w-full bg-grid-white/[0.03] flex items-center justify-center absolute top-0 left-0 mt-0 mb-0 pt-0 pb-0">
                 <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-gradient-to-b from-purple-100 to-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,purple)]" />
@@ -35,9 +27,9 @@ const Hero = () => {
                         </span>
                     </h1>
 
-                    <p className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+                    <h2 className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
                         Création de site et d&apos;application Web
-                    </p>
+                    </h2>
                     <div className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
                         <p>Vitrine, Landing-Page, Portfolio, E-commerce</p>
                     </div>

@@ -36,7 +36,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
     const minContrastRatio = theme === "dark" ? 2 : 1.2;
 
-    const renderedIcon = renderSimpleIcon({
+    return renderSimpleIcon({
         icon,
         bgHex,
         fallbackHex,
@@ -49,9 +49,6 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
             onClick: (e: any) => e.preventDefault(),
         },
     });
-
-    // Wrap the rendered icon in a div
-    return <div>{renderedIcon}</div>;
 };
 
 export type DynamicCloudProps = {

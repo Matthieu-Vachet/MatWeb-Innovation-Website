@@ -44,8 +44,8 @@ export const Header = () => {
                     <Image
                         src="/LogoWhite.webp"
                         alt="Logo Matweb-innovation développeur web indépendant"
-                        width={50}
-                        height={50}
+                        width={64}
+                        height={72}
                         priority
                         className="w-8 h-8 md:w-10 md:h-10"
                     />
