@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SEO from "@/components/SEO";
+import Head from "next/head";
 
 import "./globals.css";
 
@@ -12,14 +13,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fr" suppressHydrationWarning>
-            <head>
+        <>
+            <Head>
+                <html lang="fr" />
                 <meta
                     name="google-site-verification"
                     content="1wXC-Kpw6ZNjYoRbmTe9K2ZEh4TSae17-heUzCXq_sQ"
                 />
                 <SEO />
-            </head>
+            </Head>
             <body className={GeistSans.className}>
                 <ThemeProvider
                     attribute="class"
@@ -33,6 +35,6 @@ export default function RootLayout({
                     {children}
                 </ThemeProvider>
             </body>
-        </html>
+        </>
     );
 }
