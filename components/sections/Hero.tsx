@@ -17,7 +17,7 @@ const Hero = () => {
         >
             <div className="w-screen h-full flex flex-col justify-center items-center text-center">
                 <Image
-                    src="/bg-back.png"
+                    src="/bg-back.webp"
                     alt="Image background hero"
                     width={1000}
                     height={1000}
