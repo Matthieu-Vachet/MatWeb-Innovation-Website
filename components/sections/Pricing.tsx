@@ -32,13 +32,13 @@ const Pricing = () => {
                             <ellipse
                                 cx={604}
                                 cy={512}
-                                fill="url(#6d1bd035-0dd1-437e-93fa-59d316231eb0)"
+                                fill="url(#id6d1bd035-0dd1-437e-93fa-59d316231eb0)"
                                 rx={604}
                                 ry={512}
                             />
                             <defs>
-                                <radialGradient id="6d1bd035-0dd1-437e-93fa-59d316231eb0">
-                                    <stop stopColor="#905BF4" />
+                                <radialGradient id="id6d1bd035-0dd1-437e-93fa-59d316231eb0">
+                                    <stop offset={0} stopColor="#905BF4" />
                                     <stop offset={1} stopColor="#594199" />
                                 </radialGradient>
                             </defs>
@@ -56,7 +56,7 @@ const Pricing = () => {
                                     >
                                         <div>
                                             <div className="flex gap-2 flex-col items-center">
-                                                <h3
+                                                <div
                                                     id={tier.id}
                                                     className="text-xl font-semibold leading-7 text-purple"
                                                 >
@@ -67,7 +67,7 @@ const Pricing = () => {
                                                             second: "#FE8FB5",
                                                         }}
                                                     />
-                                                </h3>
+                                                </div>
                                                 <span className="text-sm text-white-100/50">
                                                     {tier.details}
                                                 </span>
@@ -169,7 +169,7 @@ const Pricing = () => {
                                         </p>
                                         <a
                                             href="#Formulaire"
-                                            aria-describedby="Boutton de contact"
+                                            aria-label="Boutton de contact"
                                             className="uppercase mt-8 block rounded-md bg-purple px-3.5 py-2 text-center text-lg font-semibold leading-6 text-white shadow-sm hover:bg-purple-700/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-700/90 transition-all duration-200"
                                         >
                                             Me contacter

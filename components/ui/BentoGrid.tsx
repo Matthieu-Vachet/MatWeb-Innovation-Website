@@ -4,7 +4,6 @@ import Image from "next/image";
 import { cn } from "@/utils/cn";
 
 import RetroGrid from "./RetroGrid";
-import Globe from "./Globe";
 import Ripple from "./Ripple";
 import { VelocityScroll } from "./ScrollVelocity";
 
@@ -98,7 +97,6 @@ export const BentoGridItem = ({
                         <Ripple />
                     </div>
                 )}
-                {/* {id === 3 && <Globe className="top-10 opacity-40" />} */}
 
                 <div
                     className={cn(
