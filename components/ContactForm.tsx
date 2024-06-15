@@ -187,7 +187,7 @@ export function ContactForm() {
                             className="text-lg"
                             id="firstname"
                             name="firstname"
-                            placeholder="Tyler"
+                            placeholder="Vachet"
                             type="text"
                             value={firstName}
                             onChange={handleChange}
@@ -202,7 +202,7 @@ export function ContactForm() {
                             className="text-lg"
                             id="lastname"
                             name="lastname"
-                            placeholder="Durden"
+                            placeholder="Matthieu"
                             type="text"
                             value={lastName}
                             onChange={handleChange}
@@ -233,7 +233,7 @@ export function ContactForm() {
                         className="text-lg"
                         id="Sujets"
                         name="sujet"
-                        placeholder="Demande de devis"
+                        placeholder="Votre sujet"
                         type="text"
                         value={sujet}
                         onChange={handleChange}
@@ -248,7 +248,7 @@ export function ContactForm() {
                         className="text-lg"
                         id="message"
                         name="message"
-                        placeholder="Bonjour, je voudrais ..."
+                        placeholder="Votre message"
                         value={message}
                         onChange={handleChange}
                         aria-label="message"

@@ -40,7 +40,7 @@ const Projets = () => {
                                     style={{ backgroundColor: "#13162D" }}
                                 >
                                     <Image
-                                        src="/bg.png"
+                                        src="/bg.webp"
                                         alt="Image de fond photo des projets"
                                         width={400}
                                         height={250}
@@ -53,7 +53,7 @@ const Projets = () => {
                                     width={350}
                                     height={230}
                                     loading="lazy"
-                                    className="z-10 absolute bottom-0 rounded-sm "
+                                    className="z-10 absolute bottom-0 rounded-sm"
                                 />
                             </div>
                             <h1 className="font-bold lg:text-1xl text-xl  line-clamp-1">
