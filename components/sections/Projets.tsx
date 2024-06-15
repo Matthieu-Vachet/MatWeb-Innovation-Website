@@ -20,10 +20,10 @@ const Projets = () => {
                 <Features.Main
                     title="Projets"
                     text={
-                        <p>
+                        <>
                             Une partie de{" "}
                             <span className="text-purple uppercase font-bold">mes projets</span>
-                        </p>
+                        </>
                     }
                 />
             </Features>

@@ -21,10 +21,10 @@ const Service = () => {
                 <Features.Main
                     title="Service"
                     text={
-                        <p>
+                        <>
                             Des prestations adaptées à{" "}
                             <span className="text-purple uppercase font-bold">vos besoins</span>
-                        </p>
+                        </>
                     }
                 />
             </Features>

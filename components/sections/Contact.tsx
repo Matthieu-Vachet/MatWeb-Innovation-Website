@@ -20,14 +20,14 @@ const Contact = () => {
                 <Features.Main
                     title="Contactez-moi"
                     text={
-                        <p>
+                        <>
                             Une idée ? Un Projet ? N&apos;hésitez pas à{" "}
                             <span className="text-blue font-bold uppercase">demander un devis</span>{" "}
                             <span className="font-bold uppercase text-white underline">
                                 GRATUIT
                             </span>{" "}
                             !
-                        </p>
+                        </>
                     }
                 />
             </Features>
