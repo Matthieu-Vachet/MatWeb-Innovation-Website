@@ -14,9 +14,16 @@ const MagicButton = ({
     otherClasses?: string;
 }) => {
     return (
-        <button
+        <div
+            role="button"
+            tabIndex={0}
             className="relative inline-flex h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none"
             onClick={handleClick}
+            onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    handleClick?.();
+                }
+            }}
         >
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
             <span
@@ -27,7 +34,7 @@ const MagicButton = ({
                 {title}
                 {position === "right" && icon}
             </span>
-        </button>
+        </div>
     );
 };
 

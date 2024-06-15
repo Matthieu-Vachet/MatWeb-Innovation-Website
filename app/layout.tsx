@@ -176,9 +176,7 @@ export default function RootLayout({
         <>
             <html lang="fr" suppressHydrationWarning>
                 <head>
-                    <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta name="next-size-adjust" content="" />
                     <meta name="author" content="Matthieu Vachet" />
                     <meta name="owner" content="Matthieu Vachet" />
                     <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />
