@@ -19,7 +19,7 @@ const Pricing = () => {
             <Features color="89, 65, 153" colorDark="89, 65, 153">
                 <Features.Main
                     title="Mes Tarifs"
-                    text={<p>Deux Tarif unique pour un site de qualité !</p>}
+                    text={<>Deux Tarif unique pour un site de qualité !</>}
                 />
             </Features>
             <div className=" mx-auto max-w-[100vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-48 md:mt-20 ">

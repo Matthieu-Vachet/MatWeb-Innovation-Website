@@ -88,12 +88,6 @@ export const metadata: Metadata = {
             url: "/favicon/favicon-256x256.png",
         },
         {
-            rel: "android-icon",
-            type: "image/png",
-            sizes: "192x192",
-            url: "/favicon/android-icon-192x192.png",
-        },
-        {
             rel: "apple-touch-icon",
             sizes: "57x57",
             url: "/favicon/apple-icon-57x57.png",
@@ -139,6 +133,7 @@ export const metadata: Metadata = {
             url: "/favicon/apple-icon-180x180.png",
         },
     ],
+
     category: "Web Development",
     openGraph: {
         title: "Vachet Matthieu - Developpeur Freelance indépendant",
@@ -183,6 +178,7 @@ export default function RootLayout({
                 <head>
                     <meta charSet="utf-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta name="next-size-adjust" content="" />
                     <meta name="author" content="Matthieu Vachet" />
                     <meta name="owner" content="Matthieu Vachet" />
                     <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { socialMedias } from "@/data/Hero-data";
 
@@ -33,20 +34,20 @@ const Hero = () => {
                             Matthieu Vachet
                         </p>
 
-                        <h1 className="text-center font-semibold text-3xl md:text-5xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] lg:max-w-[75vw]">
+                        <h1 className="text-center font-semibold text-3xl md:text-5xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
                             Développeur Web Front-End{" "}
                             <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
                                 Indépendant
                             </span>
                         </h1>
 
-                        <h2 className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+                        <h2 className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                             Création de site et d&apos;application Web
                         </h2>
-                        <div className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+                        <div className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:300ms]">
                             <p>Vitrine, Landing-Page, Portfolio, E-commerce</p>
                         </div>
-                        <div className="flex items-center justify-center gap-5 mt-10 rounded-lg translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
+                        <div className="flex items-center justify-center gap-5 mt-10 rounded-lg translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
                             {socialMedias.map((media) => (
                                 <a
                                     key={media.id}
@@ -66,15 +67,15 @@ const Hero = () => {
                                 </a>
                             ))}
                         </div>
-                        <a
-                            href="#Contact"
-                            className="mt-10 lg:hover:scale-110 duration-200 transition-all translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]"
+                        <Link
+                            href="#Formulaire"
+                            className="mt-10 lg:hover:scale-110 duration-200 transition-all translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                         >
                             <MagicButton title="Me contacter" position="left" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
-                <div className="flex flex-col w-full items-center mt-20 lg:mt-32 z-10 bg-transparent animate-fade-in opacity-0 [--animation-delay:1300ms]   ">
+                <div className="flex flex-col w-full items-center mt-20 lg:mt-32 z-10 bg-transparent animate-fade-in opacity-0 [--animation-delay:600ms]   ">
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>
