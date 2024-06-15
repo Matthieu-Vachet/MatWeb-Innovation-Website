@@ -36,6 +36,20 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
     const minContrastRatio = theme === "dark" ? 2 : 1.2;
 
+    const iconUrls: { [key: string]: string } = {
+        typescript: "https://www.typescriptlang.org/",
+        react: "https://reactjs.org/",
+        nodedotjs: "https://nodejs.org/",
+        express: "https://expressjs.com/",
+        nextdotjs: "https://nextjs.org/",
+        vercel: "https://vercel.com/",
+        redux: "https://redux.js.org/",
+        vite: "https://vitejs.dev/",
+        tailwindcss: "https://tailwindcss.com/",
+        framer: "https://www.framer.com/",
+        javascript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    };
+
     return renderSimpleIcon({
         icon,
         bgHex,
@@ -43,9 +57,9 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
         minContrastRatio,
         size: 42,
         aProps: {
-            href: undefined,
-            target: undefined,
-            rel: undefined,
+            href: iconUrls[icon.slug],
+            target: "_blank",
+            rel: "noopener noreferrer",
             onClick: (e: any) => e.preventDefault(),
         },
     });
