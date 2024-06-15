@@ -1,15 +1,21 @@
 "use client";
+
 import React from "react";
+
 import { BoxReveal } from "@/components/ui/BoxReveal";
 import { ContactForm } from "@/components/ContactForm";
 import { Features } from "@/components/feature";
+
 import { IoIosPin } from "react-icons/io";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoMailSharp, IoTime, IoPerson } from "react-icons/io5";
 
 const Contact = () => {
     return (
-        <section id="Contact" className="bg-black-100">
+        <section
+            id="Contact"
+            className="bg-gradient-to-b from-black-100 via-blue-100/15 to-black-100"
+        >
             <Features color="40,87,255" colorDark="48,58,117">
                 <Features.Main
                     title="Contactez-moi"
@@ -27,9 +33,9 @@ const Contact = () => {
             </Features>
             {/* Titre Tablette / Desktop */}
             <div className="flex mt-10">
-                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[95vw] lg:max-w-[70vw] imac:max-w-[60vw] mx-auto px-4 -mt-[10rem] md:-mt-[17rem]">
+                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto px-4 -mt-[10rem] md:-mt-[17rem]">
                     {/* Conteneur pour le BoxReveal */}
-                    <div className="w-full md:w-[50%] flex flex-col z-50 lg:pl-10">
+                    <div className="w-full md:w-[50%] flex flex-col z-50 lg:pl-10 gap-5">
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <p className="text-3xl font-semibold lg:text-5xl">
                                 Contact<span className="text-[#6062e8]">.</span>
@@ -37,7 +43,7 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1.5rem] lg:mt-[2rem] text-xl lg:text-2xl font-normal text-white-100">
+                                <h2 className="flex items-center gap-2 mt-[1.5rem] lg:mt-[2rem] text-xl lg:text-2xl text-white-100">
                                     <IoIosPin />
                                     Adresse :
                                 </h2>
@@ -48,7 +54,7 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100 font-normal">
+                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <BsFillTelephoneFill />
                                     Téléphone
                                 </h2>
@@ -59,7 +65,7 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl font-normal text-white-100">
+                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <IoMailSharp />
                                     E-Mail
                                 </h2>
@@ -70,7 +76,7 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl font-normal text-white-100">
+                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <IoTime />
                                     Horaires
                                 </h2>
@@ -82,7 +88,7 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className=" flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl font-normal text-white-100">
+                                <h2 className=" flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <IoPerson />
                                     S.I.R.E.N
                                 </h2>
@@ -90,7 +96,7 @@ const Contact = () => {
                             </div>
                         </BoxReveal>
                     </div>
-                    <div className="w-full md:w-[50%] z-50 sm:px-0">
+                    <div id="Formulaire" className="w-full md:w-[50%] z-50 sm:px-0">
                         <ContactForm />
                     </div>
                 </div>

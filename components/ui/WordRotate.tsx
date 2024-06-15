@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 interface WordRotateProps {
     words: string[];
@@ -29,7 +29,6 @@ export default function WordRotate({
             setIndex((prevIndex) => (prevIndex + 1) % words.length);
         }, duration);
 
-        // Clean up interval on unmount
         return () => clearInterval(interval);
     }, [words, duration]);
 

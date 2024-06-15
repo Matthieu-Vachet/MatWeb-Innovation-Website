@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+"use strict";
+
+import React, { useState, useEffect } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { PiNotePencilFill, PiCoffeeBold, PiPencil, PiCodeBold } from "react-icons/pi";
 import { BsSendCheck } from "react-icons/bs";
@@ -20,15 +23,32 @@ export const HoverEffect = ({
     className?: string;
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [visibleItems, setVisibleItems] = useState<number>(0);
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            const timer = setInterval(() => {
+                setVisibleItems((items) => items + 1);
+            }, 50);
+            return () => clearInterval(timer);
+        }
+    }, [inView]);
 
     return (
-        <div className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3", className)}>
-            {items.map((item, idx) => (
-                <div
+        <div className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3", className)} ref={ref}>
+            {items.slice(0, visibleItems).map((item, idx) => (
+                <motion.div
                     key={idx}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
+                    initial={{ opacity: 0, y: "1em" }}
+                    animate={{ opacity: inView ? 1 : 0, y: "0em" }}
+                    transition={{ delay: idx * 0.3, ease: "easeOut" }}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
@@ -72,7 +92,7 @@ export const HoverEffect = ({
                         <CardSubtitle>{item.subtitle}</CardSubtitle>
                         <CardDescription>{item.description}</CardDescription>
                     </Card>
-                </div>
+                </motion.div>
             ))}
         </div>
     );
@@ -88,7 +108,7 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-glass-gradient border border-white/[0.2] group-hover:border-slate-700 relative z-50 shadow-[0px_5px_50px_0px_rgba(165,_39,_255,_0.30)] ",
+                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-glass-gradient border border-white/[0.2] group-hover:border-white-200/50 relative z-50 shadow-[0px_5px_50px_0px_rgba(49,35,85,_0.50)] ",
                 className,
             )}
         >
@@ -132,7 +152,7 @@ export const CardSubtitle = ({
     return (
         <p
             className={cn(
-                " text-center text-purple-200 text-2xl font-normal tracking-wide mt-4",
+                " text-center text-purple text-2xl font-normal tracking-wide mt-4",
                 className,
             )}
         >

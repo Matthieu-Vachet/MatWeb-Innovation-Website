@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import { cn } from "@/utils/cn";
 
 import RetroGrid from "./RetroGrid";
@@ -117,7 +118,7 @@ export const BentoGridItem = ({
                     {id === 4 && (
                         <VelocityScroll
                             text="Large Desktop - Desktop - Tablette - Mobile - "
-                            default_velocity={2}
+                            default_velocity={1}
                             className="flex items-center pb-5 text-5xl font-bold tracking-[-0.02em] drop-shadow-sm text-white-200 opacity-30"
                         />
                     )}
