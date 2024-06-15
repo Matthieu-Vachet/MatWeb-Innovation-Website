@@ -1,6 +1,5 @@
 "use client";
 
-// feature.tsx
 import React from "react";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";

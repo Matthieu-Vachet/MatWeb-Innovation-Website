@@ -33,7 +33,8 @@ const config = {
             colors: {
                 black: {
                     DEFAULT: "#000",
-                    100: "#000319",
+                    // 100: "#000319",
+                    100: "#000",
                     200: "rgba(17, 25, 40, 0.75)",
                     300: "rgba(255, 255, 255, 0.125)",
                 },
@@ -46,8 +47,16 @@ const config = {
                     DEFAULT: "#905BF4",
                     100: "#0F032D",
                     200: "#4E2BCC",
+                    300: "#312355", // Section "Service",
+                    400: "#3B2A66", // Section "Competences",
+                    500: "#453277", // Section "Projets",
+                    600: "#4F3988", // Section "About",
+                    700: "#594199", // Section "Pricing",
                 },
-                blue: "#6062e8",
+                blue: {
+                    DEFAULT: "#6062e8",
+                    100: "#303A75", // Section "Contact",
+                },
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

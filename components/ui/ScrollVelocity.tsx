@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/utils/cn";
 import { wrap } from "@motionone/utils";
 import {
@@ -11,7 +12,6 @@ import {
     useTransform,
     useVelocity,
 } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
 
 interface VelocityScrollProps {
     text: string;
@@ -25,7 +25,7 @@ interface ParallaxProps {
     className?: string;
 }
 
-export function VelocityScroll({ text, default_velocity = 5, className }: VelocityScrollProps) {
+export function VelocityScroll({ text, default_velocity = 1, className }: VelocityScrollProps) {
     function ParallaxText({ children, baseVelocity = 100, className }: ParallaxProps) {
         const baseX = useMotionValue(0);
         const { scrollY } = useScroll();

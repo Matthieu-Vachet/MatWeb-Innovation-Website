@@ -1,24 +1,24 @@
-import { socialMedias } from "@/data/Hero-data";
 import Image from "next/image";
+
+import { socialMedias } from "@/data/Hero-data";
 
 const Footer = () => {
     return (
-        <footer className="w-full pt-28 pb-10" id="contact">
-            {/* background grid */}
-            <div className="w-full absolute left-0 -bottom-72 min-h-96">
+        <footer className=" relative w-full pt-28 pb-5 " id="contact">
+            <div className="w-full absolute left-0 bottom-0 min-h-96">
                 <Image
                     src="/footer-grid.svg"
                     alt="grid"
                     width={100}
                     height={100}
                     loading="lazy"
-                    className="w-full h-full opacity-50 "
+                    className="w-full h-screen opacity-70 "
                 />
             </div>
 
-            <div className="flex flex-col items-center lg:max-w-[45vw] mx-auto">
+            <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto">
                 <h1 className="text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-4xl [.is-visible_&]:translate-y-0 ">
-                    Développeur <span className="text-purple">Informatique</span> Indépendant
+                    Développeur <span className="text-blue">Informatique</span> Indépendant
                 </h1>
                 <p className="bg-clip-text text-center text-lg [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-lg [.is-visible_&]:translate-y-0 mt-14">
                     Développeur Web front-end freelance, je suis à votre disposition pour répondre à

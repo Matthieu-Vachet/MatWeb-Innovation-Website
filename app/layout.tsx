@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "./provider";
-import { GeistSans } from "geist/font/sans";
+
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import RichSnippet from "./RichSnippet";
+import { GeistSans } from "geist/font/sans";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://mat-web-innovation-website.vercel.app/"),
     title: "MatWeb Innovation",
     description:
         "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
@@ -16,9 +19,6 @@ export const metadata: Metadata = {
     keywords: [
         "Matweb-Innovation, Matweb innovation, Matthieu Vachet, Vachet, freelance, developpeur, developer, intégrateur, freelance developer, developpeur freelance, frontend, nextjs, tailwind, react, frontend developer, developpeur frontend, creative, creative developer, tech, france, aisne, développeur freelance Aisne, software developer, portfolio, landing page, frontend developer portfolio, developpeur frontend portfolio, creative developer portfolio",
     ],
-    themeColor: "#000000",
-    colorScheme: "dark",
-    viewport: "width=device-width, initial-scale=1",
     robots: {
         index: true,
         follow: true,
@@ -181,6 +181,8 @@ export default function RootLayout({
         <>
             <html lang="fr" suppressHydrationWarning>
                 <head>
+                    <meta charSet="utf-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta name="author" content="Matthieu Vachet" />
                     <meta name="owner" content="Matthieu Vachet" />
                     <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />

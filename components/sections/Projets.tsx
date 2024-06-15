@@ -1,17 +1,22 @@
 "use client";
 
 import React from "react";
-import { PinContainer } from "../ui/Pin";
-import { FaGithub, FaGlobe } from "react-icons/fa6";
 import Image from "next/image";
+
+import { FaGithub, FaGlobe } from "react-icons/fa6";
+
+import { PinContainer } from "../ui/Pin";
 import { Features } from "@/components/feature";
 
 import { projets } from "@/data/Projets-data";
 
 const Projets = () => {
     return (
-        <section id="Projets" className="bg-black-100">
-            <Features color="204,107,254" colorDark="53,20,100">
+        <section
+            id="Projets"
+            className="bg-gradient-to-b from-black-100 via-purple-500/15 to-black-100"
+        >
+            <Features color="69, 50, 119" colorDark="69, 50, 119">
                 <Features.Main
                     title="Projets"
                     text={
@@ -22,11 +27,11 @@ const Projets = () => {
                     }
                 />
             </Features>
-            <div className="flex flex-wrap items-center justify-center gap-24 max-w-[90vw] lg:max-w-[80vw] imac:max-w-[75vw] mx-auto -mt-[8rem] md:-mt-[15rem] ">
-                {projets.map((item) => (
+            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-24 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[75vw] mx-auto -mt-[8rem] md:-mt-[15rem] ">
+                {projets.map((item, idx) => (
                     <div
                         className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "
-                        key={item.id}
+                        key={idx}
                     >
                         <PinContainer title={item.title} href={item.link}>
                             <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-auto mb-10 rounded-xl   ">
@@ -46,9 +51,9 @@ const Projets = () => {
                                     src={item.img}
                                     alt="cover"
                                     width={350}
-                                    height={200}
+                                    height={230}
                                     loading="lazy"
-                                    className="z-10 absolute bottom-0 rounded-sm"
+                                    className="z-10 absolute bottom-0 rounded-sm "
                                 />
                             </div>
                             <h1 className="font-bold lg:text-1xl text-xl  line-clamp-1">

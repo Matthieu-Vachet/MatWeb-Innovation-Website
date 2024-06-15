@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from "react";
-import { Header } from "@/components/Header";
-import { Toaster } from "sonner";
 
+import { Header } from "@/components/Header";
 import Hero from "@/components/sections/Hero";
+const Pricing = lazy(() => import("@/components/sections/Pricing"));
 const Service = lazy(() => import("@/components/sections/Service"));
 const Competences = lazy(() => import("@/components/sections/Competences"));
 const Projets = lazy(() => import("@/components/sections/Projets"));
@@ -10,12 +10,7 @@ const About = lazy(() => import("@/components/sections/About"));
 const Contact = lazy(() => import("@/components/sections/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
 
-// import Service from "@/components/sections/Service";
-// import Projets from "@/components/sections/Projets";
-// import Competences from "@/components/sections/Competences";
-// import About from "@/components/sections/About";
-// import Contact from "@/components/sections/Contact";
-// import Footer from "@/components/Footer";
+import { Toaster } from "sonner";
 
 const Loader = () => (
     <div className="flex justify-center items-center h-full">
@@ -25,9 +20,9 @@ const Loader = () => (
 
 export default function Home() {
     return (
-        <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto">
+        <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto">
             {/* <PreLoader /> */}
-            <div className="w-full">
+            <div className="w-full h-full">
                 <Header />
                 <Hero />
                 <Suspense fallback={<Loader />}>
@@ -35,6 +30,7 @@ export default function Home() {
                     <Competences />
                     <Projets />
                     <About />
+                    <Pricing />
                     <Contact />
                     <Footer />
                 </Suspense>
