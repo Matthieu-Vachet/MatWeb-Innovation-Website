@@ -75,7 +75,7 @@ const Hero = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col w-full items-center mt-20 lg:mt-32 z-10 bg-transparent animate-fade-in opacity-0 [--animation-delay:600ms]   ">
+                <div className="flex flex-col w-full items-center mt-20 lg:mt-32 z-10 bg-transparent">
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>
