@@ -28,25 +28,23 @@ const Service = () => {
                     }
                 />
             </Features>
-            <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[100vw] imac:max-w-[70vw] -mt-[8rem] md:-mt-[15rem]">
-                <AnimatedElement className="" delay={0.4} duration={0.6}>
-                    <BentoGrid className="relative w-full z-100 ">
-                        {items.map((item, i) => (
-                            <BentoGridItem
-                                id={item.id}
-                                key={i}
-                                title={item.title}
-                                description={item.description}
-                                className={item.className}
-                                icon={item.icon}
-                                img={item.img}
-                                imgClassName={item.imgClassName}
-                                titleClassName={item.titleClassName}
-                                spareImg={item.spareImg}
-                            />
-                        ))}
-                    </BentoGrid>
-                </AnimatedElement>
+            <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[90vw] imac:max-w-[70vw] -mt-[8rem] md:-mt-[15rem]">
+                <BentoGrid className="relative w-full z-100 ">
+                    {items.map((item, i) => (
+                        <BentoGridItem
+                            id={item.id}
+                            key={i}
+                            title={item.title}
+                            description={item.description}
+                            className={item.className}
+                            icon={item.icon}
+                            img={item.img}
+                            imgClassName={item.imgClassName}
+                            titleClassName={item.titleClassName}
+                            spareImg={item.spareImg}
+                        />
+                    ))}
+                </BentoGrid>
                 <AnimatedElement delay={0.4} duration={0.6}>
                     <h2 className=" w-full text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-20 lg:mt-36 mb-28 md:mb-40 flex flex-col">
                         Processus de Conception et Développement <br />

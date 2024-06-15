@@ -1,9 +1,8 @@
 "use strict";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 import { PiNotePencilFill, PiCoffeeBold, PiPencil, PiCodeBold } from "react-icons/pi";
 import { BsSendCheck } from "react-icons/bs";
@@ -23,32 +22,15 @@ export const HoverEffect = ({
     className?: string;
 }) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-    const [visibleItems, setVisibleItems] = useState<number>(0);
-
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-    });
-
-    useEffect(() => {
-        if (inView) {
-            const timer = setInterval(() => {
-                setVisibleItems((items) => items + 1);
-            }, 50);
-            return () => clearInterval(timer);
-        }
-    }, [inView]);
 
     return (
-        <div className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3", className)} ref={ref}>
-            {items.slice(0, visibleItems).map((item, idx) => (
-                <motion.div
+        <div className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3", className)}>
+            {items.map((item, idx) => (
+                <div
                     key={idx}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
-                    initial={{ opacity: 0, y: "1em" }}
-                    animate={{ opacity: inView ? 1 : 0, y: "0em" }}
-                    transition={{ delay: idx * 0.3, ease: "easeOut" }}
                 >
                     <AnimatePresence>
                         {hoveredIndex === idx && (
@@ -92,7 +74,7 @@ export const HoverEffect = ({
                         <CardSubtitle>{item.subtitle}</CardSubtitle>
                         <CardDescription>{item.description}</CardDescription>
                     </Card>
-                </motion.div>
+                </div>
             ))}
         </div>
     );

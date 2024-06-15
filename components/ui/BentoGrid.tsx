@@ -98,7 +98,7 @@ export const BentoGridItem = ({
                         <Ripple />
                     </div>
                 )}
-                {id === 3 && <Globe className="top-10 opacity-40" />}
+                {/* {id === 3 && <Globe className="top-10 opacity-40" />} */}
 
                 <div
                     className={cn(
