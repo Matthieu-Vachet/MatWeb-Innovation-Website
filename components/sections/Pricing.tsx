@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 import { Features } from "@/components/feature";
 import SparklesText from "@/components/ui/SparkleTexte";
+import MagicButton from "../MagicButton";
 
 import { tiers } from "@/data/Pricing-data";
 
@@ -112,14 +114,16 @@ const Pricing = () => {
                                                 ))}
                                             </ul>
                                         </div>
-
-                                        <a
+                                        <Link
                                             href="#Formulaire"
                                             aria-describedby={tier.id}
-                                            className="uppercase mt-8 block rounded-md bg-purple px-3.5 py-2 text-center text-md font-semibold leading-6 text-white hover:text-purple shadow-sm hover:bg-white-200 transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-700/90"
+                                            className="mt-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] text-center"
                                         >
-                                            Demander un devis
-                                        </a>
+                                            <MagicButton
+                                                title="Demander un devis"
+                                                position="left"
+                                            />
+                                        </Link>
                                     </div>
                                 ))}
                                 <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center  dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]">
@@ -161,19 +165,19 @@ const Pricing = () => {
                                         <p className="uppercase mt-1 text-base leading-7 text-gray-200 ">
                                             Taux journalier moyen
                                         </p>
-                                        <p className="mt-1 text-gray-200 text-5xl font-semibold">
+                                        <p className="mt-1 mb-10 text-gray-200 text-5xl font-semibold">
                                             250€
                                             <span className="text-xl uppercase text-purple">
                                                 /jour
                                             </span>
                                         </p>
-                                        <a
+                                        <Link
                                             href="#Formulaire"
                                             aria-label="Boutton de contact"
-                                            className="uppercase mt-8 block rounded-md bg-purple px-3.5 py-2 text-center text-lg font-semibold leading-6 text-white hover:text-purple shadow-sm hover:bg-white-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-700/90 transition-all duration-200"
+                                            className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] text-center"
                                         >
-                                            Me contacter
-                                        </a>
+                                            <MagicButton title="Me contacter" position="left" />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

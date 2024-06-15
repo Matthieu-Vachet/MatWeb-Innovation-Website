@@ -177,6 +177,10 @@ export default function RootLayout({
             <html lang="fr" suppressHydrationWarning>
                 <head>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta
+                        name="description"
+                        content="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS."
+                    />
                     <meta name="author" content="Matthieu Vachet" />
                     <meta name="owner" content="Matthieu Vachet" />
                     <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />
