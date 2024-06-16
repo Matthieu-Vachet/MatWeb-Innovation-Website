@@ -30,7 +30,7 @@ const RichSnippet = () => {
             },
         },
         priceRange: "€€",
-        image: "/LogoWhite.webp",
+        image: "/OpengraphCard.png",
     };
 
     return (
