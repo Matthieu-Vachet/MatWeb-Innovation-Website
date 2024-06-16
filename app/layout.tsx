@@ -10,7 +10,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://mat-web-innovation-website.vercel.app/"),
+    metadataBase: new URL("https://matthieu-vachet-website.vercel.app/"),
     title: "MatWeb Innovation",
     description:
         "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
@@ -139,7 +139,7 @@ export const metadata: Metadata = {
         title: "Vachet Matthieu - Developpeur Freelance indépendant",
         description:
             "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
-        url: "https://mat-web-innovation-website.vercel.app/",
+        url: "https://matthieu-vachet-website.vercel.app/",
         siteName: "MatWeb Innovation",
         images: [
             {
