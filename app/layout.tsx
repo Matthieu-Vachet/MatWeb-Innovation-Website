@@ -10,7 +10,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://matthieu-vachet-website.vercel.app/"),
+    metadataBase: new URL("https://www.matthieu-vachet.fr/"),
     title: "MatWeb Innovation",
     description:
         "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
@@ -139,7 +139,7 @@ export const metadata: Metadata = {
         title: "Vachet Matthieu - Developpeur Freelance indépendant",
         description:
             "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
-        url: "https://matthieu-vachet-website.vercel.app/",
+        url: "https://www.matthieu-vachet.fr/",
         siteName: "MatWeb Innovation",
         images: [
             {
@@ -177,10 +177,6 @@ export default function RootLayout({
             <html lang="fr" suppressHydrationWarning>
                 <head>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta
-                        name="description"
-                        content="Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS."
-                    />
                     <meta name="author" content="Matthieu Vachet" />
                     <meta name="owner" content="Matthieu Vachet" />
                     <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />
