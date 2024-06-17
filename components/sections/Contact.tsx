@@ -43,10 +43,10 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1.5rem] lg:mt-[2rem] text-xl lg:text-2xl text-white-100">
+                                <p className="flex items-center gap-2 mt-[1.5rem] lg:mt-[2rem] text-xl lg:text-2xl text-white-100">
                                     <IoIosPin />
                                     Adresse :
-                                </h2>
+                                </p>
                                 <p className="text-[#6062e8] text-lg lg:text-xl">
                                     10, Rue de Marle 02120 Puisieux et Clanlieu
                                 </p>
@@ -54,10 +54,10 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
+                                <p className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <BsFillTelephoneFill />
                                     Téléphone
-                                </h2>
+                                </p>
                                 <p className="text-[#6062e8] text-lg lg:text-xl ">
                                     (+33)7.44.89.08.31
                                 </p>
@@ -65,10 +65,10 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
+                                <p className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <IoMailSharp />
                                     E-Mail
-                                </h2>
+                                </p>
                                 <p className="text-[#6062e8] text-lg lg:text-xl">
                                     matweb_innovation@icloud.com{" "}
                                 </p>
@@ -76,10 +76,10 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
+                                <p className="flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <IoTime />
                                     Horaires
-                                </h2>
+                                </p>
                                 <p className="text-[#6062e8] text-lg lg:text-xl">
                                     Lundi - Vendredi
                                 </p>
@@ -88,15 +88,15 @@ const Contact = () => {
                         </BoxReveal>
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>
                             <div>
-                                <h2 className=" flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
+                                <p className=" flex items-center gap-2 mt-[1rem] text-xl lg:text-2xl text-white-100">
                                     <IoPerson />
                                     S.I.R.E.N
-                                </h2>
+                                </p>
                                 <p className="text-[#6062e8] text-lg lg:text-xl">544 456 000</p>
                             </div>
                         </BoxReveal>
                     </div>
-                    <div id="Formulaire" className="w-full md:w-[50%] z-50 sm:px-0">
+                    <div id="formulaire-de-contact" className="w-full md:w-[50%] z-50 sm:px-0">
                         <ContactForm />
                     </div>
                 </div>

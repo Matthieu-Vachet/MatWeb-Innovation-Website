@@ -17,7 +17,7 @@ const About = () => {
 
     return (
         <section
-            id="About"
+            id="a-propos-de-moi"
             className="bg-gradient-to-b from-black-100 via-purple-600/15 to-black-100"
         >
             <Features color="79, 57, 136" colorDark="79, 57, 136">
@@ -31,9 +31,9 @@ const About = () => {
                 >
                     <div className="flex flex-col  w-full justify-items-start items-start text-left gap-5 Z-20">
                         <AnimatedElement delay={0.4} duration={0.6}>
-                            <h3 className="text-2xl lg:text-3xl font-bold text-white Z-20">
+                            <h2 className="text-2xl lg:text-3xl font-bold text-white Z-20">
                                 Un développeur <span className="text-purple">passionné !</span>
-                            </h3>
+                            </h2>
                             <p className="w-full max-w-3xl text-md md:text-lg font-semibold text-white-100 Z-20">
                                 Passionné par l&apos;informatique depuis mon enfance, j&apos;ai
                                 toujours été fasciné par le potentiel illimité de la technologie.
@@ -48,9 +48,9 @@ const About = () => {
                     </div>
                     <div className="flex flex-col w-full justify-items-end items-end text-right gap-5 Z-20">
                         <AnimatedElement delay={0.5} duration={0.6}>
-                            <h3 className="text-2xl lg:text-3xl font-bold text-white Z-20">
+                            <h2 className="text-2xl lg:text-3xl font-bold text-white Z-20">
                                 <span className="text-purple">Mon parcours</span> en développement
-                            </h3>
+                            </h2>
                             <p className="w-full max-w-3xl text-md md:text-lg font-semibold text-white-100 Z-20">
                                 Mon parcours en développement web a commencé bien avant ma
                                 reconversion professionnelle. Curieux et autodidacte, j&apos;ai
@@ -67,10 +67,10 @@ const About = () => {
                     </div>
                     <div className="flex flex-col w-full justify-items-start items-start text-left gap-5 Z-20">
                         <AnimatedElement delay={0.6} duration={0.6}>
-                            <p className=" text-2xl lg:text-3xl font-bold text-white Z-20">
+                            <h2 className=" text-2xl lg:text-3xl font-bold text-white Z-20">
                                 Mes <span className="text-purple">compétences</span> et{" "}
                                 <span className="text-purple">projets</span>
-                            </p>
+                            </h2>
                             <p className="w-full max-w-3xl text-md md:text-lg font-semibold text-white-100 Z-20">
                                 Au cours de ma formation et de mes expériences, j&apos;ai développé
                                 un large éventail de compétences techniques et créatives. Je

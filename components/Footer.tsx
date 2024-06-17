@@ -37,13 +37,14 @@ const Footer = () => {
                         <a
                             key={media.id}
                             href={media.url}
+                            aria-label={media.alt}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
                         >
                             <Image
                                 src={media.img}
-                                alt={media.name}
+                                alt={media.alt}
                                 width={40}
                                 height={40}
                                 loading="lazy"

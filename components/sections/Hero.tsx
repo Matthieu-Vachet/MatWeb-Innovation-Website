@@ -70,7 +70,7 @@ const Hero = () => {
                             ))}
                         </div>
                         <Link
-                            href="#Formulaire"
+                            href="#formulaire-de-contact"
                             className="mt-10 lg:hover:scale-110 duration-200 transition-all translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                         >
                             <MagicButton title="Me contacter" position="left" />
