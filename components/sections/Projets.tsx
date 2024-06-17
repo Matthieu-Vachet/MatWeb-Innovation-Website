@@ -13,12 +13,12 @@ import { projets } from "@/data/Projets-data";
 const Projets = () => {
     return (
         <section
-            id="Projets"
+            id="mes-projets"
             className="bg-gradient-to-b from-black-100 via-purple-500/15 to-black-100"
         >
             <Features color="69, 50, 119" colorDark="69, 50, 119">
                 <Features.Main
-                    title="Projets"
+                    title="Mes Projets"
                     text={
                         <>
                             Une partie de{" "}
@@ -56,9 +56,9 @@ const Projets = () => {
                                     className="z-10 absolute bottom-0 rounded-sm"
                                 />
                             </div>
-                            <h1 className="font-bold lg:text-1xl text-xl  line-clamp-1">
+                            <h3 className="font-bold lg:text-1xl text-xl  line-clamp-1">
                                 {item.title}
-                            </h1>
+                            </h3>
                             <p
                                 className="text-sm lg:text-lg font-light text-white-100"
                                 style={{

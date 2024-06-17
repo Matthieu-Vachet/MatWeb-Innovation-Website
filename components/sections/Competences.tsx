@@ -10,7 +10,7 @@ import { Features } from "@/components/feature";
 const Competences = () => {
     return (
         <section
-            id="Competences"
+            id="mes-competences"
             className="bg-gradient-to-b from-black-100 via-purple-400/15 to-black-100 "
         >
             <Features color="120, 89, 171" colorDark="59, 42, 102">

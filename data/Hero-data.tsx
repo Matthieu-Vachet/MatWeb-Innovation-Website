@@ -2,19 +2,22 @@ export const socialMedias = [
     {
         id: 1,
         name: "Github",
-        url: "https://github.com/Matthieu-Vachet",
+        alt: "Lien vers le Github de Matthieu Vachet",
+        url: "https://github.com/Matthieu-Vachet/",
         img: "/logo/logo-Github.svg",
     },
     {
         id: 2,
         name: "Twitter",
-        url: "https://twitter.com/ShinyHunting02",
+        alt: "Lien vers le Twitter de Matthieu Vachet",
+        url: "https://twitter.com/matweb_innov/",
         img: "/logo/logo-Twitter.svg",
     },
     {
         id: 3,
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/matthieuvachet/",
+        alt: "Lien vers le LinkedIn de Matthieu Vachet",
+        url: "https://www.linkedin.com/in/matthieu-vachet-46b7231b0/",
         img: "/logo/logo-LinkedIn-2.svg",
     },
 ];

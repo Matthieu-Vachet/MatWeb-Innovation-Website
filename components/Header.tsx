@@ -84,27 +84,27 @@ export const Header = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#Service" onClick={handleLinkClick}>
+                                <Link href="#mes-service" onClick={handleLinkClick}>
                                     Service
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#Competences" onClick={handleLinkClick}>
+                                <Link href="#mes-competences" onClick={handleLinkClick}>
                                     Competences
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#Projets" onClick={handleLinkClick}>
+                                <Link href="#mes-projets" onClick={handleLinkClick}>
                                     Projets
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#About" onClick={handleLinkClick}>
+                                <Link href="#a-propos-de-moi" onClick={handleLinkClick}>
                                     A propos
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#Pricing" onClick={handleLinkClick}>
+                                <Link href="#mes-tarifs" onClick={handleLinkClick}>
                                     Tarifs
                                 </Link>
                             </li>

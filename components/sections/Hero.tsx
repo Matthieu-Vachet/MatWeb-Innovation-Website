@@ -45,21 +45,22 @@ const Hero = () => {
                         <h2 className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                             Création de site et d&apos;application Web
                         </h2>
-                        <div className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:300ms]">
-                            <p>Vitrine, Landing-Page, Portfolio, E-commerce</p>
-                        </div>
+                        <h3 className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:300ms]">
+                            Vitrine, Landing-Page, Portfolio, E-commerce
+                        </h3>
                         <div className="flex items-center justify-center gap-5 mt-10 rounded-lg translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
                             {socialMedias.map((media) => (
                                 <a
                                     key={media.id}
                                     href={media.url}
+                                    aria-label={media.alt}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-[3rem] h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-xl border-black-300 border hover:bg-black-300 hover:scale-110 transition-all"
                                 >
                                     <Image
                                         src={media.img}
-                                        alt={media.name}
+                                        alt={media.alt}
                                         width={40}
                                         height={40}
                                         priority
@@ -69,7 +70,7 @@ const Hero = () => {
                             ))}
                         </div>
                         <Link
-                            href="#Formulaire"
+                            href="#formulaire-de-contact"
                             className="mt-10 lg:hover:scale-110 duration-200 transition-all translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                         >
                             <MagicButton title="Me contacter" position="left" />
@@ -81,34 +82,51 @@ const Hero = () => {
                         Ma présence en ligne
                     </p>
                     <div className="flex gap-3 md:gap-10 lg:gap-14 items-center justify-center opacity-50 flex-wrap md:-mt-5">
-                        <Image
-                            src="/logo/logo-Fiverr.svg"
-                            alt="Logo de Fiverr"
-                            width={150}
-                            height={150}
-                            className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
-                        />
-                        <Image
-                            src="/logo/logo-LinkedIn.svg"
-                            alt="Logo de LinkedIn"
-                            width={230}
-                            height={200}
-                            className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px]"
-                        />
-                        <Image
-                            src="/logo/logo-Malt.svg"
-                            alt="Logo de Malt"
-                            width={200}
-                            height={200}
-                            className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
-                        />
-                        <Image
-                            src="/logo/logo-Pylote.svg"
-                            alt="Logo de Pylote"
-                            width={200}
-                            height={200}
-                            className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
-                        />
+                        <Link
+                            href="https://fr.fiverr.com/matthieu_vachet/developpeur-web-certifie-creation-de-sites-modernes-avec-react-et-next-js"
+                            aria-label="Lien vers le profil Fiverr de Matthieu Vachet"
+                        >
+                            <Image
+                                src="/logo/logo-Fiverr.svg"
+                                alt="Logo de Fiverr"
+                                width={150}
+                                height={150}
+                                className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
+                            />
+                        </Link>
+                        <Link
+                            href="https://www.linkedin.com/in/matthieu-vachet-46b7231b0/"
+                            aria-label="Lien vers le profil LinkedIn de Matthieu Vachet"
+                        >
+                            <Image
+                                src="/logo/logo-LinkedIn.svg"
+                                alt="Logo de LinkedIn"
+                                width={230}
+                                height={200}
+                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px]"
+                            />
+                        </Link>
+                        <Link href="https://www.malt.fr" aria-label="lien vers le site de Malt">
+                            <Image
+                                src="/logo/logo-Malt.svg"
+                                alt="Logo de Malt"
+                                width={200}
+                                height={200}
+                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
+                            />
+                        </Link>
+                        <Link
+                            href="https://www.pylote.com"
+                            aria-label="Lien vers le site de Pylote"
+                        >
+                            <Image
+                                src="/logo/logo-Pylote.svg"
+                                alt="Logo de Pylote"
+                                width={200}
+                                height={200}
+                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
+                            />
+                        </Link>
                     </div>
                 </div>
             </div>

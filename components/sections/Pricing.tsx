@@ -15,7 +15,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Pricing = () => {
     return (
         <section
-            id="Pricing"
+            id="mes-tarifs"
             className="bg-gradient-to-b from-black-100 via-purple-700/15 to-black-100"
         >
             <Features color="89, 65, 153" colorDark="89, 65, 153">
@@ -115,7 +115,7 @@ const Pricing = () => {
                                             </ul>
                                         </div>
                                         <Link
-                                            href="#Formulaire"
+                                            href="#formulaire-de-contact"
                                             aria-describedby={tier.id}
                                             className="mt-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] text-center"
                                         >
@@ -128,9 +128,9 @@ const Pricing = () => {
                                 ))}
                                 <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center  dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset]">
                                     <div className="lg:min-w-0 lg:flex-1">
-                                        <h3 className="text-2xl font-semibold leading-8 tracking-tight text-purple">
+                                        <p className="text-2xl font-semibold leading-8 tracking-tight text-purple">
                                             Informations
-                                        </h3>
+                                        </p>
                                         <p className="flex items-center gap-3 mt-5 text-sm leading-7 text-gray-200 font-bold">
                                             <FaArrowRight className="h-5 w-4 flex-none text-purple" />
                                             L&apos;ensemble des tarifs indiqués sont H.T
@@ -159,9 +159,9 @@ const Pricing = () => {
                                 </div>
                                 <div className="flex flex-col items-center gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-1  [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#8686f01f_inset]">
                                     <div className="lg:min-w-0 text-center">
-                                        <h3 className="uppercase text-xl font-semibold leading-8 tracking-tight text-purple">
+                                        <p className="uppercase text-xl font-semibold leading-8 tracking-tight text-purple">
                                             Développements spécifique
-                                        </h3>
+                                        </p>
                                         <p className="uppercase mt-1 text-base leading-7 text-gray-200 ">
                                             Taux journalier moyen
                                         </p>
@@ -172,7 +172,7 @@ const Pricing = () => {
                                             </span>
                                         </p>
                                         <Link
-                                            href="#Formulaire"
+                                            href="#formulaire-de-contact"
                                             aria-label="Boutton de contact"
                                             className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] text-center"
                                         >
