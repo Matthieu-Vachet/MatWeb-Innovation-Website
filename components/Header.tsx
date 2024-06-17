@@ -41,7 +41,7 @@ export const Header = () => {
             <Container className="flex justify-between items-center">
                 <Link className="flex items-center text-md gap-3" href="/">
                     <Image
-                        src="/LogoWhite.webp"
+                        src="/logo/logo-MatWeb.webp"
                         alt="Logo Matweb-innovation développeur web indépendant"
                         width={40}
                         height={36}
