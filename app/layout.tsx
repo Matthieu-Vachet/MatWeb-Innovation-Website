@@ -143,7 +143,7 @@ export const metadata: Metadata = {
         siteName: "MatWeb Innovation",
         images: [
             {
-                url: "/OpengraphCard.png",
+                url: "/cards/OpengraphCard.png",
                 width: 1200,
                 height: 630,
                 alt: "Vachet Matthieu - Developpeur Freelance indépendant",
@@ -159,7 +159,7 @@ export const metadata: Metadata = {
             "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
         creator: "Vachet Matthieu",
         creatorId: "0000000000",
-        images: ["/OpengraphCard.png"],
+        images: ["/cards/OpengraphCard.png"],
         site: "MatWeb Innovation",
     },
     verification: {

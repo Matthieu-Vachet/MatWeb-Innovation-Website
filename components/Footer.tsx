@@ -7,8 +7,8 @@ const Footer = () => {
         <footer className=" relative w-full pt-28 pb-5 " id="contact">
             <div className="w-full absolute left-0 bottom-0 min-h-96">
                 <Image
-                    src="/footer-grid.svg"
-                    alt="grid"
+                    src="/background/background-footer.svg"
+                    alt="Image de fond du footer"
                     width={100}
                     height={100}
                     loading="lazy"

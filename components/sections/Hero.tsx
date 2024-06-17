@@ -17,7 +17,7 @@ const Hero = () => {
         >
             <div className="w-screen h-full flex flex-col justify-center items-center text-center">
                 <Image
-                    src="/bg-back.webp"
+                    src="/background/background-hero.webp"
                     alt="Image background hero"
                     width={1000}
                     height={1000}
@@ -82,28 +82,28 @@ const Hero = () => {
                     </p>
                     <div className="flex gap-3 md:gap-10 lg:gap-14 items-center justify-center opacity-50 flex-wrap md:-mt-5">
                         <Image
-                            src="/FiverrLogo.svg"
+                            src="/logo/logo-Fiverr.svg"
                             alt="Logo de Fiverr"
                             width={150}
                             height={150}
                             className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
                         />
                         <Image
-                            src="/LinkedInLogo.svg"
-                            alt="Logo de LinkdIn"
+                            src="/logo/logo-LinkedIn.svg"
+                            alt="Logo de LinkedIn"
                             width={230}
                             height={200}
                             className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px]"
                         />
                         <Image
-                            src="/MaltLogo.svg"
+                            src="/logo/logo-Malt.svg"
                             alt="Logo de Malt"
                             width={200}
                             height={200}
                             className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
                         />
                         <Image
-                            src="/PyloteLogo.svg"
+                            src="/logo/logo-Pylote.svg"
                             alt="Logo de Pylote"
                             width={200}
                             height={200}

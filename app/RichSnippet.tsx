@@ -6,7 +6,7 @@ const RichSnippet = () => {
         "@type": "LocalBusiness",
         name: "Matthieu Vachet",
         url: "https://www.matthieu-vachet.fr/",
-        logo: "/LogoWhite.webp",
+        logo: "/logo/logo-MatWeb.webp",
         telephone: "+33744890831",
         email: "matweb_innovation@icloud.com",
         address: {
@@ -30,7 +30,7 @@ const RichSnippet = () => {
             },
         },
         priceRange: "€€",
-        image: "/OpengraphCard.png",
+        image: "/cards/OpengraphCard.png",
     };
 
     return (

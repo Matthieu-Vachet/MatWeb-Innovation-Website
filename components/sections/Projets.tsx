@@ -40,7 +40,7 @@ const Projets = () => {
                                     style={{ backgroundColor: "#13162D" }}
                                 >
                                     <Image
-                                        src="/bg.webp"
+                                        src="/background/background-projets.webp"
                                         alt="Image de fond photo des projets"
                                         width={400}
                                         height={250}
@@ -49,7 +49,7 @@ const Projets = () => {
                                 </div>
                                 <Image
                                     src={item.img}
-                                    alt="cover"
+                                    alt={item.alt}
                                     width={350}
                                     height={230}
                                     loading="lazy"
