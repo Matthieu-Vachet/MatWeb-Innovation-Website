@@ -4,10 +4,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-
 import { Container } from "@/components/Container";
 import { HamburgerIcon } from "@/components/icons/Hamburger";
-
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
@@ -32,8 +30,15 @@ export const Header = () => {
         };
     }, [setHamburgerMenuIsOpen]);
 
-    const handleLinkClick = () => {
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        e.preventDefault();
         setHamburgerMenuIsOpen(false);
+        const section = document.querySelector(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+            // Remove the hash from the URL
+            history.replaceState(null, "", " ");
+        }
     };
 
     return (
@@ -79,37 +84,55 @@ export const Header = () => {
                             )}
                         >
                             <li>
-                                <Link href="#Home" onClick={handleLinkClick}>
+                                <Link href="#Home" onClick={(e) => handleLinkClick(e, "#Home")}>
                                     Acceuil
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#mes-service" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-service"
+                                    onClick={(e) => handleLinkClick(e, "#mes-service")}
+                                >
                                     Service
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#mes-competences" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-competences"
+                                    onClick={(e) => handleLinkClick(e, "#mes-competences")}
+                                >
                                     Competences
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#mes-projets" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-projets"
+                                    onClick={(e) => handleLinkClick(e, "#mes-projets")}
+                                >
                                     Projets
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#a-propos-de-moi" onClick={handleLinkClick}>
+                                <Link
+                                    href="#a-propos-de-moi"
+                                    onClick={(e) => handleLinkClick(e, "#a-propos-de-moi")}
+                                >
                                     A propos
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#mes-tarifs" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-tarifs"
+                                    onClick={(e) => handleLinkClick(e, "#mes-tarifs")}
+                                >
                                     Tarifs
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#Contact" onClick={handleLinkClick}>
+                                <Link
+                                    href="#Contact"
+                                    onClick={(e) => handleLinkClick(e, "#Contact")}
+                                >
                                     Contact
                                 </Link>
                             </li>
