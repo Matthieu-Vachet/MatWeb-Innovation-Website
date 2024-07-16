@@ -4,10 +4,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-
 import { Container } from "@/components/Container";
 import { HamburgerIcon } from "@/components/icons/Hamburger";
-
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
@@ -32,8 +30,15 @@ export const Header = () => {
         };
     }, [setHamburgerMenuIsOpen]);
 
-    const handleLinkClick = () => {
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
         setHamburgerMenuIsOpen(false);
+        const href = e.currentTarget.href.split("#")[1];
+        window.scrollTo({
+            top: document.getElementById(href)?.offsetTop,
+            left: 0,
+            behavior: "smooth",
+        });
     };
 
     return (
