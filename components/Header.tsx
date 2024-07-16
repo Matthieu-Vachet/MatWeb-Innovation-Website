@@ -30,15 +30,15 @@ export const Header = () => {
         };
     }, [setHamburgerMenuIsOpen]);
 
-    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         e.preventDefault();
         setHamburgerMenuIsOpen(false);
-        const section = document.querySelector(id);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-            // Remove the hash from the URL
-            history.replaceState(null, "", " ");
-        }
+        const href = e.currentTarget.href.split("#")[1];
+        window.scrollTo({
+            top: document.getElementById(href)?.offsetTop,
+            left: 0,
+            behavior: "smooth",
+        });
     };
 
     return (
@@ -84,55 +84,37 @@ export const Header = () => {
                             )}
                         >
                             <li>
-                                <Link href="#Home" onClick={(e) => handleLinkClick(e, "#Home")}>
+                                <Link href="#Home" onClick={handleLinkClick}>
                                     Acceuil
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="#mes-service"
-                                    onClick={(e) => handleLinkClick(e, "#mes-service")}
-                                >
+                                <Link href="#mes-service" onClick={handleLinkClick}>
                                     Service
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link
-                                    href="#mes-competences"
-                                    onClick={(e) => handleLinkClick(e, "#mes-competences")}
-                                >
+                                <Link href="#mes-competences" onClick={handleLinkClick}>
                                     Competences
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link
-                                    href="#mes-projets"
-                                    onClick={(e) => handleLinkClick(e, "#mes-projets")}
-                                >
+                                <Link href="#mes-projets" onClick={handleLinkClick}>
                                     Projets
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link
-                                    href="#a-propos-de-moi"
-                                    onClick={(e) => handleLinkClick(e, "#a-propos-de-moi")}
-                                >
+                                <Link href="#a-propos-de-moi" onClick={handleLinkClick}>
                                     A propos
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="#mes-tarifs"
-                                    onClick={(e) => handleLinkClick(e, "#mes-tarifs")}
-                                >
+                                <Link href="#mes-tarifs" onClick={handleLinkClick}>
                                     Tarifs
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="#Contact"
-                                    onClick={(e) => handleLinkClick(e, "#Contact")}
-                                >
+                                <Link href="#Contact" onClick={handleLinkClick}>
                                     Contact
                                 </Link>
                             </li>
