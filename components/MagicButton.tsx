@@ -17,7 +17,7 @@ const MagicButton = ({
         <div
             role="button"
             tabIndex={0}
-            className="relative inline-flex h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+            className="relative inline-flex h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none lg:hover:scale-110 duration-500 transition-all"
             onClick={handleClick}
             onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {

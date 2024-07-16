@@ -71,7 +71,13 @@ const Hero = () => {
                         </div>
                         <Link
                             href="#formulaire-de-contact"
-                            className="mt-10 lg:hover:scale-110 duration-200 transition-all translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document
+                                    .getElementById("formulaire-de-contact")
+                                    ?.scrollIntoView({ behavior: "smooth" });
+                            }}
+                            className="mt-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                         >
                             <MagicButton title="Me contacter" position="left" />
                         </Link>

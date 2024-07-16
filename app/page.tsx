@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 
 import { Header } from "@/components/Header";
+import CookieConsent from "@/components/BannerCookies";
 import Hero from "@/components/sections/Hero";
 const Pricing = lazy(() => import("@/components/sections/Pricing"));
 const Service = lazy(() => import("@/components/sections/Service"));
@@ -25,6 +26,7 @@ export default function Home() {
             <div className="w-full h-full">
                 <Header />
                 <Hero />
+                <CookieConsent />
                 <Suspense fallback={<Loader />}>
                     <Service />
                     <Competences />
