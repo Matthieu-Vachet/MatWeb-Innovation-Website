@@ -3,6 +3,7 @@ import { ThemeProvider } from "./provider";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import RichSnippet from "./RichSnippet";
 import { GeistSans } from "geist/font/sans";
@@ -193,6 +194,7 @@ export default function RootLayout({
                         <SpeedInsights />
                         <Analytics />
                         {children}
+                        <GoogleAnalytics gaId="G-D73QCRWR4R" />
                     </ThemeProvider>
                 </body>
             </html>
