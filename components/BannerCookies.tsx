@@ -31,8 +31,8 @@ const CookieConsent = (props: any) => {
     }
 
     return (
-        <div className="fixed inset-0 z-50 h-5 flex items-center justify-center">
-            <div className="fixed bottom-5 md:left-5 w-[90%] md:w-[30%] 3xl:w-[20%] flex flex-col md:flex-row md:justify-around text-center mx-auto py-4 gap-5 bg-black-100/80 p-5 rounded-xl border">
+        <div className="fixed inset-0 z-[100] h-5 flex items-center justify-center">
+            <div className="fixed bottom-5 md:left-5 w-[90%] md:w-[50%] lg:w-[30%] flex flex-col md:flex-row md:justify-around text-center mx-auto py-4 gap-5 bg-black-100/85 p-5 rounded-xl border">
                 <span className=" text-sm md:text-base md:text-start">
                     Ce site utilise des cookies pour améliorer l&apos;expérience utilisateur. En
                     utilisant le site, vous consentez à tous les cookies conformément à notre
