@@ -65,10 +65,11 @@ const Service = () => {
                     <div className="relative flex items-center justify-center lg:justify-between overflow-hidden bg-transparent gap-1  flex-wrap mt-20 lg:mt-36  ">
                         <div className="flex max-w-[90vw] lg:max-w-[50%] flex-col items-center gap-5">
                             <p className="text-gradient translate-y-[40%] text-center text-2xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mb-8 md:mb-5 ">
-                                Des technologie qui n&apos;ont plus à faire leurs preuves ...
+                                Utilisation de technologies qui n&apos;ont plus besoin de prouver
+                                leur efficacité
                             </p>
                             <WordRotate
-                                className="subtitle text-purple font-semibold"
+                                className="text-2xl md:text-5xl md:mt-10 text-purple font-semibold"
                                 words={[
                                     "Javascript",
                                     "Typescript",
@@ -81,7 +82,7 @@ const Service = () => {
                                 ]}
                             />
                         </div>
-                        <div className="flex md:max-w-[50%] md:items-center md:mx-auto lg:max-w-[40%]">
+                        <div className="flex md:max-w-[70%] md:items-center md:mx-auto lg:max-w-[40%]">
                             <IconCloud iconSlugs={slugs} />
                         </div>
                     </div>
