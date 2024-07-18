@@ -177,13 +177,13 @@ export default function RootLayout({
         <>
             <html lang="fr" suppressHydrationWarning>
                 <head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta name="author" content="Matthieu Vachet" />
                     <meta name="owner" content="Matthieu Vachet" />
                     <meta name="copyright" content="Copyright © 2024 Matthieu Vachet" />
                     <RichSnippet />
                 </head>
-                <body className={GeistSans.className}>
+                <body className={`w-full ${GeistSans.className}`}>
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="dark"

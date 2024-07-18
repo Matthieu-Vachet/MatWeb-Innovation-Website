@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <section
             id="Home"
-            className=" w-full flex pb-0 px-4 bg-gradient-to-b from-purple-950/15 to-black-100 pt-32 imac:pt-40"
+            className=" w-full flex pb-0 px-4 bg-gradient-to-b from-purple-950/15 to-black-100 pt-28 md:pt-52 lg:pt-32 imac:pt-40"
         >
             <div className="w-screen h-full flex flex-col justify-center items-center text-center">
                 <Image
@@ -35,7 +35,7 @@ const Hero = () => {
                             Matthieu Vachet
                         </p>
 
-                        <h1 className="text-center font-semibold text-3xl md:text-5xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
+                        <h1 className="text-center font-semibold text-3xl md:text-6xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
                             Développeur Web Front-End{" "}
                             <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
                                 Indépendant
@@ -43,10 +43,10 @@ const Hero = () => {
                         </h1>
 
                         <h2 className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-                            Création de site et d&apos;application Web
+                            Création de sites et d&apos;applications Web
                         </h2>
                         <h3 className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:300ms]">
-                            Vitrine, Landing-Page, Portfolio, E-commerce
+                            Vitrine, Landing-Page, Portfolio, CV
                         </h3>
                         <div className="flex items-center justify-center gap-5 mt-10 rounded-lg translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
                             {socialMedias.map((media) => (
@@ -69,18 +69,36 @@ const Hero = () => {
                                 </a>
                             ))}
                         </div>
-                        <Link
-                            href="#formulaire-de-contact"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                document
-                                    .getElementById("formulaire-de-contact")
-                                    ?.scrollIntoView({ behavior: "smooth" });
-                            }}
-                            className="mt-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
-                        >
-                            <MagicButton title="Me contacter" position="left" />
-                        </Link>
+                        <div className="flex flex-col md:flex-row md:gap-10">
+                            <Link
+                                href="#mes-tarifs"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document
+                                        .getElementById("mes-tarifs")
+                                        ?.scrollIntoView({ behavior: "smooth" });
+                                }}
+                                className="mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                            >
+                                <MagicButton title="Mes Offres" position="left" />
+                            </Link>
+                            <Link
+                                href="#formulaire-de-contact"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document
+                                        .getElementById("formulaire-de-contact")
+                                        ?.scrollIntoView({ behavior: "smooth" });
+                                }}
+                                className="mt-5 md:mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                            >
+                                <MagicButton
+                                    title="Devis Gratuit"
+                                    position="right"
+                                    otherClasses="bg-purple text-white font-bold"
+                                />
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col w-full items-center mt-20 lg:mt-32 z-10 bg-transparent">
