@@ -31,7 +31,8 @@ const Service = () => {
                     paragraphes="Je conçois et intégre des solutions adaptées pour soutenir la croissance de votre entreprise, en améliorant votre visibilité et votre positionnement sur internet"
                 />
             </Features>
-            <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[90vw] imac:max-w-[70vw] -mt-[8rem] md:-mt-[15rem]">
+
+            <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[95vw] imac:max-w-[70vw] -mt-[8rem] md:-mt-[15rem]">
                 <FeaturesSection />
                 <div className="flex justify-center">
                     <Link
@@ -48,14 +49,14 @@ const Service = () => {
                     </Link>
                 </div>
                 <AnimatedElement delay={0.4} duration={0.6}>
-                    <h3 className=" w-full text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-20 lg:mt-36 mb-28 md:mb-40 flex flex-col">
+                    <h3 className="w-[95vw] md:w-full text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
                         Processus de Conception et Développement <br />
                         <span className="text-purple subtitle">
-                            Une Tasse de Café et Six Étapes
+                            Les étapes clés qui vous séparent de votre site internet
                         </span>
                     </h3>
                 </AnimatedElement>
-                <div className="max-w-[90vw] mx-auto">
+                <div className="max-w-[95vw] mx-auto">
                     <div>
                         <HoverEffect items={Processus} />
                     </div>

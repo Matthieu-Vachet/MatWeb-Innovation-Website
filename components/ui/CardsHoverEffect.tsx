@@ -24,11 +24,11 @@ export const HoverEffect = ({
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <div className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3", className)}>
+        <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3", className)}>
             {items.map((item, idx) => (
                 <div
                     key={idx}
-                    className="relative group  block p-2 h-full w-full"
+                    className="relative group block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -90,7 +90,7 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-glass-gradient border border-white/[0.2] group-hover:border-white-200/50 relative z-50 shadow-[0px_5px_50px_0px_rgba(49,35,85,_0.50)] ",
+                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-glass-gradient border border-white/[0.2] group-hover:border-white-200/50 relative z-30  shadow-[0px_5px_50px_0px_rgba(49,35,85,_0.50)] ",
                 className,
             )}
         >
@@ -108,7 +108,7 @@ export const CardTitle = ({
     children: React.ReactNode;
 }) => {
     return (
-        <p className={cn("text-white text-xl font-normal tracking-wide mt-3", className)}>
+        <p className={cn("text-purple text-4xl font-normal tracking-wide mt-3", className)}>
             {children}
         </p>
     );
@@ -134,7 +134,7 @@ export const CardSubtitle = ({
     return (
         <p
             className={cn(
-                " text-center text-purple text-2xl font-normal tracking-wide mt-4",
+                " text-center text-white uppercase text-lg md:text-xl imac:text-2xl font-bold tracking-wide mt-4",
                 className,
             )}
         >
@@ -151,12 +151,7 @@ export const CardDescription = ({
     children: React.ReactNode;
 }) => {
     return (
-        <p
-            className={cn(
-                "mt-6 text-white-200 tracking-wide leading-relaxed text-sm lg:text-md",
-                className,
-            )}
-        >
+        <p className={cn("mt-6 text-white/60 tracking-wide leading-relaxed text-md", className)}>
             {children}
         </p>
     );
