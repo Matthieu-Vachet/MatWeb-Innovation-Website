@@ -17,7 +17,7 @@ const Service = () => {
     return (
         <section
             id="mes-service"
-            className="bg-gradient-to-b from-black-100 via-purple-300/15 to-black-100 pt-0  md:pt-[10rem]"
+            className="bg-gradient-to-b from-black-100 via-purple-300/15 to-black-100 pt-0 md:pt-[10rem]"
         >
             <Features color="49, 35, 85" colorDark="49, 35, 85">
                 <Features.Main
@@ -49,9 +49,9 @@ const Service = () => {
                     </Link>
                 </div>
                 <AnimatedElement delay={0.4} duration={0.6}>
-                    <h3 className="w-[95vw] md:w-full text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
+                    <h3 className="w-[95vw] md:w-full text-gradient subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
                         Processus de Conception et Développement <br />
-                        <span className="text-purple subtitle">
+                        <span className="text-purple subtitle text-xl md:text-2xl">
                             Les étapes clés qui vous séparent de votre site internet
                         </span>
                     </h3>
@@ -64,12 +64,12 @@ const Service = () => {
                 <AnimatedElement delay={0.4} duration={0.6}>
                     <div className="relative flex items-center justify-center lg:justify-between overflow-hidden bg-transparent gap-1  flex-wrap mt-20 lg:mt-36  ">
                         <div className="flex max-w-[90vw] lg:max-w-[50%] flex-col items-center gap-5">
-                            <p className="text-gradient translate-y-[40%] text-center text-2xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mb-8 md:mb-5 ">
+                            <p className="text-gradient translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mb-8 md:mb-5 subtitle-size">
                                 Utilisation de technologies qui n&apos;ont plus besoin de prouver
                                 leur efficacité
                             </p>
                             <WordRotate
-                                className="text-2xl md:text-5xl md:mt-10 text-purple font-semibold"
+                                className="subtitle-size md:mt-10 text-purple font-semibold"
                                 words={[
                                     "Javascript",
                                     "Typescript",

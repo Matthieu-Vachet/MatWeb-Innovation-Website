@@ -10,6 +10,7 @@ const Projets = lazy(() => import("@/components/sections/Projets"));
 const About = lazy(() => import("@/components/sections/About"));
 const Contact = lazy(() => import("@/components/sections/Contact"));
 const Footer = lazy(() => import("@/components/Footer"));
+import GlobeMask from "@/components/ui/GlobeMask";
 
 import { Toaster } from "sonner";
 
@@ -32,6 +33,7 @@ export default function Home() {
                     <Competences />
                     <Projets />
                     <About />
+                    <GlobeMask />
                     <Pricing />
                     <Contact />
                     <Footer />

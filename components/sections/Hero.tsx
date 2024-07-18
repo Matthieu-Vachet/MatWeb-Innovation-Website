@@ -80,7 +80,11 @@ const Hero = () => {
                                 }}
                                 className="mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                             >
-                                <MagicButton title="Mes Offres" position="left" />
+                                <MagicButton
+                                    title="Mes Offres"
+                                    position="left"
+                                    otherClasses="font-base"
+                                />
                             </Link>
                             <Link
                                 href="#formulaire-de-contact"
@@ -95,7 +99,7 @@ const Hero = () => {
                                 <MagicButton
                                     title="Devis Gratuit"
                                     position="right"
-                                    otherClasses="bg-purple text-white font-bold"
+                                    otherClasses="bg-purple text-white font-semibold"
                                 />
                             </Link>
                         </div>

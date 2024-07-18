@@ -54,16 +54,16 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
                         imageSize === "small" ? "w-[78rem]" : "w-[102.4rem]",
                     )}
                 >
-                    <h1 className="text-gradient mb-11 translate-y-[40%] pt-[12rem] text-center text-5xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 md:text-8xl [.is-visible_&]:translate-y-0">
+                    <h1 className="text-gradient mb-11 translate-y-[40%] pt-[12rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0">
                         {title}
                     </h1>
                 </Container>
             </div>
             <Container className="w-[78rem] max-w-[90%] text-center">
-                <h2 className="mx-auto my-10 md:my-16 text-2xl leading-tight text-white md:w-[80%] md:text-4xl">
+                <h2 className="mx-auto my-10 md:my-16 leading-tight text-white md:w-[80%] subtitle-size">
                     {text}
                 </h2>
-                <p className="my-10 md:my-16 text-md md:text-2xl">{paragraphes}</p>
+                <p className="my-10 md:my-16 text-xl md:text-2xl">{paragraphes}</p>
                 <hr className="mb-[5rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2)_50%,transparent)]" />
             </Container>
         </>

@@ -56,11 +56,11 @@ const Projets = () => {
                                     className="z-10 absolute bottom-0 rounded-sm"
                                 />
                             </div>
-                            <h3 className="font-bold lg:text-1xl text-xl  line-clamp-1">
+                            <h3 className="font-bold composant-title-size  line-clamp-1">
                                 {item.title}
                             </h3>
                             <p
-                                className="text-sm lg:text-lg font-light text-white-100"
+                                className="text-md font-light text-white-100"
                                 style={{
                                     margin: "0.5vh 0",
                                 }}

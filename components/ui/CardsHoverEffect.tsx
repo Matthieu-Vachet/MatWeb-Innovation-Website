@@ -134,7 +134,7 @@ export const CardSubtitle = ({
     return (
         <p
             className={cn(
-                " text-center text-white uppercase text-lg md:text-xl imac:text-2xl font-bold tracking-wide mt-4",
+                " text-center text-white uppercase composant-title-size font-bold tracking-wide mt-4",
                 className,
             )}
         >

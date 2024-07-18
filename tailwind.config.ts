@@ -97,6 +97,8 @@ const config = {
             backgroundImage: {
                 "glass-gradient":
                     "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                "radial-faded":
+                    "radial-gradient(circle at bottom center,var(--color),transparent 100%)",
             },
             keyframes: {
                 "fade-in": {
@@ -141,6 +143,18 @@ const config = {
                     },
                     "50%": {
                         transform: "translate(-50%, -50%) scale(0.9)",
+                    },
+                },
+
+                "shine-pulse": {
+                    "0%": {
+                        "background-position": "0% 0%",
+                    },
+                    "50%": {
+                        "background-position": "100% 100%",
+                    },
+                    to: {
+                        "background-position": "0% 0%",
                     },
                 },
             },
