@@ -1,44 +1,44 @@
 export const Processus = [
     {
-        title: "Etape 1",
-        subtitle: "Café",
+        title: "1",
+        subtitle: "échange",
         description:
-            "Nous commençons par un café ensemble, l'occasion parfaite pour échanger sur votre projet. Nous discuterons de vos idées, de vos objectifs et des détails importants à prendre en compte.",
+            "Nous débutons par un échange, l'occasion idéale pour discuter de votre projet. Nous aborderons vos idées, vos objectifs, et les détails essentiels à considérer.",
         icon: "PiCoffeeBold",
     },
     {
-        title: "Etape 2",
+        title: "2",
         subtitle: "Analyse",
         description:
-            "Après notre café, je me plongerai dans une analyse approfondie de vos besoins. Nous examinerons ensemble les différentes possibilités et établirons une vision claire pour le projet.",
+            "Après notre rendez-vous, j'analyserai en profondeur vos besoins. Nous examinerons ensemble les différentes possibilités et établirons une vision claire pour le projet.",
         icon: "PiNotePencilFill",
     },
     {
-        title: "Etape 3",
+        title: "3",
         subtitle: "Design",
         description:
-            "Une fois que nous avons défini les bases, je passerai à la conception initiale du site. Nous pourrons discuter des premières esquisses et ajuster les éléments en fonction de vos retours.",
+            "Une fois les bases définies, je me lancerai dans la conception initiale du site. Nous discuterons des premières esquisses et ajusterons les éléments selon vos retours.",
         icon: "PiPencil",
     },
     {
-        title: "Etape 4",
+        title: "4",
         subtitle: "Code",
         description:
-            "Avec le design approuvé, je me mettrai au travail pour développer le site. Je veillerai à ce que le code soit propre, efficace et conforme à vos attentes.",
+            "Une fois le design approuvé, je commencerai le développement du site. Je veillerai à ce que le code soit propre, efficace et conforme à vos attentes.",
         icon: "PiCodeBold",
     },
     {
-        title: "Etape 5",
+        title: "5",
         subtitle: "Test",
         description:
-            "Avant de finaliser le projet, nous effectuerons des tests rigoureux pour nous assurer que tout fonctionne parfaitement. Votre implication est précieuse pour garantir que le site répond à vos besoins.",
+            "Avant de finaliser le projet, des tests rigoureux seront effectués pour garantir que tout fonctionne parfaitement. Votre implication sera précieuse pour s'assurer que le site répond à vos besoins.",
         icon: "SiTestinglibrary",
     },
     {
-        title: "Etape 6",
+        title: "6",
         subtitle: "Livraison",
         description:
-            "Une fois que le site est prêt, je vous le livrerai avec enthousiasme. Nous pourrons passer en revue les derniers détails et je vous fournirai toutes les informations nécessaires pour assurer la gestion et la maintenance du site à l'avenir.",
+            "Une fois le site prêt, je le livrerai avec enthousiasme. Nous passerons en revue les derniers détails, et je vous fournirai toutes les informations nécessaires pour la gestion et la maintenance future du site.",
         icon: "BsSendCheck",
     },
 ];
@@ -57,61 +57,64 @@ export const slugs = [
     "javascript",
 ];
 
+import {
+    IconDeviceDesktopCode,
+    IconWorldWww,
+    IconFileUpload,
+    IconLayoutGrid,
+    IconBuildingSkyscraper,
+    IconChartBar,
+    IconDevices,
+    IconSettings,
+} from "@tabler/icons-react";
+
 export const items = [
     {
-        id: 1,
         title: "Intégration WEB",
-        description: "Intégration HTML/CSS/REACT respectueuses des standards du Web.",
-        className: "relative md:col-span-3 md:row-span-2 w-full h-full ",
-        imgClassName: "",
-        titleClassName:
-            " text-2xl lg:text-3xl gap-2 font-semibold flex justifiy-center items-center text-center mt-10",
-        spareImgClassName: "",
-        descriptionClassName: "",
-        img: "",
-        spareImg: "",
-        icon: "",
-    },
-    {
-        id: 2,
-        title: "Dynamisme des pages",
         description:
-            "Des pages dynamiques et interactives non intrusives pour embellir votre projet.",
-        className: "md:col-span-1 md:row-span-2 justifiy-center items-center text-center",
-        imgClassName: "",
-        titleClassName: "text-2xl lg:text-3xl font-semibold gap-2 lg:gap-5",
-        spareImgClassName: "",
-        descriptionClassName: "",
-        img: "",
-        spareImg: "",
-        icon: "",
+            "Intégration de solutions web sur mesure pour optimiser la performance de votre site. Nous assurons une compatibilité parfaite avec tous les navigateurs et appareils pour offrir une expérience utilisateur fluide et cohérente.",
+        icon: <IconDeviceDesktopCode />,
     },
-
     {
-        id: 3,
-        title: "Référencement Naturel",
+        title: "Création de Site Internet",
         description:
-            "Affichage sémantique des informations, des pages propres pour un référencement optimal sur le Web.",
-        className: "md:col-span-2 md:row-span-2 justifiy-center items-center text-center",
-        imgClassName: "",
-        titleClassName: "text-2xl lg:text-3xl font-semibold gap-2 lg:gap-5",
-        spareImgClassName: "",
-        descriptionClassName: "",
-        img: "",
-        spareImg: "",
-        icon: "",
+            "Conception de sites internet sur mesure qui convertissent vos prospects en clients. Mettez en avant votre image de marque grâce à des designs soignés et un référencement efficace.",
+        icon: <IconWorldWww />,
     },
     {
-        id: 4,
-        title: "Responsive Design",
-        description: `Compatible tous supports`,
-        className: "md:col-span-2 md:row-span-2 flex justifiy-center items-center text-center",
-        imgClassName: "",
-        titleClassName: "  text-2xl md:text-2xl lg:text-3xl font-semibold gap-2 lg:gap-5",
-        spareImgClassName: "",
-        descriptionClassName: "",
-        img: "",
-        spareImg: "",
-        icon: "",
+        title: "Landing Page",
+        description:
+            "Développement de landing pages captivantes et performantes. Maximisez vos taux de conversion avec des pages d'atterrissage optimisées pour attirer et retenir l’attention de vos visiteurs.",
+        icon: <IconFileUpload />,
+    },
+    {
+        title: "Portfolio",
+        description:
+            "Créez un portfolio en ligne professionnel qui reflète vos compétences et réalisations. Mettez en valeur vos projets avec un design élégant et une navigation intuitive.",
+        icon: <IconLayoutGrid />,
+    },
+    {
+        title: "Site Vitrine",
+        description:
+            "Conception de sites vitrines attractifs pour présenter votre entreprise et vos services. Améliorez votre présence en ligne avec des designs modernes et une optimisation SEO.",
+        icon: <IconBuildingSkyscraper />,
+    },
+    {
+        title: "Référencement",
+        description:
+            "Boostez votre visibilité en ligne avec des stratégies de référencement naturel (SEO). Améliorez votre positionnement sur Google et attirez un trafic qualifié vers votre site.",
+        icon: <IconChartBar />,
+    },
+    {
+        title: "100% Responsive",
+        description:
+            "Optimisation de votre site pour une expérience utilisateur optimale sur toutes les plateformes : ordinateur, tablette, et smartphone. Améliorez votre classement sur Google avec un site entièrement responsive.",
+        icon: <IconDevices />,
+    },
+    {
+        title: "Maintenance Site Internet",
+        description:
+            "Assurez la performance et la sécurité de votre site avec nos services de maintenance. Optimisation de la vitesse de chargement, correction des failles de sécurité, et mise à jour régulière de votre contenu.",
+        icon: <IconSettings />,
     },
 ];

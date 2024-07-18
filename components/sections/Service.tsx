@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
-import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { HoverEffect } from "@/components/ui/CardsHoverEffect";
 import IconCloud from "@/components/ui/IconCloud";
 import WordRotate from "@/components/ui/WordRotate";
@@ -10,6 +10,8 @@ import { Features } from "@/components/feature";
 import AnimatedElement from "../ui/AnimateElements";
 
 import { Processus, items, slugs } from "@/data/Services-data";
+import { FeaturesSection } from "../FeaturesSection";
+import MagicButton from "../MagicButton";
 
 const Service = () => {
     return (
@@ -19,32 +21,32 @@ const Service = () => {
         >
             <Features color="49, 35, 85" colorDark="49, 35, 85">
                 <Features.Main
-                    title="Mes Service"
+                    title="Mes Services"
                     text={
                         <>
-                            Des prestations adaptées à{" "}
-                            <span className="text-purple uppercase font-bold">vos besoins</span>
+                            Donnez vie à vos{" "}
+                            <span className="text-purple uppercase font-bold">Projets</span>
                         </>
                     }
+                    paragraphes="Je conçois et intégre des solutions adaptées pour soutenir la croissance de votre entreprise, en améliorant votre visibilité et votre positionnement sur internet"
                 />
             </Features>
             <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[90vw] imac:max-w-[70vw] -mt-[8rem] md:-mt-[15rem]">
-                <BentoGrid className="relative w-full z-100 ">
-                    {items.map((item, i) => (
-                        <BentoGridItem
-                            id={item.id}
-                            key={i}
-                            title={item.title}
-                            description={item.description}
-                            className={item.className}
-                            icon={item.icon}
-                            img={item.img}
-                            imgClassName={item.imgClassName}
-                            titleClassName={item.titleClassName}
-                            spareImg={item.spareImg}
-                        />
-                    ))}
-                </BentoGrid>
+                <FeaturesSection />
+                <div className="flex justify-center">
+                    <Link
+                        href="#formulaire-de-contact"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document
+                                .getElementById("formulaire-de-contact")
+                                ?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="mt-5 md:mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                    >
+                        <MagicButton title="Besoin d'un devis ?" position="left" />
+                    </Link>
+                </div>
                 <AnimatedElement delay={0.4} duration={0.6}>
                     <h3 className=" w-full text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-20 lg:mt-36 mb-28 md:mb-40 flex flex-col">
                         Processus de Conception et Développement <br />
