@@ -26,11 +26,11 @@ const Hero = () => {
                     layout="responsive"
                 />
                 {/* Background Grid */}
-                <div className="h-[80vh]  w-full bg-grid-white/[0.04] flex items-center justify-center absolute top-0 left-0 mt-0 mb-0 pt-0 pb-0 z-0">
+                <div className="h-[80vh] w-full bg-grid-white/[0.04] flex items-center justify-center absolute top-0 left-0 mt-0 mb-0 pt-0 pb-0 z-0">
                     <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-gradient-to-b from-purple-950/10 to-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,white)]" />
                 </div>
                 <div className="flex justify-center relative z-10">
-                    <div className="max-w-[90vw] md:max-w-[80vw] lg:max-w-[80vw] flex flex-col items-center justify-center">
+                    <div className="max-w-[100vw] md:max-w-[80vw] lg:max-w-[80vw] flex flex-col items-center justify-center">
                         <p className="uppercase tracking-widest text-sm md:text-lg text-center text-white-200 translate-y-[-1rem] animate-fade-in opacity-0">
                             Matthieu Vachet
                         </p>
@@ -42,7 +42,7 @@ const Hero = () => {
                             </span>
                         </h1>
 
-                        <h2 className="text-3xl md:text-4xl lg:text-4xl pt-10 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+                        <h2 className="text-xl md:text-4xl lg:text-4xl pt-5 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                             Création de sites et d&apos;applications Web
                         </h2>
                         <h3 className="text-sm md:text-lg lg:text-xl text-white-200 text-center mt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:300ms]">
@@ -69,7 +69,7 @@ const Hero = () => {
                                 </a>
                             ))}
                         </div>
-                        <div className="flex flex-col md:flex-row md:gap-10">
+                        <div className="flex items-center justify-center gap-5 md:gap-10">
                             <Link
                                 href="#mes-tarifs"
                                 onClick={(e) => {
@@ -94,7 +94,7 @@ const Hero = () => {
                                         .getElementById("formulaire-de-contact")
                                         ?.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="mt-5 md:mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                                className="mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] "
                             >
                                 <MagicButton
                                     title="Devis Gratuit"
@@ -105,7 +105,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col w-full items-center mt-20 lg:mt-32 z-10 bg-transparent">
+                <div className="flex flex-col w-full items-center mt-10 lg:mt-32 z-10 bg-transparent">
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>
