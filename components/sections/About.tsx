@@ -23,7 +23,7 @@ const About = () => {
             <Features color="79, 57, 136" colorDark="79, 57, 136">
                 <Features.Main title="A propos de moi" />
             </Features>
-            <div className=" max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-[8rem] md:-mt-[15rem]">
+            <div className=" max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
                 <div
                     onMouseEnter={() => setHovered(true)}
                     onMouseLeave={() => setHovered(false)}

@@ -26,7 +26,7 @@ const Competences = () => {
                     }
                 />
             </Features>
-            <div className="max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-[8rem] md:-mt-[15rem]">
+            <div className="max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
                 <div className="w-full grid lg:grid-cols-4 grid-cols-1 gap-10">
                     {CompetencesList.map((card: Competence) => (
                         <Button

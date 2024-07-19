@@ -32,7 +32,7 @@ const Service = () => {
                 />
             </Features>
 
-            <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[95vw] imac:max-w-[70vw] -mt-[8rem] md:-mt-[15rem]">
+            <div className="flex flex-col items-center justify-center mx-auto px-4 max-w-[95vw] imac:max-w-[70vw] -mt-16 lg:-mt-0">
                 <FeaturesSection />
                 <div className="flex justify-center">
                     <Link

@@ -27,7 +27,7 @@ const Projets = () => {
                     }
                 />
             </Features>
-            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-24 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[75vw] mx-auto -mt-[8rem] md:-mt-[15rem] ">
+            <div className="flex flex-wrap items-center justify-center gap-14 md:gap-32 lg:gap-16 max-w-[100vw] md:max-w-[90vw] lg:max-w-[95vw] imac:max-w-[75vw] mx-auto -mt-10 md:-mt-0">
                 {projets.map((item, idx) => (
                     <div
                         className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "
