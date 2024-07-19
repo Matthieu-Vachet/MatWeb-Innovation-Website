@@ -109,7 +109,7 @@ const Hero = () => {
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>
-                    <div className="flex gap-3 md:gap-10 lg:gap-14 items-center justify-center opacity-50 flex-wrap md:-mt-5">
+                    <div className="flex gap-3 md:gap-10 lg:gap-14 items-center justify-center flex-wrap md:-mt-5">
                         <Link
                             href="https://fr.fiverr.com/matthieu_vachet/developpeur-web-certifie-creation-de-sites-modernes-avec-react-et-next-js"
                             aria-label="Lien vers le profil Fiverr de Matthieu Vachet"
@@ -119,7 +119,7 @@ const Hero = () => {
                                 alt="Logo de Fiverr"
                                 width={150}
                                 height={150}
-                                className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]"
+                                className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                         <Link
@@ -131,7 +131,7 @@ const Hero = () => {
                                 alt="Logo de LinkedIn"
                                 width={230}
                                 height={200}
-                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px]"
+                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                         <Link href="https://www.malt.fr" aria-label="lien vers le site de Malt">
@@ -140,7 +140,7 @@ const Hero = () => {
                                 alt="Logo de Malt"
                                 width={200}
                                 height={200}
-                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
+                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                         <Link
@@ -152,7 +152,7 @@ const Hero = () => {
                                 alt="Logo de Pylote"
                                 width={200}
                                 height={200}
-                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px]"
+                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                     </div>

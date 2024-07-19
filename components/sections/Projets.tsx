@@ -17,7 +17,7 @@ const Projets = () => {
         >
             <Features color="69, 50, 119" colorDark="69, 50, 119">
                 <Features.Main
-                    title="Mes Projets"
+                    title="Mes réalisations"
                     text={
                         <>
                             Une partie de{" "}
