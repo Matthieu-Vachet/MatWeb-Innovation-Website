@@ -95,7 +95,7 @@
     }
 
     .subtitle-size {
-        @apply text-2xl md:text-3xl imac:text-4xl;
+        @apply text-xl md:text-3xl imac:text-4xl;
     }
 
     .composant-title-size {

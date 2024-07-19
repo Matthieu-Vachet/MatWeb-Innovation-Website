@@ -78,7 +78,7 @@ const Hero = () => {
                                         .getElementById("mes-tarifs")
                                         ?.scrollIntoView({ behavior: "smooth" });
                                 }}
-                                className="mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                                className="mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] hidden md:block"
                             >
                                 <MagicButton
                                     title="Mes Offres"
