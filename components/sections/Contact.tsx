@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react";
-
-import { BoxReveal } from "@/components/ui/BoxReveal";
 import { ContactForm } from "@/components/ContactForm";
-import { Features } from "@/components/feature";
+import { Features } from "@/components/Feature";
+import { BoxReveal } from "@/components/ui/BoxReveal";
 
-import { IoIosPin } from "react-icons/io";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { IoMailSharp, IoTime, IoPerson } from "react-icons/io5";
+import { IoIosPin } from "react-icons/io";
+import { IoMailSharp, IoPerson, IoTime } from "react-icons/io5";
 
 const Contact = () => {
     return (
@@ -33,7 +31,7 @@ const Contact = () => {
             </Features>
             {/* Titre Tablette / Desktop */}
             <div className="flex mt-10">
-                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto px-4 -mt-[10rem] md:-mt-[17rem]">
+                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto px-4 -mt-16 lg:-mt-10">
                     {/* Conteneur pour le BoxReveal */}
                     <div className="w-full md:w-[50%] flex flex-col z-50 lg:pl-10 gap-5">
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>

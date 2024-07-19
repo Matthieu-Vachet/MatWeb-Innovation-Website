@@ -19,16 +19,14 @@ const config = {
         container: {
             center: true,
             padding: "2rem",
-            screens: {
-                "2xl": "1400px",
-            },
         },
         extend: {
+            screens: {
+                "2xl": "1400px",
+                imac: "1700px",
+            },
             boxShadow: {
                 input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
-            },
-            screens: {
-                imac: "1700px",
             },
             colors: {
                 black: {
@@ -99,6 +97,8 @@ const config = {
             backgroundImage: {
                 "glass-gradient":
                     "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                "radial-faded":
+                    "radial-gradient(circle at bottom center,var(--color),transparent 100%)",
             },
             keyframes: {
                 "fade-in": {
@@ -143,6 +143,18 @@ const config = {
                     },
                     "50%": {
                         transform: "translate(-50%, -50%) scale(0.9)",
+                    },
+                },
+
+                "shine-pulse": {
+                    "0%": {
+                        "background-position": "0% 0%",
+                    },
+                    "50%": {
+                        "background-position": "100% 100%",
+                    },
+                    to: {
+                        "background-position": "0% 0%",
                     },
                 },
             },

@@ -72,6 +72,7 @@
     }
     body {
         @apply bg-background text-foreground;
+        overflow-x: hidden;
     }
     button {
         @apply active:outline-none;
@@ -83,10 +84,22 @@
         @apply text-gradient translate-y-[40%] text-center text-4xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-16 md:mt-14 mb-28 md:mb-40;
     }
     .subtitle {
-        @apply bg-clip-text text-center text-2xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-3xl [.is-visible_&]:translate-y-0 mt-5;
+        @apply bg-clip-text text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-5;
     }
     .heading-bottom-spacing {
         @apply pb-[2rem] md:pb-[4rem] pt-[2rem] md:pt-[10rem];
+    }
+
+    .title-size {
+        @apply text-4xl md:text-6xl imac:text-7xl;
+    }
+
+    .subtitle-size {
+        @apply text-xl md:text-3xl imac:text-4xl;
+    }
+
+    .composant-title-size {
+        @apply text-xl md:text-2xl;
     }
 }
 
@@ -94,4 +107,8 @@
     background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
     background-clip: text;
     color: transparent;
+}
+
+.mask-radial-faded {
+    mask-image: radial-gradient(circle at center center, #171717, transparent 100%);
 }

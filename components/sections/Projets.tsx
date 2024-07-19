@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
-import { PinContainer } from "../ui/Pin";
-import { Features } from "@/components/feature";
+import { Features } from "@/components/Feature";
+import { PinContainer } from "../ui/PinContainer";
 
-import { projets } from "@/data/Projets-data";
+import { projets } from "@/data/ProjetsData";
 
 const Projets = () => {
     return (
@@ -18,7 +17,7 @@ const Projets = () => {
         >
             <Features color="69, 50, 119" colorDark="69, 50, 119">
                 <Features.Main
-                    title="Mes Projets"
+                    title="Mes réalisations"
                     text={
                         <>
                             Une partie de{" "}
@@ -27,7 +26,7 @@ const Projets = () => {
                     }
                 />
             </Features>
-            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-24 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[75vw] mx-auto -mt-[8rem] md:-mt-[15rem] ">
+            <div className="flex flex-wrap items-center justify-center gap-14 md:gap-32 lg:gap-16 max-w-[100vw] md:max-w-[90vw] lg:max-w-[95vw] imac:max-w-[75vw] mx-auto -mt-10 md:-mt-0">
                 {projets.map((item, idx) => (
                     <div
                         className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "
@@ -56,11 +55,11 @@ const Projets = () => {
                                     className="z-10 absolute bottom-0 rounded-sm"
                                 />
                             </div>
-                            <h3 className="font-bold lg:text-1xl text-xl  line-clamp-1">
+                            <h3 className="font-bold composant-title-size  line-clamp-1">
                                 {item.title}
                             </h3>
                             <p
-                                className="text-sm lg:text-lg font-light text-white-100"
+                                className="text-md font-light text-white-100"
                                 style={{
                                     margin: "0.5vh 0",
                                 }}

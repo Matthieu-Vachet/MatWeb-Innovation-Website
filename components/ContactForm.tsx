@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/Label";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
 import { toast } from "sonner";
 
 export function ContactForm() {

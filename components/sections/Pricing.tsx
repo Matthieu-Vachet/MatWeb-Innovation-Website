@@ -1,16 +1,15 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 
-import { Features } from "@/components/feature";
-import SparklesText from "@/components/ui/SparkleTexte";
+import SparklesText from "@/components/ui/SparklesText";
 import MagicButton from "../MagicButton";
 
-import { tiers } from "@/data/Pricing-data";
+import { tiers } from "@/data/PricingData";
 
-import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import AnimatedElement from "../ui/AnimatedElement";
 
 const Pricing = () => {
     return (
@@ -18,18 +17,20 @@ const Pricing = () => {
             id="mes-tarifs"
             className="bg-gradient-to-b from-black-100 via-purple-700/15 to-black-100"
         >
-            <Features color="89, 65, 153" colorDark="89, 65, 153">
-                <Features.Main
-                    title="Mes Tarifs"
-                    text={<>Deux Tarif unique pour un site de qualité !</>}
-                />
-            </Features>
+            <AnimatedElement delay={0.4} duration={0.5}>
+                <h3 className="w-full text-gradient translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 -mt-[8rem] md:-mt-[18rem] mb-28 md:mb-40 flex flex-col title-size">
+                    Apercu de mes offres <br />
+                    <span className="text-purple subtitle subtitle-size">
+                        Deux Tarif unique pour un site de qualité !
+                    </span>
+                </h3>
+            </AnimatedElement>
             <div className=" mx-auto max-w-[100vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-48 md:mt-20 ">
-                <div className="hidden md:block mx-auto lg:max-w-7xl px-6  text-center lg:px-8 ">
+                <div className="hidden md:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8 ">
                     <div className="relative mt-6 opacity-50">
                         <svg
                             viewBox="0 0 1208 1024"
-                            className="absolute  opacity-50 left-1/2 -z-8 h-[50rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-[20rem]"
+                            className="absolute opacity-50 left-1/2 -z-8 h-[50rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:top-[10rem]"
                         >
                             <ellipse
                                 cx={604}
@@ -48,7 +49,7 @@ const Pricing = () => {
                     </div>
                 </div>
                 <div className="flow-root z-20 bg-transparent pb-24 sm:pb-32">
-                    <div className="-mt-80">
+                    <div>
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-3">
                                 {tiers.map((tier) => (
