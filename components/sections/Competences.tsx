@@ -1,11 +1,9 @@
 "use client";
 
-import React from "react";
+import { Competence, CompetencesList, iconMap } from "@/data/CompetencesData";
 
-import { CompetencesList, iconMap, Competence } from "@/data/Competences-data";
-
-import { Button } from "@/components/ui/MovingBorders";
-import { Features } from "@/components/feature";
+import { Features } from "@/components/Feature";
+import { Button } from "@/components/ui/MovingBorder";
 
 const Competences = () => {
     return (

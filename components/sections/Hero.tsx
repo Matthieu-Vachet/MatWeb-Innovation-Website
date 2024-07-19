@@ -4,10 +4,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { socialMedias } from "@/data/Hero-data";
+import { socialMedias } from "@/data/HeroData";
 
 import MagicButton from "@/components/MagicButton";
-import TopToScroll from "@/components/TopToScroll";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Hero = () => {
     return (
@@ -158,7 +158,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <TopToScroll />
+            <ScrollToTop />
         </section>
     );
 };

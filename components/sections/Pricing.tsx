@@ -1,17 +1,15 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 
-import { Features } from "@/components/feature";
-import SparklesText from "@/components/ui/SparkleTexte";
+import SparklesText from "@/components/ui/SparklesText";
 import MagicButton from "../MagicButton";
 
-import { tiers } from "@/data/Pricing-data";
+import { tiers } from "@/data/PricingData";
 
-import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
-import AnimatedElement from "../ui/AnimateElements";
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import AnimatedElement from "../ui/AnimatedElement";
 
 const Pricing = () => {
     return (

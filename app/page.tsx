@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 
 import { Header } from "@/components/Header";
-import CookieConsent from "@/components/BannerCookies";
+import CookieConsent from "@/components/CookieConsent";
 import Hero from "@/components/sections/Hero";
 const Pricing = lazy(() => import("@/components/sections/Pricing"));
 const Service = lazy(() => import("@/components/sections/Service"));

@@ -1,5 +1,5 @@
+import { items } from "@/data/ServicesData";
 import { cn } from "@/utils/cn";
-import { items } from "@/data/Services-data";
 
 export function FeaturesSection() {
     return (

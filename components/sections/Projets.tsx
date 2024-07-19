@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 
 import { FaGithub, FaGlobe } from "react-icons/fa6";
 
-import { PinContainer } from "../ui/Pin";
-import { Features } from "@/components/feature";
+import { Features } from "@/components/Feature";
+import { PinContainer } from "../ui/PinContainer";
 
-import { projets } from "@/data/Projets-data";
+import { projets } from "@/data/ProjetsData";
 
 const Projets = () => {
     return (

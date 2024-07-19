@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 
+import { Features } from "@/components/Feature";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import GaugeCircle from "@/components/ui/GaugeCircle";
-import { Features } from "@/components/feature";
-import AnimatedElement from "../ui/AnimateElements";
+import AnimatedElement from "../ui/AnimatedElement";
 
 const About = () => {
     const [hovered, setHovered] = React.useState(false);

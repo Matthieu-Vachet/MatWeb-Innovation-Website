@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react";
-
-import { BoxReveal } from "@/components/ui/BoxReveal";
 import { ContactForm } from "@/components/ContactForm";
-import { Features } from "@/components/feature";
+import { Features } from "@/components/Feature";
+import { BoxReveal } from "@/components/ui/BoxReveal";
 
-import { IoIosPin } from "react-icons/io";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { IoMailSharp, IoTime, IoPerson } from "react-icons/io5";
+import { IoIosPin } from "react-icons/io";
+import { IoMailSharp, IoPerson, IoTime } from "react-icons/io5";
 
 const Contact = () => {
     return (

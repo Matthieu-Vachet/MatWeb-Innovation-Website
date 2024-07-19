@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-import RichSnippet from "./RichSnippet";
+import RichSnippet from "./richSnippet";
 import { GeistSans } from "geist/font/sans";
 
 import "./globals.css";

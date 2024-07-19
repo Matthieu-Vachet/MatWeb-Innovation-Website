@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 
-import { HoverEffect } from "@/components/ui/CardsHoverEffect";
+import { Features } from "@/components/Feature";
+import { HoverEffect } from "@/components/ui/HoverEffect";
 import IconCloud from "@/components/ui/IconCloud";
 import WordRotate from "@/components/ui/WordRotate";
-import { Features } from "@/components/feature";
-import AnimatedElement from "../ui/AnimateElements";
+import AnimatedElement from "../ui/AnimatedElement";
 
-import { Processus, items, slugs } from "@/data/Services-data";
+import { Processus, slugs } from "@/data/ServicesData";
 import { FeaturesSection } from "../FeaturesSection";
 import MagicButton from "../MagicButton";
 

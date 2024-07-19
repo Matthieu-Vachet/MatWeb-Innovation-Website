@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { socialMedias } from "@/data/Hero-data";
+import { socialMedias } from "@/data/HeroData";
 
 const Footer = () => {
     return (
