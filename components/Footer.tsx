@@ -12,7 +12,7 @@ const Footer = () => {
                     width={100}
                     height={100}
                     loading="lazy"
-                    className="w-full h-screen opacity-70 "
+                    className="w-full h-screen opacity-70 imac:opacity-50 "
                 />
             </div>
 
