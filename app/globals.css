@@ -101,6 +101,10 @@
     .composant-title-size {
         @apply text-xl md:text-2xl;
     }
+
+    /* .text-gradient {
+        @apply pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/30;
+    } */
 }
 
 .text-gradient {

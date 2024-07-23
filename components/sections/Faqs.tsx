@@ -4,41 +4,38 @@ import Image from "next/image";
 export default function Faqs() {
     const faqsList = [
         {
-            questions: "What are some random questions to ask?",
+            questions: "Quel est le prix d'un site internet ?",
             réponses:
-                "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question.",
+                "En général, le coût dépend de la complexité du projet et du type de service requis. Par exemple, un CV en ligne ou une landing page est moins coûteux qu'un portfolio complet ou un site vitrine. L'intégration d'une maquette ou d'une palette graphique existante sera toujours moins chère que la création complète du design. Pour une estimation précise, n'hésitez pas à me contacter.",
         },
         {
-            questions: "Do you include common questions?",
+            questions: "Le design de mon site sera-t-il unique ?",
             réponses:
-                "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.",
+                "Votre site sera unique, que ce soit par l'intégration de votre palette graphique ou maquette existante, ou par une création sur mesure. Chaque projet est personnalisé pour refléter votre image avec une interface moderne et élégante. J'utilise des animations avancées avec Framer Motion, GSAP, et d'autres technologies pour garantir une expérience utilisateur exceptionnelle.",
         },
         {
-            questions: "Can I use this for 21 questions?",
+            questions: "Mon site sera-t-il adapté sur mobile ?",
             réponses:
-                "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated.",
+                "Oui, tous mes projets sont conçus pour être adaptés aux mobiles, tablettes et desktops. Sur demande, je peux également adapter votre site pour de très grands écrans, garantissant ainsi une expérience utilisateur optimale sur tous les types de dispositifs.",
         },
         {
-            questions: "Are these questions for girls or for boys?",
+            questions: "Serai-je autonome pour gérer les contenus de mon site web ?",
             réponses:
-                "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).",
-        },
-        {
-            questions: "What do you wish you had more talent doing?",
-            réponses:
-                "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
+                "Oui, vous pourrez gérer vos contenus de manière autonome si vous le souhaitez. Je vous fournirai une formation pour maîtriser l'outil de gestion. Pour un portfolio ou un CV en ligne, vous pourrez ajouter, modifier ou supprimer des projets, des expériences et des photos. Sur une landing page, vous pourrez ajuster les textes, les images et les galeries de photos. Si vous préférez déléguer cette gestion, je peux également prendre en charge cette tâche, partiellement ou totalement, via un contrat spécifique.",
         },
     ];
 
     return (
         <section
-            className="relative bg-gradient-to-b from-black-100 via-blue-100/30 to-black-100"
+            className="relative bg-gradient-to-b from-black-100 via-blue-100/20 to-black-100"
             id="faq"
         >
             <div className=" relative max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto  md:flex px-4 md:px-6">
                 <div className="flex-1 ">
                     <div>
-                        <h3 className="mt-3 font-extrabold title-size text-gradient ">F.A.Q</h3>
+                        <h3 className="mt-3 font-extrabold text-2xl md:text-9xl text-gradient ">
+                            F.A.Q
+                        </h3>
                     </div>
                 </div>
                 <div className="flex-1 mt-12 md:mt-0">

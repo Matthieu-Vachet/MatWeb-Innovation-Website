@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <section
             id="Home"
-            className=" w-full flex pb-0 px-4 bg-gradient-to-b from-purple-950/15 to-black-100 pt-28 md:pt-52 lg:pt-32 imac:pt-40"
+            className="relative w-full flex pb-0 px-4 bg-gradient-to-b from-purple-950/15 to-black-100 pt-28 md:pt-52 lg:pt-32 imac:pt-40"
         >
             <div className="w-screen h-full flex flex-col justify-center items-center text-center">
                 <Image

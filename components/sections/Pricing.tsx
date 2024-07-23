@@ -15,7 +15,7 @@ const Pricing = () => {
     return (
         <section
             id="mes-tarifs"
-            className="bg-gradient-to-b from-black-100 via-purple-700/15 to-black-100"
+            className="relative bg-gradient-to-b from-black-100 via-purple-700/15 to-black-100"
         >
             <AnimatedElement delay={0.4} duration={0.5}>
                 <h3 className="w-full text-gradient translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 -mt-[8rem] md:-mt-[18rem] mb-28 md:mb-40 flex flex-col title-size">

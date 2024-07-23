@@ -53,22 +53,22 @@ export const HoverEffect = ({
                         <CardTitle>{item.title}</CardTitle>
                         <CardIcons className="absolute top-0 right-0">
                             {item.icon === "PiNotePencilFill" && (
-                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "PiCoffeeBold" && (
-                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "PiPencil" && (
-                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "PiCodeBold" && (
-                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "BsSendCheck" && (
-                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "SiTestinglibrary" && (
-                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-5" />
+                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-15" />
                             )}
                         </CardIcons>
                         <CardSubtitle>{item.subtitle}</CardSubtitle>

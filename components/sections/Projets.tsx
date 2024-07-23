@@ -13,7 +13,7 @@ const Projets = () => {
     return (
         <section
             id="mes-projets"
-            className="bg-gradient-to-b from-black-100 via-purple-500/15 to-black-100"
+            className="relative bg-gradient-to-b from-black-100 via-purple-500/15 to-black-100"
         >
             <Features color="69, 50, 119" colorDark="69, 50, 119">
                 <Features.Main

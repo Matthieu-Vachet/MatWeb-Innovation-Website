@@ -12,7 +12,7 @@ const Contact = () => {
     return (
         <section
             id="Contact"
-            className="bg-gradient-to-b from-black-100 via-blue-100/15 to-black-100"
+            className=" relative bg-gradient-to-b from-black-100 via-blue-100/15 to-black-100"
         >
             <Features color="40,87,255" colorDark="48,58,117">
                 <Features.Main

@@ -18,7 +18,7 @@ const About = () => {
     return (
         <section
             id="a-propos-de-moi"
-            className="bg-gradient-to-b from-black-100 via-purple-600/15 to-black-100 mb-[5rem] md:mb-[20rem]"
+            className="relative bg-gradient-to-b from-black-100 via-purple-600/15 to-black-100 mb-[5rem] md:mb-[20rem]"
         >
             <Features color="79, 57, 136" colorDark="79, 57, 136">
                 <Features.Main title="A propos de moi" />
