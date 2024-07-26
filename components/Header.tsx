@@ -42,12 +42,17 @@ export const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 z-[100] w-full border-b border-transparent-white backdrop-blur-[12px] p-4">
+        <header className="fixed top-0 left-0 z-[100] w-full border-b border-transparent-white backdrop-blur-[12px] p-4 pointer-events-auto">
             <Container className="flex justify-between items-center">
-                <Link className="flex items-center text-md gap-3" href="/">
+                <Link
+                    className="flex items-center text-md gap-3"
+                    href="/"
+                    title="Retour à l'accueil"
+                    aria-label="Retour à l'accueil"
+                >
                     <Image
                         src="/logo/logo-MatWeb.webp"
-                        alt="Logo Matweb-innovation développeur web indépendant"
+                        alt="Logo Matweb-innovation développeur web indépendant dans l'Aisne"
                         width={40}
                         height={36}
                         priority
@@ -84,37 +89,72 @@ export const Header = () => {
                             )}
                         >
                             <li>
-                                <Link href="#Home" onClick={handleLinkClick}>
+                                <Link
+                                    href="#Home"
+                                    onClick={handleLinkClick}
+                                    title="Retour à l'accueil"
+                                    aria-label="Retour à l'accueil"
+                                >
                                     Acceuil
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#mes-service" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-service"
+                                    onClick={handleLinkClick}
+                                    title="Voir les services proposés"
+                                    aria-label="Voir la liste des services que je propose en développement web ou en intégration"
+                                >
                                     Services
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#mes-competences" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-competences"
+                                    onClick={handleLinkClick}
+                                    title="Consulter mes compétences"
+                                    aria-label="Consulter mes compétences en développement web ou en intégration"
+                                >
                                     Compétences
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#mes-projets" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-projets"
+                                    onClick={handleLinkClick}
+                                    title="Voir mes projets"
+                                    aria-label="Voir les projets que j'ai réalisés"
+                                >
                                     Projets
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
-                                <Link href="#a-propos-de-moi" onClick={handleLinkClick}>
+                                <Link
+                                    href="#a-propos-de-moi"
+                                    onClick={handleLinkClick}
+                                    title="En savoir plus sur moi"
+                                    aria-label="En savoir plus sur moi"
+                                >
                                     À propos
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#mes-tarifs" onClick={handleLinkClick}>
+                                <Link
+                                    href="#mes-tarifs"
+                                    onClick={handleLinkClick}
+                                    title="Découvrir mes tarifs"
+                                    aria-label="Découvrir les tarifs pour les services que je propose en developpement web ou en intégration"
+                                >
                                     Offres
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#Contact" onClick={handleLinkClick}>
+                                <Link
+                                    href="#Contact"
+                                    onClick={handleLinkClick}
+                                    title="Me contacter"
+                                    aria-label="Contacter Matthieu Vachet via le formulaire de contact"
+                                >
                                     Contact
                                 </Link>
                             </li>

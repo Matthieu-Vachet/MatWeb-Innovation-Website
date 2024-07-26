@@ -103,8 +103,9 @@ const Projets = () => {
                                         <a
                                             href={item.link}
                                             target="_blank"
+                                            title="Voir le projet"
                                             rel="noopener noreferrer"
-                                            className="flex justify-center items-center text-center gap-2 "
+                                            className="flex justify-center items-center text-center gap-2"
                                             aria-label="Lien vers le projet"
                                         >
                                             <FaGithub

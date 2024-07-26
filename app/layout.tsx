@@ -12,7 +12,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.matthieu-vachet.fr/"),
-    title: "MatWeb Innovation",
+    title: "MatWeb Innovation développeur Web freelance dans l'Aisne",
     description:
         "Developpeur Web Freelance, intégration, création de site web dans l'Aisne. Développement en React, Next.js, Tailwind CSS.",
     generator: "Next.js",

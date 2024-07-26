@@ -7,7 +7,6 @@ export interface Tier {
     name: string;
     id: string;
     details: string;
-    href: string;
     priceMonthly: string;
     description: string;
     features: string[];
@@ -19,7 +18,6 @@ export const tiers: Tier[] = [
         name: "Intégration",
         id: "tier-1",
         details: "(Maquette à fournir)",
-        href: "#",
         priceMonthly: "100€",
         description:
             "Site Web, Portfolio, Landing page, simple d'une page comportant jusqu'a 4 sections.",
@@ -48,7 +46,6 @@ export const tiers: Tier[] = [
         name: "Intégration",
         id: "tier-2",
         details: "(Maquette à fournir)",
-        href: "#",
         priceMonthly: "250€",
         description: "Site Web, Portfolio, Landing page, de 2 pages comportant jusqu'a 5 sections.",
         features: [
@@ -76,7 +73,6 @@ export const tiers: Tier[] = [
     {
         name: "Développement",
         id: "tier-3",
-        href: "#",
         details: "(Avec ou sans maquette)",
         priceMonthly: "1200€",
         description: "Site Web, Portfolio, Landing page, sans limite de pages et de sections.",

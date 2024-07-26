@@ -72,6 +72,8 @@ const Hero = () => {
                         <div className="flex items-center justify-center gap-5 md:gap-10">
                             <Link
                                 href="#mes-tarifs"
+                                title="Découvrire mes offres"
+                                aria-label="Découvrire mes offres"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     document
@@ -88,6 +90,8 @@ const Hero = () => {
                             </Link>
                             <Link
                                 href="#formulaire-de-contact"
+                                title="Me contacter pour un devis Gratuit"
+                                aria-label="Me contacter pour un devis Gratuit"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     document
@@ -112,6 +116,7 @@ const Hero = () => {
                     <div className="flex gap-3 md:gap-10 lg:gap-14 items-center justify-center flex-wrap md:-mt-5">
                         <Link
                             href="https://fr.fiverr.com/matthieu_vachet/developpeur-web-certifie-creation-de-sites-modernes-avec-react-et-next-js"
+                            title="Voir le profil Fiverr de Matthieu Vachet"
                             aria-label="Lien vers le profil Fiverr de Matthieu Vachet"
                         >
                             <Image
@@ -124,6 +129,7 @@ const Hero = () => {
                         </Link>
                         <Link
                             href="https://www.linkedin.com/in/matthieu-vachet-46b7231b0/"
+                            title="Voir le profil LinkedIn de Matthieu Vachet"
                             aria-label="Lien vers le profil LinkedIn de Matthieu Vachet"
                         >
                             <Image
@@ -134,7 +140,11 @@ const Hero = () => {
                                 className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
-                        <Link href="https://www.malt.fr" aria-label="lien vers le site de Malt">
+                        <Link
+                            href="https://www.malt.fr"
+                            title="Voir le site de Malt"
+                            aria-label="lien vers le site de Malt"
+                        >
                             <Image
                                 src="/logo/logo-Malt.svg"
                                 alt="Logo de Malt"
@@ -145,6 +155,7 @@ const Hero = () => {
                         </Link>
                         <Link
                             href="https://www.pylote.com"
+                            title="Voir le site de Pylote"
                             aria-label="Lien vers le site de Pylote"
                         >
                             <Image

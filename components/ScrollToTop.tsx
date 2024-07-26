@@ -34,6 +34,7 @@ export default function TopToScroll() {
                     <div
                         onClick={ScrollToTop}
                         aria-label="Flêche pour remonter au début de la page"
+                        role="button"
                     >
                         <MdKeyboardDoubleArrowUp className="text-[3rem] md:text-[4rem]" />
                     </div>

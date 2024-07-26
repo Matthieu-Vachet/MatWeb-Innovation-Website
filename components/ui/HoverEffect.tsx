@@ -53,22 +53,46 @@ export const HoverEffect = ({
                         <CardTitle>{item.title}</CardTitle>
                         <CardIcons className="absolute top-0 right-0">
                             {item.icon === "PiNotePencilFill" && (
-                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
+                                <PiNotePencilFill
+                                    className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15"
+                                    title="Image d'un crayon pour désigner la carte design"
+                                    aria-label="Image d'un crayon pour désigner la carte design"
+                                />
                             )}
                             {item.icon === "PiCoffeeBold" && (
-                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
+                                <PiCoffeeBold
+                                    className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15"
+                                    title="Image tasse de cafe pour la carte échange"
+                                    aria-label="Image tasse de cafe pour la carte échange"
+                                />
                             )}
                             {item.icon === "PiPencil" && (
-                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
+                                <PiPencil
+                                    className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15"
+                                    title="Image crayon pour la carte analyse"
+                                    aria-label="Image crayon pour la carte analyse"
+                                />
                             )}
                             {item.icon === "PiCodeBold" && (
-                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
+                                <PiCodeBold
+                                    className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15"
+                                    title="Image de code pour la carte code"
+                                    aria-label="Image de code pour la carte code"
+                                />
                             )}
                             {item.icon === "BsSendCheck" && (
-                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
+                                <BsSendCheck
+                                    className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15"
+                                    title="Image d'une enveloppe pour la carte livraison"
+                                    aria-label="Image d'une enveloppe pour la carte livraison"
+                                />
                             )}
                             {item.icon === "SiTestinglibrary" && (
-                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-15" />
+                                <SiTestinglibrary
+                                    className="text-[5rem] rotate-12 text-white z-0 opacity-15"
+                                    title="Image de React testing library pour la carte test"
+                                    aria-label="Image de React testing library pour la carte test"
+                                />
                             )}
                         </CardIcons>
                         <CardSubtitle>{item.subtitle}</CardSubtitle>
