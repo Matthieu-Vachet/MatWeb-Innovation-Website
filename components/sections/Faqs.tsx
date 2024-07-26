@@ -37,12 +37,12 @@ export default function Faqs() {
             <div className=" relative max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto  md:flex px-4 md:px-6">
                 <div className="flex-1 ">
                     <div>
-                        <h3 className="mt-3 font-extrabold text-2xl md:text-8xl text-gradient ">
+                        <h3 className="mt-3 font-extrabold text-6xl md:text-8xl text-gradient ">
                             F.A.Q
                         </h3>
                     </div>
                 </div>
-                <div className="flex-1 mt-12 md:mt-0">
+                <div className="flex-1 mt-5 md:mt-0">
                     <ul className="space-y-4 divide-y">
                         {faqsList.map((item) => (
                             <li className="py-5" key={item.id}>

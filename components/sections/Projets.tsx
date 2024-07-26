@@ -30,7 +30,7 @@ const Projets = () => {
             </Features>
             <div className="relative">
                 <Particles
-                    className="absolute inset-0"
+                    className="hidden md:block absolute inset-0"
                     quantity={200}
                     ease={80}
                     color={"#fff"}

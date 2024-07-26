@@ -25,7 +25,7 @@ const Pricing = () => {
                     </span>
                 </h3>
             </AnimatedElement>
-            <div className=" mx-auto max-w-[100vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-48 md:mt-20 ">
+            <div className=" mx-auto max-w-[100vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-32 md:mt-20 ">
                 <div className="hidden md:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8 ">
                     <div className="relative mt-6 opacity-50">
                         <svg

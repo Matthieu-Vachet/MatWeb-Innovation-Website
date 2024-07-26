@@ -33,7 +33,7 @@ const Service = () => {
             </Features>
             <div className="relative">
                 <Particles
-                    className="absolute inset-0"
+                    className="hidden md:block absolute inset-0"
                     quantity={200}
                     ease={80}
                     color={"#fff"}
@@ -79,7 +79,7 @@ const Service = () => {
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>
                         <h3 className="w-[95vw] md:w-full text-gradient subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
-                            Processus de Conception et Développement <br />
+                            Processus de Conception et Développement
                             <span className="text-purple subtitle text-xl md:text-2xl">
                                 Les étapes clés qui vous séparent de votre site internet
                             </span>

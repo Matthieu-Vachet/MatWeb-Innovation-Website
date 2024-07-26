@@ -42,7 +42,7 @@ export const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 z-50 w-full border-b border-transparent-white backdrop-blur-[12px] p-4">
+        <header className="fixed top-0 left-0 z-[100] w-full border-b border-transparent-white backdrop-blur-[12px] p-4">
             <Container className="flex justify-between items-center">
                 <Link className="flex items-center text-md gap-3" href="/">
                     <Image

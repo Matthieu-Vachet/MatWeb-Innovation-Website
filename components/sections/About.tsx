@@ -42,7 +42,7 @@ const About = () => {
                         <div className="flex flex-col  w-full justify-items-start items-start text-left gap-5 Z-20">
                             <AnimatedElement delay={0.4} duration={0.6}>
                                 <h2 className="composant-title-size font-bold text-white Z-20">
-                                    Un développeur <span className="text-purple">passionné !</span>
+                                    Un développeur <span className="text-purple">passionné</span>
                                 </h2>
                                 <p className="w-full max-w-3xl text-md font-semibold text-white-100 Z-20">
                                     Passionné par l&apos;informatique depuis mon enfance, j&apos;ai

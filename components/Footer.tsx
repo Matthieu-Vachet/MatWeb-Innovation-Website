@@ -29,14 +29,14 @@ const SOCIAL_MEDIAS: SocialMediaLink[] = [
 ];
 export default function Footer() {
     return (
-        <footer className="bg-gradient-to-tr from-transparent via-black-100/15 to-black-100 py-12 text-gray-400 backdrop-blur-lg sm:py-16    ">
+        <footer className="bg-gradient-to-tr from-transparent via-black-100/15 to-black-100 py-0 text-gray-400 backdrop-blur-lg md:py-12 ">
             <Image
                 src="/background/background-footer.svg"
                 alt="Image de fond du footer"
                 width={100}
                 height={100}
                 loading="lazy"
-                className="w-full h-screen opacity-70 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-10 "
+                className="w-full h-screen opacity-80 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-10 "
             />
 
             <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto mb-16">
@@ -58,11 +58,11 @@ export default function Footer() {
                         besoins dans divers domaines.
                     </p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-start md:items-center">
                     <h4 className="mb-4 font-heading2 font-semibold text-gray-200">
                         Liens rapides
                     </h4>
-                    <ul className="space-y-2 text-center">
+                    <ul className="space-y-2 text-start md:text-center">
                         {QUICK_LINKS.map(({ title, link, id }) => (
                             <li key={id}>
                                 <Link
@@ -75,7 +75,7 @@ export default function Footer() {
                         ))}
                     </ul>
                 </div>
-                <div className="flex flex-col items-end">
+                <div className="flex flex-col items-start md:items-end">
                     <h4 className="mb-4 font-heading2 font-semibold text-gray-200">Suivez-moi</h4>
                     <div className="flex space-x-4">
                         {SOCIAL_MEDIAS.map(({ icon, link, id }) => (
@@ -90,8 +90,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="container flex justify-center items-center mx-auto mt-8 px-4 text-center sm:px-6 lg:px-8 gap-2 text-sm">
-                <p>© 2024 Vachet Matthieu - Développeur - Tous droits réservés -</p>
+            <div className="container flex flex-col justify-center items-center mx-auto mt-8 px-4 text-center sm:px-6 lg:px-8 gap-2 text-sm">
+                <p>© 2024 Vachet Matthieu - Développeur - Tous droits réservés</p>
                 <Link href="/mentions-legales" className="transition-colors hover:text-purple">
                     Mentions légales
                 </Link>
