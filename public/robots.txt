@@ -1,2 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://www.matthieu-vachet.fr
+
+# Sitemaps
+Sitemap: https://www.matthieu-vachet.fr/sitemap.xml
