@@ -134,6 +134,14 @@ const config = {
                         "background-position": "0% 0%",
                     },
                 },
+                "arrow-scroll": {
+                    "0%, 100%": {
+                        transform: "translateY(0)",
+                    },
+                    "50%": {
+                        transform: "translateY(-10px)",
+                    },
+                },
             },
 
             animation: {
