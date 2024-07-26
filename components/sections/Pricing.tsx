@@ -117,7 +117,8 @@ const Pricing = () => {
                                         </div>
                                         <Link
                                             href="#formulaire-de-contact"
-                                            aria-describedby={tier.id}
+                                            title="Demander un devis Gratuit"
+                                            aria-describedby="Demander un devis Gratuit"
                                             className="mt-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] text-center"
                                         >
                                             <MagicButton
@@ -174,7 +175,8 @@ const Pricing = () => {
                                         </p>
                                         <Link
                                             href="#formulaire-de-contact"
-                                            aria-label="Boutton de contact"
+                                            title="Me contacter pour un devis Gratuit"
+                                            aria-label="Me contacter pour un devis Gratuit"
                                             className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms] text-center"
                                         >
                                             <MagicButton title="Me contacter" position="left" />

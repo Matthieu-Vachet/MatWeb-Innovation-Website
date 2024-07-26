@@ -19,13 +19,34 @@ type SocialMediaLink = {
     id: string;
     icon: () => JSX.Element;
     link: string;
+    title: string;
     index?: number;
 };
 const SOCIAL_MEDIAS: SocialMediaLink[] = [
-    { id: "Twitter-link", icon: (...props) => <TwitterIcon />, link: "#" },
-    { id: "Facebook-link", icon: (...props) => <FacebookIcon />, link: "#" },
-    { id: "Linkedin-link", icon: (...props) => <LinkedinIcon />, link: "#" },
-    { id: "Instagram-link", icon: (...props) => <InstagramIcon />, link: "#" },
+    {
+        id: "Twitter-link",
+        icon: (...props) => <TwitterIcon />,
+        link: "https://twitter.com/matweb_innov/",
+        title: "Voir le profil Twitter de Matthieu Vachet",
+    },
+    {
+        id: "Facebook-link",
+        icon: (...props) => <FacebookIcon />,
+        link: "https://www.facebook.com/profile.php?id=61561295637110",
+        title: "Voir la page Facebook de Matthieu Vachet",
+    },
+    {
+        id: "Linkedin-link",
+        icon: (...props) => <LinkedinIcon />,
+        link: "https://www.linkedin.com/in/matthieu-vachet-46b7231b0/",
+        title: "Voir le profil LinkedIn de Matthieu Vachet",
+    },
+    {
+        id: "Instagram-link",
+        icon: (...props) => <InstagramIcon />,
+        link: "https://www.instagram.com/matthieuvachet02/",
+        title: "Voir le profil Instagram de Matthieu Vachet",
+    },
 ];
 export default function Footer() {
     return (
@@ -78,11 +99,16 @@ export default function Footer() {
                 <div className="flex flex-col items-start md:items-end">
                     <h4 className="mb-4 font-heading2 font-semibold text-gray-200">Suivez-moi</h4>
                     <div className="flex space-x-4">
-                        {SOCIAL_MEDIAS.map(({ icon, link, id }) => (
+                        {SOCIAL_MEDIAS.map(({ icon, link, id, title }) => (
                             <Link
                                 key={id}
                                 className="transition-colors hover:text-purple"
                                 href={link}
+                                title={title}
+                                aria-label={title}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-labelledby="{title}-link"
                             >
                                 {icon()}
                             </Link>

@@ -66,6 +66,8 @@ const Service = () => {
                     <div className="flex justify-center">
                         <Link
                             href="#formulaire-de-contact"
+                            title="Demander un devis Gratuit"
+                            aria-label="Demander un devis Gratuit"
                             onClick={(e) => {
                                 e.preventDefault();
                                 document
@@ -93,10 +95,10 @@ const Service = () => {
                     <AnimatedElement delay={0.4} duration={0.6}>
                         <div className="relative flex items-center justify-center lg:justify-between overflow-hidden bg-transparent gap-1  flex-wrap mt-20 lg:mt-36  ">
                             <div className="flex max-w-[90vw] lg:max-w-[50%] flex-col items-center gap-5">
-                                <p className=" text-white-100 translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mb-8 md:mb-5 subtitle-size">
+                                <h4 className=" text-white-100 translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mb-8 md:mb-5 subtitle-size">
                                     Utilisation de technologies qui n&apos;ont plus besoin de
                                     prouver leur efficacité
-                                </p>
+                                </h4>
                                 <WordRotate
                                     className="subtitle-size md:mt-10 text-purple font-semibold"
                                     words={[
