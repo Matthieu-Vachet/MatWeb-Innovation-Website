@@ -227,7 +227,7 @@ export function ContactForm() {
                 </LabelInputContainer>
                 <LabelInputContainer className="mb-4">
                     <Label className="text-lg" htmlFor="Sujets">
-                        Sujets
+                        Sujet
                     </Label>
                     <Input
                         className="text-lg"

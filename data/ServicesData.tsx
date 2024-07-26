@@ -1,9 +1,16 @@
-export const Processus = [
+export interface Service {
+    title: string;
+    subtitle: string;
+    description: string;
+    icon: string;
+}
+
+export const Processus: Service[] = [
     {
         title: "1",
         subtitle: "échange",
         description:
-            "Nous débutons par un échange, l'occasion idéale pour discuter de votre projet. Nous aborderons vos idées, vos objectifs, et les détails essentiels à considérer.",
+            "Nous débutons par un échange, l'occasion idéale pour discuter de votre projet. Nous aborderons vos idées, vos objectifs et les détails essentiels à considérer.",
         icon: "PiCoffeeBold",
     },
     {
@@ -38,7 +45,7 @@ export const Processus = [
         title: "6",
         subtitle: "Livraison",
         description:
-            "Une fois le site prêt, je le livrerai avec enthousiasme. Nous passerons en revue les derniers détails, et je vous fournirai toutes les informations nécessaires pour la gestion et la maintenance future du site.",
+            "Une fois le site prêt, je le livrerai avec enthousiasme. Nous passerons en revue les derniers détails, et je vous fournirai toutes les informations nécessaires pour la gestion et la maintenance futures du site.",
         icon: "BsSendCheck",
     },
 ];
@@ -68,53 +75,68 @@ import {
     IconSettings,
 } from "@tabler/icons-react";
 
-export const items = [
+export interface Item {
+    id: string;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+}
+
+export const items: Item[] = [
     {
+        id: "Intégration-WEB",
         title: "Intégration WEB",
         description:
             "Intégration de solutions web sur mesure pour optimiser la performance de votre site. Nous assurons une compatibilité parfaite avec tous les navigateurs et appareils pour offrir une expérience utilisateur fluide et cohérente.",
         icon: <IconDeviceDesktopCode />,
     },
     {
+        id: "Création-de-Site-Internet",
         title: "Création de Site Internet",
         description:
             "Conception de sites internet sur mesure qui convertissent vos prospects en clients. Mettez en avant votre image de marque grâce à des designs soignés et un référencement efficace.",
         icon: <IconWorldWww />,
     },
     {
+        id: "Landing-Page",
         title: "Landing Page",
         description:
             "Développement de landing pages captivantes et performantes. Maximisez vos taux de conversion avec des pages d'atterrissage optimisées pour attirer et retenir l’attention de vos visiteurs.",
         icon: <IconFileUpload />,
     },
     {
+        id: "Portfolio",
         title: "Portfolio",
         description:
             "Créez un portfolio en ligne professionnel qui reflète vos compétences et réalisations. Mettez en valeur vos projets avec un design élégant et une navigation intuitive.",
         icon: <IconLayoutGrid />,
     },
     {
+        id: "Site-Vitrine",
         title: "Site Vitrine",
         description:
             "Conception de sites vitrines attractifs pour présenter votre entreprise et vos services. Améliorez votre présence en ligne avec des designs modernes et une optimisation SEO.",
         icon: <IconBuildingSkyscraper />,
     },
     {
+        id: "SEO",
         title: "Référencement",
         description:
             "Boostez votre visibilité en ligne avec des stratégies de référencement naturel (SEO). Améliorez votre positionnement sur Google et attirez un trafic qualifié vers votre site.",
         icon: <IconChartBar />,
     },
     {
+        id: "Responsive",
         title: "100% Responsive",
         description:
-            "Optimisation de votre site pour une expérience utilisateur optimale sur toutes les plateformes : ordinateur, tablette, et smartphone. Améliorez votre classement sur Google avec un site entièrement responsive.",
+            "Optimisation de votre site pour une expérience utilisateur optimale sur toutes les plateformes : ordinateur, tablette et smartphone. Améliorez votre classement sur Google avec un site entièrement responsive.",
         icon: <IconDevices />,
     },
     {
+        id: "Maintenance-Site-Internet",
         title: "Maintenance Site Internet",
         description:
-            "Assurez la performance et la sécurité de votre site avec nos services de maintenance. Optimisation de la vitesse de chargement, correction des failles de sécurité, et mise à jour régulière de votre contenu.",
+            "Assurez la performance et la sécurité de votre site avec nos services de maintenance. Optimisation de la vitesse de chargement, correction des failles de sécurité et mise à jour régulière de votre contenu.",
         icon: <IconSettings />,
     },
 ];

@@ -12,14 +12,14 @@ const Contact = () => {
     return (
         <section
             id="Contact"
-            className="bg-gradient-to-b from-black-100 via-blue-100/15 to-black-100"
+            className=" relative bg-gradient-to-b from-black-100 via-blue-100/15 to-black-100"
         >
             <Features color="40,87,255" colorDark="48,58,117">
                 <Features.Main
                     title="Contactez-moi"
                     text={
                         <>
-                            Une idée ? Un Projet ? N&apos;hésitez pas à{" "}
+                            Une idée ? Un projet ? N&apos;hésitez pas à{" "}
                             <span className="text-blue font-bold uppercase">demander un devis</span>{" "}
                             <span className="font-bold uppercase text-white underline">
                                 GRATUIT
@@ -31,7 +31,7 @@ const Contact = () => {
             </Features>
             {/* Titre Tablette / Desktop */}
             <div className="flex mt-10">
-                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto px-4 -mt-16 lg:-mt-10">
+                <div className="flex flex-wrap flex-col justify-center items-center md:flex-row w-full md:px-6 z-40 gap-10 md:gap-0 max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto px-4 -mt-16 lg:-mt-10 mb-[5rem] md:mb-[15rem]">
                     {/* Conteneur pour le BoxReveal */}
                     <div className="w-full md:w-[50%] flex flex-col z-50 lg:pl-10 gap-5">
                         <BoxReveal boxColor={"#6062e8"} duration={0.5}>

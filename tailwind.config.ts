@@ -145,6 +145,14 @@ const config = {
                         transform: "translate(-50%, -50%) scale(0.9)",
                     },
                 },
+                marquee: {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(calc(-100% - var(--gap)))" },
+                },
+                "marquee-vertical": {
+                    from: { transform: "translateY(0)" },
+                    to: { transform: "translateY(calc(-100% - var(--gap)))" },
+                },
 
                 "shine-pulse": {
                     "0%": {
@@ -167,6 +175,8 @@ const config = {
                 spotlight: "spotlight 2s ease .75s 1 forwards",
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
                 ripple: "ripple 3400ms ease infinite",
+                marquee: "marquee var(--duration) linear infinite",
+                "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
             },
         },
     },

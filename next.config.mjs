@@ -13,6 +13,10 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "farmui.vercel.app",
             },
+            {
+                protocol: "https",
+                hostname: "avatar.vercel.sh",
+            },
         ],
     },
 };

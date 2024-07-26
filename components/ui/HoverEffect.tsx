@@ -25,17 +25,17 @@ export const HoverEffect = ({
 
     return (
         <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3", className)}>
-            {items.map((item, idx) => (
+            {items.map((item, index) => (
                 <div
-                    key={idx}
+                    key={index}
                     className="relative group block p-2 h-full w-full"
-                    onMouseEnter={() => setHoveredIndex(idx)}
+                    onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
                     <AnimatePresence>
-                        {hoveredIndex === idx && (
+                        {hoveredIndex === index && (
                             <motion.div
-                                className="absolute inset-0 h-full w-full bg-purple/[0.05] block rounded-3xl "
+                                className="absolute inset-0 h-full w-full bg-purple/[0.04] block rounded-3xl "
                                 layoutId="hoverBackground"
                                 initial={{ opacity: 0 }}
                                 animate={{
@@ -53,22 +53,22 @@ export const HoverEffect = ({
                         <CardTitle>{item.title}</CardTitle>
                         <CardIcons className="absolute top-0 right-0">
                             {item.icon === "PiNotePencilFill" && (
-                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiNotePencilFill className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "PiCoffeeBold" && (
-                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiCoffeeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "PiPencil" && (
-                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiPencil className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "PiCodeBold" && (
-                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <PiCodeBold className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "BsSendCheck" && (
-                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-5" />
+                                <BsSendCheck className="text-[5rem] rotate-12 text-white-100 z-0 opacity-15" />
                             )}
                             {item.icon === "SiTestinglibrary" && (
-                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-5" />
+                                <SiTestinglibrary className="text-[5rem] rotate-12 text-white z-0 opacity-15" />
                             )}
                         </CardIcons>
                         <CardSubtitle>{item.subtitle}</CardSubtitle>
@@ -90,7 +90,7 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-glass-gradient border border-white/[0.2] group-hover:border-white-200/50 relative z-30  shadow-[0px_5px_50px_0px_rgba(49,35,85,_0.50)] ",
+                "flex rounded-2xl h-full w-full p-3 overflow-hidden bg-glass-gradient backdrop-blur-sm border border-white/[0.15] group-hover:border-white-200/50 relative z-30  shadow-[0px_5px_50px_0px_rgba(49,35,85,_0.70)]",
                 className,
             )}
         >

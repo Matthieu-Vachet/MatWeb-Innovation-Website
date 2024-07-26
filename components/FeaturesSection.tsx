@@ -5,7 +5,7 @@ export function FeaturesSection() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-[90vw] mx-auto">
             {items.map((feature, index) => (
-                <Feature key={feature.title} {...feature} index={index} />
+                <Feature key={feature.id} {...feature} index={index} />
             ))}
         </div>
     );
@@ -25,9 +25,9 @@ const Feature = ({
     return (
         <div
             className={cn(
-                "flex flex-col lg:border-r py-5 lg:py-10 relative group/feature dark:border-neutral-800",
-                (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
-                index < 4 && "lg:border-b dark:border-neutral-800",
+                "flex flex-col lg:border-r py-5 lg:py-10 relative group/feature dark:border-white-100/15 backdrop-blur-sm",
+                (index === 0 || index === 4) && "lg:border-l dark:border-white-100/15",
+                index < 4 && "lg:border-b dark:border-white-100/15",
             )}
         >
             {index < 4 && (

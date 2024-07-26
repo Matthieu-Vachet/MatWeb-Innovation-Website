@@ -28,12 +28,17 @@ export default function TopToScroll() {
     }, []);
 
     return (
-        <div className="fixed bottom-[10px] right-[10px] cursor-pointer text-white z-40">
-            {visible && (
-                <div onClick={ScrollToTop} aria-label="Flêche pour remonter au début de la page">
-                    <MdKeyboardDoubleArrowUp className="text-[4rem] animate-scroll-top-arrow transition-all  hover:text-purple" />
-                </div>
-            )}
+        <div className="fixed bottom-[10px] right-[10px] cursor-pointer animate-scroll-top-arrow transition-all z-[90]">
+            <div className="flex justify-center items-center border border-white/50 hover:border-purple/50 rounded-full bg-purple-100/50 hover:bg-white/50 text-white hover:text-purple-100 transition-all duration-300 ">
+                {visible && (
+                    <div
+                        onClick={ScrollToTop}
+                        aria-label="Flêche pour remonter au début de la page"
+                    >
+                        <MdKeyboardDoubleArrowUp className="text-[3rem] md:text-[4rem]" />
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

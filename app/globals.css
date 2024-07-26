@@ -101,10 +101,14 @@
     .composant-title-size {
         @apply text-xl md:text-2xl;
     }
+
+    /* .text-gradient {
+        @apply pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/30;
+    } */
 }
 
 .text-gradient {
-    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
+    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.1));
     background-clip: text;
     color: transparent;
 }

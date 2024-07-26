@@ -42,7 +42,7 @@ export const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 z-50 w-full border-b border-transparent-white backdrop-blur-[12px] p-4">
+        <header className="fixed top-0 left-0 z-[100] w-full border-b border-transparent-white backdrop-blur-[12px] p-4">
             <Container className="flex justify-between items-center">
                 <Link className="flex items-center text-md gap-3" href="/">
                     <Image
@@ -90,12 +90,12 @@ export const Header = () => {
                             </li>
                             <li>
                                 <Link href="#mes-service" onClick={handleLinkClick}>
-                                    Service
+                                    Services
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
                                 <Link href="#mes-competences" onClick={handleLinkClick}>
-                                    Competences
+                                    Compétences
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
@@ -105,12 +105,12 @@ export const Header = () => {
                             </li>
                             <li className="md:hidden lg:block">
                                 <Link href="#a-propos-de-moi" onClick={handleLinkClick}>
-                                    A propos
+                                    À propos
                                 </Link>
                             </li>
                             <li>
                                 <Link href="#mes-tarifs" onClick={handleLinkClick}>
-                                    Tarifs
+                                    Offres
                                 </Link>
                             </li>
                             <li>
