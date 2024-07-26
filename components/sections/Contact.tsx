@@ -19,7 +19,7 @@ const Contact = () => {
                     title="Contactez-moi"
                     text={
                         <>
-                            Une idée ? Un Projet ? N&apos;hésitez pas à{" "}
+                            Une idée ? Un projet ? N&apos;hésitez pas à{" "}
                             <span className="text-blue font-bold uppercase">demander un devis</span>{" "}
                             <span className="font-bold uppercase text-white underline">
                                 GRATUIT

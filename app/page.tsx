@@ -11,7 +11,7 @@ const About = lazy(() => import("@/components/sections/About"));
 const Contact = lazy(() => import("@/components/sections/Contact"));
 const Faqs = lazy(() => import("@/components/sections/Faqs"));
 const Footer = lazy(() => import("@/components/Footer"));
-import GlobeMask from "@/components/ui/GlobeMask";
+const GlobeMask = lazy(() => import("@/components/ui/GlobeMask"));
 
 import { Toaster } from "sonner";
 

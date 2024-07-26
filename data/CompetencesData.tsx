@@ -62,7 +62,7 @@ export interface Skill {
 }
 
 export interface Competence {
-    id: number;
+    id: string;
     title: string;
     desc: string;
     className: string;
@@ -71,9 +71,9 @@ export interface Competence {
 
 export const CompetencesList: Competence[] = [
     {
-        id: 1,
+        id: "Front-End-Id",
         title: "Front-End",
-        desc: "Création d'interfaces utilisateur dynamiques et responsives avec des technologies modernes comme React.js, en optimisant l'expérience utilisateur et les performances.",
+        desc: "Création d'interfaces utilisateur dynamiques et responsives avec des technologies modernes comme React.js, tout en optimisant l'expérience utilisateur et les performances.",
         className: "md:col-span-2",
         skills: [
             {
@@ -129,9 +129,9 @@ export const CompetencesList: Competence[] = [
         ],
     },
     {
-        id: 2,
+        id: "Back-End-Id",
         title: "Back-End",
-        desc: "Développement de serveurs robustes et sécurisés, gestion des bases de données et API avec Node.js, Express.js, et MongoDB, garantissant l'efficacité et la scalabilité des applications.",
+        desc: "Développement de serveurs robustes et sécurisés, gestion des bases de données et des API avec Node.js, Express.js et MongoDB, garantissant l'efficacité et la scalabilité des applications.",
         className: "md:col-span-2",
         skills: [
             {
@@ -152,9 +152,9 @@ export const CompetencesList: Competence[] = [
         ],
     },
     {
-        id: 3,
+        id: "Tools-Dev-Id",
         title: "Outils de développement",
-        desc: "Maîtrise des outils de développement modernes pour améliorer l'efficacité du workflow, incluant la gestion de version avec Git et la collaboration sur des projets complexes.",
+        desc: "Maîtrise des outils de développement modernes pour améliorer l'efficacité du workflow, y compris la gestion de version avec Git et la collaboration sur des projets complexes.",
         className: "md:col-span-2",
         skills: [
             {
@@ -180,9 +180,9 @@ export const CompetencesList: Competence[] = [
         ],
     },
     {
-        id: 4,
+        id: "Tools-Design-Id",
         title: "Conception et collaboration",
-        desc: "Utilisation des outils de conception et de gestion de projets pour créer des interfaces utilisateur intuitives et collaborer efficacement avec les équipes, assurant une cohérence dans le développement.",
+        desc: "Utilisation des outils de conception et de gestion de projets pour créer des interfaces utilisateur intuitives et collaborer efficacement avec les équipes, assurant ainsi une cohérence dans le développement.",
         className: "md:col-span-2",
         skills: [
             {

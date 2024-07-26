@@ -90,12 +90,12 @@ export const Header = () => {
                             </li>
                             <li>
                                 <Link href="#mes-service" onClick={handleLinkClick}>
-                                    Service
+                                    Services
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
                                 <Link href="#mes-competences" onClick={handleLinkClick}>
-                                    Competences
+                                    Compétences
                                 </Link>
                             </li>
                             <li className="md:hidden lg:block">
@@ -105,12 +105,12 @@ export const Header = () => {
                             </li>
                             <li className="md:hidden lg:block">
                                 <Link href="#a-propos-de-moi" onClick={handleLinkClick}>
-                                    A propos
+                                    À propos
                                 </Link>
                             </li>
                             <li>
                                 <Link href="#mes-tarifs" onClick={handleLinkClick}>
-                                    Tarifs
+                                    Offres
                                 </Link>
                             </li>
                             <li>

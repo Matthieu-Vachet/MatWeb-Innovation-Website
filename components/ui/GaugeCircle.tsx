@@ -24,7 +24,10 @@ export default function GaugeCircle({
 
     return (
         <div
-            className={cn("relative h-40 w-40 text-5xl font-semibold text-purple", className)}
+            className={cn(
+                "relative h-40 w-40 text-5xl font-semibold text-purple backdrop-blur-sm",
+                className,
+            )}
             style={
                 {
                     "--circle-size": "100px",

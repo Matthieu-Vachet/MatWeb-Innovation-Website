@@ -49,9 +49,9 @@ const Hero = () => {
                             Vitrine, Landing-Page, Portfolio, CV
                         </h3>
                         <div className="flex items-center justify-center gap-5 mt-10 rounded-lg translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-                            {socialMedias.map((media) => (
+                            {socialMedias.map((media, index) => (
                                 <a
-                                    key={media.id}
+                                    key={media.name + index}
                                     href={media.url}
                                     aria-label={media.alt}
                                     target="_blank"
@@ -105,7 +105,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col w-full items-center mt-10 lg:mt-32 z-10 bg-transparent">
+                <div className="flex flex-col w-full items-center mt-10 lg:mt-32 z-30">
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>

@@ -1,4 +1,12 @@
-export const socialMedias = [
+export interface SocialMedia {
+    id: number;
+    name: string;
+    alt: string;
+    url: string;
+    img: string;
+}
+
+export const socialMedias: SocialMedia[] = [
     {
         id: 1,
         name: "Github",

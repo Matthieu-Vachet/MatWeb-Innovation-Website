@@ -3,7 +3,18 @@ import { DiJavascript } from "react-icons/di";
 import { RiTailwindCssLine } from "react-icons/ri";
 import { RiNextjsLine } from "react-icons/ri";
 
-export const tiers = [
+export interface Tier {
+    name: string;
+    id: string;
+    details: string;
+    href: string;
+    priceMonthly: string;
+    description: string;
+    features: string[];
+    icones: JSX.Element[];
+}
+
+export const tiers: Tier[] = [
     {
         name: "Intégration",
         id: "tier-1",

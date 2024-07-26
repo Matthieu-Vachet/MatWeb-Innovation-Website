@@ -3,27 +3,29 @@ import { TwitchIcon } from "lucide-react";
 import Image from "next/image";
 
 type LinkFooterType = {
+    id: string;
     title: string;
     link?: string;
     targetBlank?: boolean;
 };
 
 const QUICK_LINKS: LinkFooterType[] = [
-    { title: "Acceuil", link: "#Home", targetBlank: false },
-    { title: "Service", link: "#mes-service", targetBlank: false },
-    { title: "Tarifs", link: "#mes-tarifs", targetBlank: false },
-    { title: "Contact", link: "#Contact", targetBlank: false },
+    { id: "Acceuil-link", title: "Acceuil", link: "#Home", targetBlank: false },
+    { id: "Service-link", title: "Service", link: "#mes-service", targetBlank: false },
+    { id: "Tarifs-link", title: "Tarifs", link: "#mes-tarifs", targetBlank: false },
+    { id: "Contact-link", title: "Contact", link: "#Contact", targetBlank: false },
 ];
 type SocialMediaLink = {
+    id: string;
     icon: () => JSX.Element;
     link: string;
     index?: number;
 };
 const SOCIAL_MEDIAS: SocialMediaLink[] = [
-    { icon: (...props) => <TwitterIcon />, link: "#" },
-    { icon: (...props) => <FacebookIcon />, link: "#" },
-    { icon: (...props) => <LinkedinIcon />, link: "#" },
-    { icon: (...props) => <InstagramIcon />, link: "#" },
+    { id: "Twitter-link", icon: (...props) => <TwitterIcon />, link: "#" },
+    { id: "Facebook-link", icon: (...props) => <FacebookIcon />, link: "#" },
+    { id: "Linkedin-link", icon: (...props) => <LinkedinIcon />, link: "#" },
+    { id: "Instagram-link", icon: (...props) => <InstagramIcon />, link: "#" },
 ];
 export default function Footer() {
     return (
@@ -49,11 +51,11 @@ export default function Footer() {
                         </span>
                     </div>
                     <p className="text-sm leading-relaxed">
-                        Développeur Web front-end freelance, je suis à votre disposition pour
-                        répondre à tout type de projets de création de sites internet, de
-                        développement spécifique ou d&apos;applications web. Passionné par les
-                        technologies liées au Web, je mets mes compétences au service de vos besoins
-                        dans divers domaines.
+                        Développeur web front-end freelance dans l&apos;Aisne, je suis à votre
+                        disposition pour répondre à tout type de projet de création de sites
+                        internet, de développement spécifique ou d&apos;applications web. Passionné
+                        par les technologies liées au web, je mets mes compétences au service de vos
+                        besoins dans divers domaines.
                     </p>
                 </div>
                 <div className="flex flex-col items-center">
@@ -61,8 +63,8 @@ export default function Footer() {
                         Liens rapides
                     </h4>
                     <ul className="space-y-2 text-center">
-                        {QUICK_LINKS.map(({ title, link }) => (
-                            <li key={title}>
+                        {QUICK_LINKS.map(({ title, link, id }) => (
+                            <li key={id}>
                                 <Link
                                     className="transition-colors hover:text-purple"
                                     href={link ?? "#"}
@@ -76,9 +78,9 @@ export default function Footer() {
                 <div className="flex flex-col items-end">
                     <h4 className="mb-4 font-heading2 font-semibold text-gray-200">Suivez-moi</h4>
                     <div className="flex space-x-4">
-                        {SOCIAL_MEDIAS.map(({ icon, link, index }) => (
+                        {SOCIAL_MEDIAS.map(({ icon, link, id }) => (
                             <Link
-                                key={index}
+                                key={id}
                                 className="transition-colors hover:text-purple"
                                 href={link}
                             >
@@ -89,9 +91,9 @@ export default function Footer() {
                 </div>
             </div>
             <div className="container flex justify-center items-center mx-auto mt-8 px-4 text-center sm:px-6 lg:px-8 gap-2 text-sm">
-                <p>© 2024 VACHET Matthieu - Developpeur - Tous droits réservés -</p>
+                <p>© 2024 Vachet Matthieu - Développeur - Tous droits réservés -</p>
                 <Link href="/mentions-legales" className="transition-colors hover:text-purple">
-                    Mentions legales
+                    Mentions légales
                 </Link>
             </div>
         </footer>
@@ -196,65 +198,3 @@ function TwitterIcon(props: any) {
         </svg>
     );
 }
-
-// import Image from "next/image";
-
-// import { socialMedias } from "@/data/HeroData";
-
-// const Footer = () => {
-//     return (
-//         <footer className=" relative w-full pt-28 pb-5 " id="contact">
-//             <div className="w-full absolute left-0 bottom-0 min-h-96">
-//                 <Image
-//                     src="/background/background-footer.svg"
-//                     alt="Image de fond du footer"
-//                     width={100}
-//                     height={100}
-//                     loading="lazy"
-//                     className="w-full h-screen opacity-70 imac:opacity-50 "
-//                 />
-//             </div>
-
-//             <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto">
-//                 <h1 className="text-gradient translate-y-[40%] text-center text-3xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-4xl [.is-visible_&]:translate-y-0 ">
-//                     Développeur <span className="text-blue">Informatique</span> Indépendant
-//                 </h1>
-//                 <p className="bg-clip-text text-center text-lg [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-lg [.is-visible_&]:translate-y-0 mt-14">
-//                     Développeur Web front-end freelance, je suis à votre disposition pour répondre à
-//                     tout type de projets de création de sites internet, de développement spécifique
-//                     ou d&apos;applications web. Passionné par les technologies liées au Web, je mets
-//                     mes compétences au service de vos besoins dans divers domaines.
-//                 </p>
-//             </div>
-//             <div className="flex mt-16 md:flex-row flex-col justify-between items-center px-10 gap-5">
-//                 <p className="md:text-base text-sm md:font-normal font-light text-center">
-//                     Copyright © 2024 Vachet Matthieu <br /> Tous droits reserves
-//                 </p>
-
-//                 <div className="flex items-center md:gap-3 gap-6">
-//                     {socialMedias.map((media) => (
-//                         <a
-//                             key={media.id}
-//                             href={media.url}
-//                             aria-label={media.alt}
-//                             target="_blank"
-//                             rel="noopener noreferrer"
-//                             className="w-[2.5rem] h-[2.5rem] md:w-[3rem] md:h-[3rem] cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-//                         >
-//                             <Image
-//                                 src={media.img}
-//                                 alt={media.alt}
-//                                 width={40}
-//                                 height={40}
-//                                 loading="lazy"
-//                                 className="w-[1.5rem] h-[1.5rem] md:w-[2rem] md:h-[2rem] md:opacity-80 hover:opacity-100"
-//                             />
-//                         </a>
-//                     ))}
-//                 </div>
-//             </div>
-//         </footer>
-//     );
-// };
-
-// export default Footer;
