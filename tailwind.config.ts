@@ -109,40 +109,9 @@ const config = {
                     "0%": { transform: "translateY(-50%)" },
                     "100%": { transform: "translateY(0)" },
                 },
-                "arrow-scroll": {
-                    "0%, 100%": {
-                        transform: "translateY(0)",
-                    },
-                    "50%": {
-                        transform: "translateY(-10px)",
-                    },
-                },
-                "border-beam": {
-                    "100%": {
-                        "offset-distance": "100%",
-                    },
-                },
-                spotlight: {
-                    "0%": {
-                        opacity: "0",
-                        transform: "translate(-72%, -62%) scale(0.5)",
-                    },
-                    "100%": {
-                        opacity: "1",
-                        transform: "translate(-50%,-40%) scale(1)",
-                    },
-                },
                 scroll: {
                     to: {
                         transform: "translate(calc(-50% - 0.5rem))",
-                    },
-                },
-                ripple: {
-                    "0%, 100%": {
-                        transform: "translate(-50%, -50%) scale(1)",
-                    },
-                    "50%": {
-                        transform: "translate(-50%, -50%) scale(0.9)",
                     },
                 },
                 marquee: {
@@ -171,10 +140,7 @@ const config = {
                 "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
                 grid: "grid 15s linear infinite",
                 "scroll-top-arrow": "arrow-scroll 1s infinite",
-                "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
-                spotlight: "spotlight 2s ease .75s 1 forwards",
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-                ripple: "ripple 3400ms ease infinite",
                 marquee: "marquee var(--duration) linear infinite",
                 "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
             },
