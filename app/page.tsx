@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 
+import ProgressBar from "@/components/ProgressBar";
 import { Header } from "@/components/Header";
 import CookieConsent from "@/components/CookieConsent";
 import Hero from "@/components/sections/Hero";
@@ -25,21 +26,24 @@ export default function Home() {
     return (
         <main className="relative w-full bg-black-100 flex justify-center items-center flex-col mx-auto">
             {/* <PreLoader /> */}
+
             <div className="w-full h-full">
                 <Header />
-                <Hero />
-                <CookieConsent />
-                <Suspense fallback={<Loader />}>
-                    <Service />
-                    <Competences />
-                    <Projets />
-                    <About />
-                    <GlobeMask />
-                    <Pricing />
-                    <Contact />
-                    <Faqs />
-                    <Footer />
-                </Suspense>
+                <ProgressBar>
+                    <Hero />
+                    <CookieConsent />
+                    <Suspense fallback={<Loader />}>
+                        <Service />
+                        <Competences />
+                        <Projets />
+                        <About />
+                        <GlobeMask />
+                        <Pricing />
+                        <Contact />
+                        <Faqs />
+                        <Footer />
+                    </Suspense>
+                </ProgressBar>
                 <Toaster
                     richColors
                     position="top-right"
