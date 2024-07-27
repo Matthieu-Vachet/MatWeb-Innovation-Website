@@ -21,9 +21,9 @@ const ProgressBar: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
 
     return (
         <>
-            <div className="fixed top-[3.8rem] md:top-[4.5rem] left-0 w-full h-1 bg-transparent z-50 ">
+            <div className="fixed top-[3.9rem] md:top-[4.5rem] left-0 w-full h-1 bg-transparent z-50 ">
                 <div
-                    className="h-2 md:h-1 bg-purple/50 shadow-scrollBar "
+                    className="h-1 bg-purple/80 shadow-scrollBar "
                     style={{ width: `${scrollPosition}%` }}
                 />
             </div>
