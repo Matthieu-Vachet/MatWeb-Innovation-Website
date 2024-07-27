@@ -168,7 +168,7 @@ const Pricing = () => {
                                             Taux journalier moyen
                                         </p>
                                         <p className="mt-1 mb-10 text-gray-200 text-5xl font-semibold">
-                                            250€
+                                            300€
                                             <span className="text-xl uppercase text-purple">
                                                 /jour
                                             </span>
