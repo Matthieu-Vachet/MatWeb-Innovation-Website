@@ -29,7 +29,7 @@ export default function TopToScroll() {
 
     return (
         <div className="fixed bottom-[10px] right-[10px] cursor-pointer animate-scroll-top-arrow transition-all z-[90]">
-            <div className="flex justify-center items-center border border-white/50 hover:border-purple/50 rounded-full bg-purple-100/50 hover:bg-white/50 text-white hover:text-purple-100 transition-all duration-300 ">
+            <div className="flex justify-center items-center border border-white/50 md:border-none rounded-full md:rounded-none text-white ">
                 {visible && (
                     <div
                         onClick={ScrollToTop}
