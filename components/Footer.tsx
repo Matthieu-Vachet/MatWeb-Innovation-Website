@@ -57,7 +57,7 @@ export default function Footer() {
                 width={100}
                 height={100}
                 loading="lazy"
-                className="w-full h-screen opacity-80 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-10 "
+                className="w-full h-screen opacity-80 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-50 "
             />
 
             <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto mb-16">

@@ -39,12 +39,12 @@ const About = () => {
                         onMouseLeave={() => setHovered(false)}
                         className="h-auto flex flex-col relative overflow-hidden items-center justify-center w-full mx-auto p-10 md:px-20 border border-white/[0.1] rounded-2xl gap-16 shadow-[0px_5px_30px_5px_rgba(79,57,136,_0.30)] backdrop-blur-sm z-20  "
                     >
-                        <div className="flex flex-col  w-full justify-items-start items-start text-left gap-5 Z-20">
+                        <div className="flex flex-col w-full justify-items-center md:justify-items-start items-center md:items-start text-center md:text-left Z-20">
                             <AnimatedElement delay={0.4} duration={0.6}>
-                                <h2 className="composant-title-size font-bold text-white Z-20">
+                                <h2 className="text-xl md:text-3xl font-bold text-white Z-20">
                                     Un développeur <span className="text-purple">passionné</span>
                                 </h2>
-                                <p className="w-full max-w-3xl text-md font-semibold text-white-100 Z-20">
+                                <p className="w-full max-w-3xl text-md font-semibold text-white-100 pt-5 Z-20">
                                     Passionné par l&apos;informatique depuis mon enfance, j&apos;ai
                                     toujours été fasciné par le potentiel illimité de la
                                     technologie. Très tôt, j&apos;ai commencé à explorer le monde de
@@ -57,13 +57,13 @@ const About = () => {
                                 </p>
                             </AnimatedElement>
                         </div>
-                        <div className="flex flex-col w-full justify-items-end items-end text-right gap-5 Z-20">
+                        <div className="flex flex-col w-full justify-items-center md:justify-items-end items-center md:items-end text-center md:text-right gap-5 Z-20">
                             <AnimatedElement delay={0.5} duration={0.6}>
-                                <h2 className="composant-title-size font-bold text-white Z-20">
+                                <h2 className="text-xl md:text-3xl font-bold text-white Z-20">
                                     <span className="text-purple">Mon parcours</span> en
                                     développement
                                 </h2>
-                                <p className="w-full max-w-3xl text-md font-semibold text-white-100 Z-20">
+                                <p className="w-full max-w-3xl text-md font-semibold text-white-100 pt-5 Z-20">
                                     Mon parcours en développement web a commencé bien avant ma
                                     reconversion professionnelle. Curieux et autodidacte, j&apos;ai
                                     appris les bases de la programmation à travers divers projets
@@ -77,13 +77,13 @@ const About = () => {
                                 </p>
                             </AnimatedElement>
                         </div>
-                        <div className="flex flex-col w-full justify-items-start items-start text-left gap-5 Z-20">
+                        <div className="flex flex-col w-full justify-items-center md:justify-items-start items-center md:items-start text-center md:text-left gap-5 Z-20">
                             <AnimatedElement delay={0.6} duration={0.6}>
-                                <h2 className="composant-title-size font-bold text-white Z-20">
+                                <h2 className="text-xl md:text-3xl font-bold text-white Z-20">
                                     Mes <span className="text-purple">compétences</span> et{" "}
                                     <span className="text-purple">projets</span>
                                 </h2>
-                                <p className="w-full max-w-3xl text-md font-semibold text-white-100 Z-20">
+                                <p className="w-full max-w-3xl text-md font-semibold text-white-100 pt-5 Z-20">
                                     Au cours de ma formation et de mes expériences, j&apos;ai
                                     développé un large éventail de compétences techniques et
                                     créatives. Je maîtrise les langages HTML, CSS, et Sass pour le
@@ -104,7 +104,7 @@ const About = () => {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
-                                    className="h-full w-full absolute inset-0 opacity-10"
+                                    className="h-full w-full absolute inset-0 opacity-10 hidden md:block"
                                 >
                                     <CanvasRevealEffect
                                         animationSpeed={1.5}
@@ -158,9 +158,9 @@ const About = () => {
                         </div>
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>
-                        <h3 className="w-[95vw] md:w-full text-gradient subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
+                        <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
                             Témoignages de mes clients satisfaits <br />
-                            <span className="text-purple subtitle text-xl md:text-2xl">
+                            <span className="text-purple subtitle text-lg md:text-2xl">
                                 Je suis fier des relations que j&apos;ai établies avec mes clients.
                                 Voici ce qu&apos;ils disent de mon travail et de la qualité de mes
                                 services.

@@ -35,7 +35,7 @@ const Hero = () => {
                             Matthieu Vachet
                         </p>
 
-                        <h1 className="text-center font-semibold text-3xl md:text-6xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
+                        <h1 className="text-center font-semibold text-4xl md:text-6xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
                             Développeur Web Front-End{" "}
                             <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
                                 Indépendant

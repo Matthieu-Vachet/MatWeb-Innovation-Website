@@ -26,13 +26,6 @@ const Competences = () => {
                 />
             </Features>
             <div className="relative">
-                <Particles
-                    className="hidden md:block absolute inset-0"
-                    quantity={200}
-                    ease={80}
-                    color={"#fff"}
-                    refresh
-                />
                 <div className="max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
                     <div className="w-full grid lg:grid-cols-4 grid-cols-1 gap-10">
                         {CompetencesList.map((card: Competence) => (
