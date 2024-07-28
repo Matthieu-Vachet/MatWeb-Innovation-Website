@@ -17,7 +17,7 @@ const Service = () => {
     return (
         <section
             id="mes-service"
-            className=" relative bg-gradient-to-b from-black-100 via-purple-300/15 to-black-100 pt-0 md:pt-[10rem]"
+            className=" relative bg-gradient-to-b from-black-100 via-purple-300/15 to-black-100 pt-0 md:-mt-[10rem] lg:pt-[10rem]"
         >
             <Features color="49, 35, 85" colorDark="49, 35, 85">
                 <Features.Main
@@ -80,7 +80,7 @@ const Service = () => {
                         </Link>
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>
-                        <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
+                        <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
                             Processus de Conception et Développement
                             <span className="text-purple subtitle text-lg md:text-2xl">
                                 Les étapes clés qui vous séparent de votre site internet

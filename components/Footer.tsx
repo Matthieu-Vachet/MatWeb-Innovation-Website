@@ -51,7 +51,7 @@ const SOCIAL_MEDIAS: SocialMediaLink[] = [
 ];
 export default function Footer() {
     return (
-        <footer className="bg-gradient-to-tr from-transparent via-black-100/15 to-black-100 py-0 text-gray-400 backdrop-blur-lg md:py-12 ">
+        <footer className="bg-gradient-to-tr from-transparent via-black-100/15 to-black-100 py-0 text-gray-400 backdrop-blur-lg lg:py-12 ">
             <Image
                 src="/background/background-footer.svg"
                 alt="Image de fond du footer"
@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto mb-16">
                 <p className="bg-clip-text text-center text-lg [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-lg [.is-visible_&]:translate-y-0 mt-14"></p>
             </div>
-            <div className="container mx-auto grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8 z-50">
+            <div className="container mx-auto grid grid-cols-1 gap-8 px-4 md:grid-cols-3 lg:px-8 z-50">
                 <div className="flex flex-col items-start">
                     <div className="mb-2 flex items-center gap-2">
                         <Image src="/logo/logo-MatWeb.webp" alt="Logo" width={50} height={50} />
@@ -72,7 +72,7 @@ export default function Footer() {
                             Matthieu <span className=" uppercase text-purple">Vachet</span>
                         </span>
                     </div>
-                    <p className="text-sm leading-relaxed">
+                    <p className="text-sm md:text-[0.6rem] lg:text-sm leading-relaxed">
                         Développeur web front-end freelance dans l&apos;Aisne, je suis à votre
                         disposition pour répondre à tout type de projet de création de sites
                         internet, de développement spécifique ou d&apos;applications web. Passionné

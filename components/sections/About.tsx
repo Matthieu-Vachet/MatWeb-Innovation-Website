@@ -121,7 +121,7 @@ const About = () => {
                         </AnimatePresence>
                     </div>
 
-                    <div className="flex flex-col md:flex-row flex-wrap pt-14 md:pt-24 imac:pt-32 gap-20 imac:gap-40">
+                    <div className="grid grid-cols-1 md:grid-cols-3 pt-14 md:pt-24 imac:pt-32 gap-14 imac:gap-40">
                         <div className="flex flex-col justify-center items-center">
                             <GaugeCircle
                                 max={100}
@@ -130,9 +130,7 @@ const About = () => {
                                 gaugePrimaryColor="#905BF4"
                                 gaugeSecondaryColor="rgba(17, 25, 40, 0.75)"
                             />
-                            <p className="pt-5 composant-title-size uppercase">
-                                Années d&apos;expérience
-                            </p>
+                            <p className="pt-5 text-lg lg:text-2xl">Années d&apos;expérience</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <GaugeCircle
@@ -142,7 +140,7 @@ const About = () => {
                                 gaugePrimaryColor="#905BF4"
                                 gaugeSecondaryColor="rgba(17, 25, 40, 0.75)"
                             />
-                            <p className="pt-5 composant-title-size uppercase">Projets réalisés</p>
+                            <p className="pt-5 text-lg lg:text-2xl">Projets réalisés</p>
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <GaugeCircle
@@ -152,9 +150,7 @@ const About = () => {
                                 gaugePrimaryColor="#905BF4"
                                 gaugeSecondaryColor="rgba(17, 25, 40, 0.75)"
                             />
-                            <p className="pt-5 composant-title-size uppercase">
-                                Clients satisfaits
-                            </p>
+                            <p className="pt-5 text-lg lg:text-2xl">Clients satisfaits</p>
                         </div>
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>

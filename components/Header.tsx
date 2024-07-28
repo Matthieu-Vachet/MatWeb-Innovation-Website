@@ -158,7 +158,7 @@ export const Header = () => {
                                     Contact
                                 </Link>
                             </li>
-                            <li>
+                            <li className="md:hidden lg:block">
                                 <Link
                                     href="#Faqs"
                                     onClick={handleLinkClick}

@@ -10,7 +10,7 @@ const Competences = () => {
     return (
         <section
             id="mes-competences"
-            className=" relative bg-gradient-to-b from-black-100 via-purple-400/15 to-black-100 "
+            className=" relative bg-gradient-to-b from-black-100 via-purple-400/15 to-black-100"
         >
             <Features color="120, 89, 171" colorDark="59, 42, 102">
                 <Features.Main
@@ -26,8 +26,8 @@ const Competences = () => {
                 />
             </Features>
             <div className="relative">
-                <div className="max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
-                    <div className="w-full grid lg:grid-cols-4 grid-cols-1 gap-10">
+                <div className="max-w-[95vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
+                    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-5 lg:gap-10">
                         {CompetencesList.map((card: Competence) => (
                             <Button
                                 as="div"

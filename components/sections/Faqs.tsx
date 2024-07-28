@@ -56,15 +56,15 @@ const Faqs = () => {
             className="relative bg-gradient-to-b from-black-100 via-blue-100/20 to-black-100 z-30"
             id="Faqs"
         >
-            <div className="relative max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto md:flex px-4 md:px-6">
+            <div className="relative max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto lg:flex px-4 md:px-6">
                 <div className="flex-1">
                     <div>
-                        <h3 className="mt-3 font-extrabold text-4xl md:text-8xl text-gradient">
+                        <h3 className="mt-3 font-extrabold text-4xl md:text-6xl lg:text-8xl text-gradient">
                             F.A.Q
                         </h3>
                     </div>
                 </div>
-                <div className="flex-1 mt-5 md:mt-16">
+                <div className="flex-1 mt-5 lg:mt-16">
                     <ul className="space-y-4 divide-y divide-gray-700">
                         {faqsList.map((item) => (
                             <li className="py-5" key={item.id}>
