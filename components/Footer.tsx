@@ -14,6 +14,7 @@ const QUICK_LINKS: LinkFooterType[] = [
     { id: "Service-link", title: "Service", link: "#mes-service", targetBlank: false },
     { id: "Tarifs-link", title: "Tarifs", link: "#mes-tarifs", targetBlank: false },
     { id: "Contact-link", title: "Contact", link: "#Contact", targetBlank: false },
+    { id: "Faq-link", title: "F.A.Q", link: "#Faqs", targetBlank: false },
 ];
 type SocialMediaLink = {
     id: string;
