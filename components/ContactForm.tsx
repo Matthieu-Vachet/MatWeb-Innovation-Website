@@ -178,7 +178,7 @@ export function ContactForm() {
     return (
         <div className=" w-full mx-auto rounded-2xl p-5 md:p-8 border border-white/[0.1] shadow-[0px_5px_50px_5px_rgba(48,_58,_117,_0.2)] bg-glass-gradient hover:shadow-[0px_5px_50px_5px_rgba(48,_58,_117,_1)] transition-shadow duration-500">
             <form className="" onSubmit={handleSubmit}>
-                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+                <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 mb-4">
                     <LabelInputContainer>
                         <Label className="text-lg" htmlFor="firstname">
                             Nom

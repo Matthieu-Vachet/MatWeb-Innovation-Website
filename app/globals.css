@@ -91,7 +91,7 @@
     }
 
     .title-size {
-        @apply text-4xl md:text-6xl imac:text-7xl;
+        @apply text-5xl md:text-6xl imac:text-7xl;
     }
 
     .subtitle-size {
@@ -99,7 +99,7 @@
     }
 
     .composant-title-size {
-        @apply text-xl md:text-2xl;
+        @apply text-lg md:text-2xl;
     }
 
     /* .text-gradient {

@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <section
             id="Home"
-            className="relative w-full flex pb-0 px-4 bg-gradient-to-b from-purple-950/15 to-black-100 pt-28 md:pt-52 lg:pt-32 imac:pt-40"
+            className="relative w-full flex pb-0 px-4 bg-gradient-to-b from-purple-950/15 to-black-100 pt-28 md:pt-40 lg:pt-32 imac:pt-40"
         >
             <div className="w-screen h-full flex flex-col justify-center items-center text-center">
                 <Image
@@ -35,7 +35,7 @@ const Hero = () => {
                             Matthieu Vachet
                         </p>
 
-                        <h1 className="text-center font-semibold text-3xl md:text-6xl lg:text-6xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
+                        <h1 className="text-center font-semibold text-4xl md:text-7xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
                             Développeur Web Front-End{" "}
                             <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
                                 Indépendant
@@ -109,7 +109,7 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col w-full items-center mt-10 lg:mt-32 z-30">
+                <div className="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-32 z-30">
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>
@@ -124,7 +124,7 @@ const Hero = () => {
                                 alt="Logo de Fiverr"
                                 width={150}
                                 height={150}
-                                className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px] opacity-50 hover:opacity-100 transition-opacity duration-500"
+                                className="w-[60px] h-[60px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                         <Link
@@ -137,7 +137,7 @@ const Hero = () => {
                                 alt="Logo de LinkedIn"
                                 width={230}
                                 height={200}
-                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[60px] opacity-50 hover:opacity-100 transition-opacity duration-500"
+                                className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[60px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                         <Link
@@ -150,7 +150,7 @@ const Hero = () => {
                                 alt="Logo de Malt"
                                 width={200}
                                 height={200}
-                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
+                                className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                         <Link
@@ -163,7 +163,7 @@ const Hero = () => {
                                 alt="Logo de Pylote"
                                 width={200}
                                 height={200}
-                                className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
+                                className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
                             />
                         </Link>
                     </div>

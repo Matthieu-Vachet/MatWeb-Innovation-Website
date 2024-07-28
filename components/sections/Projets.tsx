@@ -36,10 +36,10 @@ const Projets = () => {
                     color={"#fff"}
                     refresh
                 />
-                <div className="flex flex-wrap items-center justify-center gap-14 md:gap-32 lg:gap-16 max-w-[100vw] md:max-w-[90vw] lg:max-w-[95vw] imac:max-w-[75vw] mx-auto -mt-10 md:-mt-0">
+                <div className="flex flex-wrap items-center justify-center gap-14 md:gap-32 lg:gap-16 max-w-[100vw] md:max-w-[95vw] lg:max-w-[95vw] imac:max-w-[75vw] mx-auto -mt-10 md:-mt-0">
                     {projets.map((item) => (
                         <div
-                            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] "
+                            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
                             key={item.title + item.id}
                         >
                             <PinContainer title={item.title} href={item.link}>

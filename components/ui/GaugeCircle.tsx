@@ -25,7 +25,7 @@ export default function GaugeCircle({
     return (
         <div
             className={cn(
-                "relative h-32 md:h-40 w-32 md:w-40 text-5xl font-semibold text-purple backdrop-blur-sm",
+                "relative h-32 lg:h-40 w-32 lg:w-40 text-5xl font-semibold text-purple backdrop-blur-sm",
                 className,
             )}
             style={

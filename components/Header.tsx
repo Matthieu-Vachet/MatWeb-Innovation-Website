@@ -158,6 +158,16 @@ export const Header = () => {
                                     Contact
                                 </Link>
                             </li>
+                            <li className="md:hidden lg:block">
+                                <Link
+                                    href="#Faqs"
+                                    onClick={handleLinkClick}
+                                    title="Voir les questions freéquentes"
+                                    aria-label="Voir les questions freéquentes"
+                                >
+                                    F.A.Q
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>

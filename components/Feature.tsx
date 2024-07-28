@@ -12,7 +12,7 @@ type FeaturesProps = {
 };
 
 export const Features = ({ children, color, colorDark }: FeaturesProps) => {
-    const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+    const { ref, inView } = useInView({ threshold: 0.6, triggerOnce: true });
 
     return (
         <div
@@ -52,7 +52,7 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
                         imageSize === "small" ? "w-[78rem]" : "w-[102.4rem]",
                     )}
                 >
-                    <h1 className=" text-gradient mb-5 md:mb-11 translate-y-[40%] pt-[12rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0">
+                    <h1 className=" text-gradient mb-5 md:mb-11 translate-y-none md:translate-y-[100%] pt-[10rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0">
                         {title}
                     </h1>
                 </Container>
@@ -61,7 +61,7 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
                 <h2 className="mx-auto my-5 md:my-16 leading-tight text-white-100 md:w-[80%] subtitle-size">
                     {text}
                 </h2>
-                <p className="my-5 md:my-16 text-md md:text-2xl">{paragraphes}</p>
+                <p className="my-5 md:my-16 text-sm md:text-2xl">{paragraphes}</p>
                 <hr className="mb-[5rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2)_50%,transparent)]" />
             </Container>
         </>
