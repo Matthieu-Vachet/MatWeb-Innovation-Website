@@ -12,6 +12,7 @@ import { Processus, slugs } from "@/data/ServicesData";
 import { FeaturesSection } from "../FeaturesSection";
 import MagicButton from "../MagicButton";
 import Particles from "../ui/Particle";
+import ChevronAnimation from "@/components/ChevronAnimation";
 
 const Service = () => {
     return (
@@ -33,7 +34,7 @@ const Service = () => {
             </Features>
             <div className="relative">
                 <Particles
-                    className="hidden md:block absolute inset-0"
+                    className=" absolute inset-0"
                     quantity={200}
                     ease={80}
                     color={"#fff"}
@@ -62,6 +63,9 @@ const Service = () => {
                             </svg>
                         </div>
                     </div>
+                    <div className="md:hidden flex justify-end items-end w-full mt-5">
+                        <ChevronAnimation />
+                    </div>
                     <FeaturesSection />
                     <div className="flex justify-center">
                         <Link
@@ -74,19 +78,22 @@ const Service = () => {
                                     .getElementById("formulaire-de-contact")
                                     ?.scrollIntoView({ behavior: "smooth" });
                             }}
-                            className="mt-5 md:mt-10 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                            className="mt-5 md:mt-14 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                         >
                             <MagicButton title="Besoin d'un devis ?" position="left" />
                         </Link>
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>
-                        <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
+                        <h3 className="w-[90vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-14 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
                             Processus de Conception et Développement
                             <span className="text-purple subtitle text-lg md:text-2xl">
                                 Les étapes clés qui vous séparent de votre site internet
                             </span>
                         </h3>
                     </AnimatedElement>
+                    <div className="lg:hidden flex justify-end items-end w-full mb-2">
+                        <ChevronAnimation />
+                    </div>
                     <div className="max-w-[95vw] mx-auto">
                         <div>
                             <HoverEffect items={Processus} />
@@ -100,7 +107,7 @@ const Service = () => {
                                     prouver leur efficacité
                                 </h4>
                                 <WordRotate
-                                    className="subtitle-size md:mt-10 text-purple font-semibold"
+                                    className="text-3xl md:text-3xl lg:text-4xl imac:text-5xl md:mt-5 text-purple font-semibold"
                                     words={[
                                         "Javascript",
                                         "Typescript",

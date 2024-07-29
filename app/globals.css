@@ -116,3 +116,46 @@
 .mask-radial-faded {
     mask-image: radial-gradient(circle at center center, #171717, transparent 100%);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Chevron */
+/* styles/globals.css ou un fichier CSS spécifique */
+@layer utilities {
+    .chevron {
+        @apply relative -mx-5; /* Réduit l'espacement horizontal entre les chevrons */
+        opacity: 0;
+        transform: translateX(0) scale(1);
+    }
+
+    .animate-chevron {
+        animation: move-chevron 1.5s ease-out infinite;
+    }
+
+    .delay-1 {
+        animation-delay: 0.3s;
+    }
+
+    .delay-2 {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes move-chevron {
+        0%,
+        100% {
+            opacity: 0;
+            transform: translateX(0) scale(0.5);
+        }
+        50% {
+            opacity: 1;
+            transform: translateX(0.5rem) scale(1); /* Réduit la translation pour les rapprocher */
+        }
+    }
+}

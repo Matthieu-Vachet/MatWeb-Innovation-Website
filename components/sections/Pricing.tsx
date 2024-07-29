@@ -7,6 +7,7 @@ import { tiers } from "@/data/PricingData";
 import { FaArrowRight } from "react-icons/fa";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import AnimatedElement from "../ui/AnimatedElement";
+import ChevronAnimation from "@/components/ChevronAnimation";
 
 const Pricing = () => {
     const [tierSelected, setTierSelected] = useState("Intégration");
@@ -23,7 +24,7 @@ const Pricing = () => {
             className="relative bg-gradient-to-b from-black-100 via-purple-700/15 to-black-100"
         >
             <AnimatedElement delay={0.4} duration={0.5}>
-                <h3 className="w-full text-gradient translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 -mt-[8rem] md:-mt-[25rem] mb-24 lg :mb-40 flex flex-col title-size">
+                <h3 className="w-full text-gradient translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 -mt-[8rem] md:-mt-[25rem] mb-28 lg:mb-40 flex flex-col title-size">
                     Aperçu de mes offres <br />
                     <span className="text-purple subtitle subtitle-size">
                         Des offres adaptées à vos projets pour des sites internet de qualité !
@@ -54,7 +55,10 @@ const Pricing = () => {
                 </button>
             </div>
 
-            <div className="mx-auto max-w-[100vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-26 lg:mt-20">
+            <div className="mx-auto max-w-[90vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-26 lg:mt-20">
+                <div className="md:hidden flex justify-end items-end w-full mb-3">
+                    <ChevronAnimation />
+                </div>
                 <div className="hidden lg:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8">
                     <div className="relative mt-6 opacity-50">
                         <svg
@@ -80,11 +84,11 @@ const Pricing = () => {
                 <div className="flow-root z-20 bg-transparent">
                     <div className="mx-auto max-w-[100vw] md:max-w-[95vw] lg:max-w-7xl">
                         <div className="relative flex flex-col gap-10">
-                            <div className="flex lg:hidden overflow-x-auto gap-10 sm:gap-8">
+                            <div className="flex lg:hidden overflow-x-auto scrollbar-hide gap-10 sm:gap-8">
                                 {filteredTiers.map((tier) => (
                                     <div
                                         key={tier.id}
-                                        className={`relative flex-shrink-0 w-[85vw] flex flex-col justify-between rounded-3xl p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10 [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#8686f01f_inset] ${
+                                        className={`relative flex-shrink-0 w-[87vw] flex flex-col justify-between rounded-3xl p-8 shadow-xl ring-1 ring-gray-900/10 [border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#8686f01f_inset] ${
                                             tier.bestSeller
                                                 ? "[border:2px_solid_rgba(144,91,244,.5)]"
                                                 : ""
