@@ -27,7 +27,7 @@ const Competences = () => {
             </Features>
             <div className="relative">
                 <div className="max-w-[95vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
-                    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-5 lg:gap-10">
+                    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-5 lg:gap-10">
                         {CompetencesList.map((card: Competence) => (
                             <Button
                                 as="div"
@@ -41,13 +41,13 @@ const Competences = () => {
                             >
                                 <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
                                     <div className="lg:ms-5">
-                                        <h1 className="text-start composant-title-size font-bold uppercase">
+                                        <h1 className="text-center composant-title-size font-bold uppercase">
                                             {card.title}
                                         </h1>
                                         <p className="text-start text-white-100 mt-3 font-semibold text-md opacity-80">
                                             {card.desc}
                                         </p>
-                                        <div className="flex flex-wrap mt-3">
+                                        <div className="flex flex-wrap mt-5 justify-center items-center">
                                             {card.skills.map((skill) => {
                                                 const IconComponent = iconMap[skill.img];
                                                 return (
