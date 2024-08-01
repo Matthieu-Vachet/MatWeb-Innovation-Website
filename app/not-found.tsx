@@ -48,6 +48,8 @@ export default function NotFound() {
                         <Link
                             href="/"
                             className="uppercase lg:hover:scale-110 duration-200 transition-all translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                            aria-label="Retour Acceuil"
+                            title="Retour Acceuil"
                         >
                             <MagicButton title="Retour Acceuil" position="left" />
                         </Link>
