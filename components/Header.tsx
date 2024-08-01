@@ -10,6 +10,70 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 
+interface Links {
+    name: string;
+    title: string;
+    href: string;
+    className?: string;
+    arialabel?: string;
+}
+
+const HeaderLinks: Links[] = [
+    {
+        name: "Accueil",
+        title: "Retour à l'accueil",
+        href: "#Home",
+        arialabel: "Retour à l'accueil",
+    },
+    {
+        name: "Services",
+        title: "Voir les services proposés",
+        href: "#mes-service",
+        arialabel:
+            "Voir la liste des services que je propose en développement web ou en intégration",
+    },
+    {
+        name: "Compétences",
+        title: "Consulter mes compétences",
+        href: "#mes-competences",
+        className: "md:hidden lg:block",
+        arialabel: "Consulter mes compétences en développement web ou en intégration",
+    },
+    {
+        name: "Projets",
+        title: "Voir mes projets",
+        href: "#mes-projets",
+        className: "md:hidden lg:block",
+        arialabel: "Voir les projets que j'ai réalisés",
+    },
+    {
+        name: "À propos",
+        title: "En savoir plus sur moi",
+        href: "#a-propos-de-moi",
+        className: "md:hidden lg:block",
+        arialabel: "En savoir plus sur moi",
+    },
+    {
+        name: "Offres",
+        title: "Découvrir mes tarifs",
+        href: "#mes-tarifs",
+        arialabel:
+            "Découvrir les tarifs pour les services que je propose en developpement web ou en intégration",
+    },
+    {
+        name: "Contact",
+        title: "Me contacter",
+        href: "#Contact",
+        arialabel: "Contacter Matthieu Vachet via le formulaire de contact",
+    },
+    {
+        name: "F.A.Q",
+        title: "Voir les questions freéquentes",
+        href: "#Faqs",
+        className: "md:hidden lg:block",
+        arialabel: "Voir les questions freéquentes",
+    },
+];
 export const Header = () => {
     const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
 
@@ -81,93 +145,26 @@ export const Header = () => {
                                 onClick={() => setHamburgerMenuIsOpen(false)}
                             />
                         </div>
+
                         <ul
                             className={classNames(
-                                "flex h-full flex-col md:flex-row md:items-center md:[&_li]:border-none text-3xl",
+                                "flex h-full flex-col items-end pr-5 md:pr-none md:flex-row md:items-center md:[&_li]:border-none text-3xl",
                                 "ease-in [&_a:hover]:text-purple gap-5 [&_a]:flex [&_a]:w-full [&_a]:translate-y-0  [&_a]:justify-center [&_a]:text-3xl [&_a]:transition-[color,transform] [&_a]:duration-300 md:[&_a]:translate-y-0 md:[&_a]:text-sm lg:[&_a]:text-md xl:[&_a]:text-xl md:hover:[&_a]:text-purple [&_a]:md:transition-colors",
                                 hamburgerMenuIsOpen && "[&_a]:translate-y-0",
                             )}
                         >
-                            <li>
-                                <Link
-                                    href="#Home"
-                                    onClick={handleLinkClick}
-                                    title="Retour à l'accueil"
-                                    aria-label="Retour à l'accueil"
-                                >
-                                    Acceuil
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#mes-service"
-                                    onClick={handleLinkClick}
-                                    title="Voir les services proposés"
-                                    aria-label="Voir la liste des services que je propose en développement web ou en intégration"
-                                >
-                                    Services
-                                </Link>
-                            </li>
-                            <li className="md:hidden lg:block">
-                                <Link
-                                    href="#mes-competences"
-                                    onClick={handleLinkClick}
-                                    title="Consulter mes compétences"
-                                    aria-label="Consulter mes compétences en développement web ou en intégration"
-                                >
-                                    Compétences
-                                </Link>
-                            </li>
-                            <li className="md:hidden lg:block">
-                                <Link
-                                    href="#mes-projets"
-                                    onClick={handleLinkClick}
-                                    title="Voir mes projets"
-                                    aria-label="Voir les projets que j'ai réalisés"
-                                >
-                                    Projets
-                                </Link>
-                            </li>
-                            <li className="md:hidden lg:block">
-                                <Link
-                                    href="#a-propos-de-moi"
-                                    onClick={handleLinkClick}
-                                    title="En savoir plus sur moi"
-                                    aria-label="En savoir plus sur moi"
-                                >
-                                    À propos
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#mes-tarifs"
-                                    onClick={handleLinkClick}
-                                    title="Découvrir mes tarifs"
-                                    aria-label="Découvrir les tarifs pour les services que je propose en developpement web ou en intégration"
-                                >
-                                    Offres
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#Contact"
-                                    onClick={handleLinkClick}
-                                    title="Me contacter"
-                                    aria-label="Contacter Matthieu Vachet via le formulaire de contact"
-                                >
-                                    Contact
-                                </Link>
-                            </li>
-                            <li className="md:hidden lg:block">
-                                <Link
-                                    href="#Faqs"
-                                    onClick={handleLinkClick}
-                                    title="Voir les questions freéquentes"
-                                    aria-label="Voir les questions freéquentes"
-                                >
-                                    F.A.Q
-                                </Link>
-                            </li>
+                            {HeaderLinks.map((link, index) => (
+                                <li className={link.className} key={link.name + index}>
+                                    <Link
+                                        href={link.href}
+                                        onClick={handleLinkClick}
+                                        title={link.title}
+                                        aria-label={link.arialabel}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                 </div>
