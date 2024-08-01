@@ -4,7 +4,6 @@ import { Competence, CompetencesList, iconMap } from "@/data/CompetencesData";
 
 import { Features } from "@/components/Feature";
 import { Button } from "@/components/ui/MovingBorder";
-import Particles from "../ui/Particle";
 
 const Competences = () => {
     return (
