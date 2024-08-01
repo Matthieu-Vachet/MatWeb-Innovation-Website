@@ -17,7 +17,7 @@ const CookieConsent = () => {
         setCookie("localConsent", "true", {
             maxAge: 60 * 60 * 24 * 365, // 1 an
             path: "/",
-            //secure: true,
+            secure: true,
             sameSite: "strict",
         });
         setShowConsent(false);
