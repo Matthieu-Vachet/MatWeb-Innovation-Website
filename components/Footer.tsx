@@ -58,7 +58,7 @@ export default function Footer() {
                 width={100}
                 height={100}
                 loading="lazy"
-                className="w-full h-screen opacity-80 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-50 "
+                className="w-full h-full md:h-[70vh] opacity-80 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-50 "
             />
 
             <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto mb-16">
@@ -119,7 +119,7 @@ export default function Footer() {
             </div>
             <div className="container flex flex-col justify-center items-center mx-auto mt-8 px-4 text-center sm:px-6 lg:px-8 gap-2 text-sm">
                 <p>© 2024 Vachet Matthieu - Développeur - Tous droits réservés</p>
-                <Link href="/mentions-legales" className="transition-colors hover:text-purple">
+                <Link href="/mentions-legales" className="transition-colors text-purple">
                     Mentions légales
                 </Link>
             </div>
