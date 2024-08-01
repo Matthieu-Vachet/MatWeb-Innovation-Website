@@ -40,7 +40,7 @@ const Service = () => {
                     color={"#fff"}
                     refresh
                 />
-                <div className="relative flex flex-col items-center justify-center mx-auto px-4 max-w-[95vw] imac:max-w-[70vw] -mt-16 lg:-mt-0">
+                <div className="relative flex flex-col items-center justify-center mx-auto px-4 max-w-[95vw] imac:max-w-[70vw] -mt-16 md:-mt-0">
                     <div className="hidden lg:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8 ">
                         <div className="relative mt-6 opacity-50">
                             <svg
@@ -63,7 +63,7 @@ const Service = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className="md:hidden flex justify-end items-end w-full mt-5">
+                    <div className="md:hidden flex justify-end items-end w-full mt-5 mb-5">
                         <ChevronAnimation />
                     </div>
                     <FeaturesSection />
@@ -84,14 +84,14 @@ const Service = () => {
                         </Link>
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>
-                        <h3 className="w-[90vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-14 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
+                        <h3 className="w-[90vw] md:w-full text-gradient text-2xl md:text-4xl imac:text-5xl translate-y-[40%] text-start md:text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-14 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
                             Processus de Conception et Développement
                             <span className="text-purple subtitle text-lg md:text-2xl">
                                 Les étapes clés qui vous séparent de votre site internet
                             </span>
                         </h3>
                     </AnimatedElement>
-                    <div className="lg:hidden flex justify-end items-end w-full mb-2">
+                    <div className="md:hidden flex justify-end items-end w-full mb-5">
                         <ChevronAnimation />
                     </div>
                     <div className="max-w-[95vw] mx-auto">

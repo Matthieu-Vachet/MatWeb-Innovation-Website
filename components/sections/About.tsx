@@ -33,13 +33,13 @@ const About = () => {
                     color={"#fff"}
                     refresh
                 />
-                <div className=" max-w-[90vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
+                <div className=" max-w-[95vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
                     <div
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
                         className="h-auto flex flex-col relative overflow-hidden items-center justify-center w-full mx-auto p-10 md:px-20 border border-white/[0.1] rounded-2xl gap-16 shadow-[0px_5px_30px_5px_rgba(79,57,136,_0.30)] backdrop-blur-sm z-20  "
                     >
-                        <div className="flex flex-col w-full justify-items-center md:justify-items-start items-center md:items-start text-center md:text-left Z-20">
+                        <div className="flex flex-col w-full justify-items-start items-start text-left Z-20">
                             <AnimatedElement delay={0.4} duration={0.6}>
                                 <h2 className="text-xl md:text-3xl font-bold text-white Z-20">
                                     Un développeur <span className="text-purple">passionné</span>
@@ -57,7 +57,7 @@ const About = () => {
                                 </p>
                             </AnimatedElement>
                         </div>
-                        <div className="flex flex-col w-full justify-items-center md:justify-items-end items-center md:items-end text-center md:text-right gap-5 Z-20">
+                        <div className="flex flex-col w-full justify-items-end items-end text-right gap-5 Z-20">
                             <AnimatedElement delay={0.5} duration={0.6}>
                                 <h2 className="text-xl md:text-3xl font-bold text-white Z-20">
                                     <span className="text-purple">Mon parcours</span> en
@@ -77,7 +77,7 @@ const About = () => {
                                 </p>
                             </AnimatedElement>
                         </div>
-                        <div className="flex flex-col w-full justify-items-center md:justify-items-start items-center md:items-start text-center md:text-left gap-5 Z-20">
+                        <div className="flex flex-col w-full justify-items-start items-start text-left gap-5 Z-20">
                             <AnimatedElement delay={0.6} duration={0.6}>
                                 <h2 className="text-xl md:text-3xl font-bold text-white Z-20">
                                     Mes <span className="text-purple">compétences</span> et{" "}
@@ -154,7 +154,7 @@ const About = () => {
                         </div>
                     </div>
                     <AnimatedElement delay={0.4} duration={0.6}>
-                        <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:subtitle-size translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
+                        <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:text-4xl imac:text-5xl translate-y-[40%] text-start md:text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
                             Témoignages de mes clients satisfaits <br />
                             <span className="text-purple subtitle text-lg md:text-2xl">
                                 Je suis fier des relations que j&apos;ai établies avec mes clients.
