@@ -107,6 +107,10 @@
     } */
 }
 
+.progress-bar {
+    background: linear-gradient(to right, #8e2de2, /* Violet */ #6062e8 /* Bleu */);
+}
+
 .text-gradient {
     background: linear-gradient(to right bottom, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0.1));
     background-clip: text;

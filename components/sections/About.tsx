@@ -9,6 +9,7 @@ import GaugeCircle from "@/components/ui/GaugeCircle";
 import AnimatedElement from "../ui/AnimatedElement";
 import MarqueeHorizontal from "../ui/MarqueeHorizontal";
 import Particles from "../ui/Particle";
+import BlurIn from "../ui/BlurIn";
 
 const About = () => {
     const [hovered, setHovered] = React.useState(false);
@@ -121,7 +122,7 @@ const About = () => {
                         </AnimatePresence>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 pt-14 md:pt-24 imac:pt-32 gap-14 imac:gap-40">
+                    <BlurIn className="grid grid-cols-1 md:grid-cols-3 pt-14 md:pt-24 imac:pt-32 gap-14 imac:gap-40">
                         <div className="flex flex-col justify-center items-center">
                             <GaugeCircle
                                 max={100}
@@ -152,7 +153,7 @@ const About = () => {
                             />
                             <p className="pt-5 text-lg lg:text-2xl">Clients satisfaits</p>
                         </div>
-                    </div>
+                    </BlurIn>
                     <AnimatedElement delay={0.4} duration={0.6}>
                         <h3 className="w-[95vw] md:w-full text-gradient text-2xl md:text-4xl imac:text-5xl translate-y-[40%] text-start md:text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-10 lg:mt-36 mb-24 md:mb-36 lg:mb-28 flex flex-col">
                             Témoignages de mes clients satisfaits <br />
@@ -163,9 +164,9 @@ const About = () => {
                             </span>
                         </h3>
                     </AnimatedElement>
-                    <div>
+                    <BlurIn>
                         <MarqueeHorizontal />
-                    </div>
+                    </BlurIn>
                 </div>
             </div>
         </section>

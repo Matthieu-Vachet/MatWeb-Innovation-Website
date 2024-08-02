@@ -4,6 +4,7 @@ import React from "react";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 import { Container } from "./Container";
+import AnimatedElement from "./ui/AnimatedElement";
 
 type FeaturesProps = {
     children: React.ReactNode;
@@ -57,13 +58,17 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
                     </h1>
                 </Container>
             </div>
-            <Container className="w-full md:w-[78rem] md:max-w-[90%] text-center">
+            <AnimatedElement
+                delay={0.5}
+                duration={0.5}
+                className="w-full md:w-[78rem] md:max-w-[90%] mx-auto text-center"
+            >
                 <h2 className="relative mx-auto my-5 md:my-10 lg:my-16 leading-tight text-white-100 md:w-[80%] subtitle-size">
                     {text}
                 </h2>
                 <p className="relative my-5 md:my-10 lg:my-16 text-sm md:text-2xl">{paragraphes}</p>
-                <hr className="mb-[5rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2)_50%,transparent)]" />
-            </Container>
+            </AnimatedElement>
+            <hr className="mb-[5rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2)_50%,transparent)]" />
         </>
     );
 };
