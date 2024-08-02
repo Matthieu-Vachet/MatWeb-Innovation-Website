@@ -8,7 +8,6 @@ import { socialMedias } from "@/data/HeroData";
 
 import MagicButton from "@/components/MagicButton";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Parallax } from "react-next-parallax";
 
 const Hero = () => {
     return (
