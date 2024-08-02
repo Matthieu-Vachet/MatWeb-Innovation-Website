@@ -25,9 +25,9 @@ const Competences = () => {
                     }
                 />
             </Features>
-            <BlurIn className="relative">
+            <div className="relative">
                 <div className="max-w-[95vw] imac:max-w-[70vw] flex flex-col items-center justify-center mx-auto -mt-10 lg:-mt-0">
-                    <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-5 lg:gap-10">
+                    <BlurIn className="w-full grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-5 lg:gap-10">
                         {CompetencesList.map((card: Competence) => (
                             <Button
                                 as="div"
@@ -79,9 +79,9 @@ const Competences = () => {
                                 </div>
                             </Button>
                         ))}
-                    </div>
+                    </BlurIn>
                 </div>
-            </BlurIn>
+            </div>
         </section>
     );
 };
