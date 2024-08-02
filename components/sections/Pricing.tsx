@@ -25,7 +25,7 @@ const Pricing = () => {
             className="relative bg-gradient-to-b from-black-100 via-purple-700/15 to-black-100"
         >
             <div className="max-w-[95vw] imac:max-w-[70vw] mx-auto">
-                <AnimatedElement delay={0.4} duration={0.5}>
+                <AnimatedElement delay={0.5} duration={0.5}>
                     <h3 className="w-full text-gradient translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 -mt-[8rem] md:-mt-[25rem] mb-28 lg:mb-40 flex flex-col title-size">
                         Aperçu de mes offres <br />
                         <span className="text-purple subtitle subtitle-size">
@@ -324,7 +324,7 @@ const Pricing = () => {
                                     </div>
                                 </div>
                                 <div className="lg:flex lg:justify-center lg:space-x-8 lg:items-center">
-                                    <div className="flex-1">
+                                    <AnimatedElement delay={0.5} duration={0.5} className="flex-1">
                                         <p className="text-2xl md:text-4xl font-semibold leading-8 tracking-tight text-purple">
                                             Informations
                                         </p>
@@ -352,7 +352,7 @@ const Pricing = () => {
                                             A la remise du projet, vous êtes propriétaire de
                                             l&apos;ensemble des sources composant votre site web.
                                         </p>
-                                    </div>
+                                    </AnimatedElement>
                                 </div>
                             </div>
                         </div>
