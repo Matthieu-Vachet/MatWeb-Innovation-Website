@@ -9,7 +9,7 @@ import { PinContainer } from "../ui/PinContainer";
 import Particles from "../ui/Particle";
 
 import { projets } from "@/data/ProjetsData";
-import { title } from "process";
+import BlurIn from "../ui/BlurIn";
 
 const Projets = () => {
     return (
@@ -38,7 +38,7 @@ const Projets = () => {
                 />
                 <div className="flex flex-wrap items-center justify-center gap-14 md:gap-32 lg:gap-16 max-w-[100vw] md:max-w-[95vw] lg:max-w-[95vw] imac:max-w-[75vw] mx-auto -mt-10 md:-mt-0">
                     {projets.map((item) => (
-                        <div
+                        <BlurIn
                             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
                             key={item.title + item.id}
                         >
@@ -118,7 +118,7 @@ const Projets = () => {
                                     </div>
                                 </div>
                             </PinContainer>
-                        </div>
+                        </BlurIn>
                     ))}
                 </div>
             </div>

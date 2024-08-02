@@ -7,6 +7,7 @@ import { HoverEffect } from "@/components/ui/HoverEffect";
 import IconCloud from "@/components/ui/IconCloud";
 import WordRotate from "@/components/ui/WordRotate";
 import AnimatedElement from "../ui/AnimatedElement";
+import BlurIn from "../ui/BlurIn";
 
 import { Processus, slugs } from "@/data/ServicesData";
 import { FeaturesSection } from "../FeaturesSection";
@@ -66,7 +67,10 @@ const Service = () => {
                     <div className="md:hidden flex justify-end items-end w-full mt-5 mb-5">
                         <ChevronAnimation />
                     </div>
-                    <FeaturesSection />
+
+                    <BlurIn>
+                        <FeaturesSection />
+                    </BlurIn>
                     <div className="flex justify-center">
                         <Link
                             href="#formulaire-de-contact"
@@ -83,7 +87,7 @@ const Service = () => {
                             <MagicButton title="Besoin d'un devis ?" position="left" />
                         </Link>
                     </div>
-                    <AnimatedElement delay={0.4} duration={0.6}>
+                    <AnimatedElement delay={0.4} duration={0.5}>
                         <h3 className="w-[90vw] md:w-full text-gradient text-2xl md:text-4xl imac:text-5xl translate-y-[40%] text-start md:text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-14 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
                             Processus de Conception et Développement
                             <span className="text-purple subtitle text-lg md:text-2xl">
@@ -94,12 +98,12 @@ const Service = () => {
                     <div className="md:hidden flex justify-end items-end w-full mb-5">
                         <ChevronAnimation />
                     </div>
-                    <div className="max-w-[95vw] mx-auto">
+                    <BlurIn className="max-w-[95vw] mx-auto">
                         <div>
                             <HoverEffect items={Processus} />
                         </div>
-                    </div>
-                    <AnimatedElement delay={0.4} duration={0.6}>
+                    </BlurIn>
+                    <BlurIn>
                         <div className="relative flex items-center justify-center lg:justify-between overflow-hidden bg-transparent gap-1  flex-wrap mt-20 lg:mt-36  ">
                             <div className="flex max-w-[90vw] lg:max-w-[50%] flex-col items-center gap-5">
                                 <h4 className=" text-white-100 translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mb-8 md:mb-5 subtitle-size">
@@ -124,7 +128,7 @@ const Service = () => {
                                 <IconCloud iconSlugs={slugs} />
                             </div>
                         </div>
-                    </AnimatedElement>
+                    </BlurIn>
                 </div>
             </div>
         </section>

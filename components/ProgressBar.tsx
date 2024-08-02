@@ -19,12 +19,28 @@ const ProgressBar: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
         };
     }, []);
 
+    // Interpoler la couleur en fonction de la position du scroll
+    const interpolateColor = (scrollPosition: number) => {
+        const startColor = [142, 45, 226]; // Violet (rgb)
+        const endColor = [74, 0, 224]; // Bleu (rgb)
+        const ratio = scrollPosition / 100;
+
+        const r = Math.round(startColor[0] + ratio * (endColor[0] - startColor[0]));
+        const g = Math.round(startColor[1] + ratio * (endColor[1] - startColor[1]));
+        const b = Math.round(startColor[2] + ratio * (endColor[2] - startColor[2]));
+
+        return `rgb(${r},${g},${b})`;
+    };
+
     return (
         <>
             <div className="fixed top-[3.9rem] md:top-[4.5rem] left-0 w-full h-1 bg-transparent z-50 ">
                 <div
-                    className="h-1 bg-purple/80 shadow-scrollBar "
-                    style={{ width: `${scrollPosition}%` }}
+                    className="h-1 shadow-scrollBar"
+                    style={{
+                        width: `${scrollPosition}%`,
+                        backgroundColor: interpolateColor(scrollPosition),
+                    }}
                 />
             </div>
             {children}
