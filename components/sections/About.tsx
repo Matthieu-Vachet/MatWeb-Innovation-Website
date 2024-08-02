@@ -164,9 +164,9 @@ const About = () => {
                             </span>
                         </h3>
                     </AnimatedElement>
-                    <BlurIn>
+                    <div>
                         <MarqueeHorizontal />
-                    </BlurIn>
+                    </div>
                 </div>
             </div>
         </section>
