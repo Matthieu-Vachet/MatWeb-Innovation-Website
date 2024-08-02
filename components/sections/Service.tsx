@@ -78,7 +78,7 @@ const Service = () => {
                                     .getElementById("formulaire-de-contact")
                                     ?.scrollIntoView({ behavior: "smooth" });
                             }}
-                            className="mt-5 md:mt-14 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
+                            className="mt-10 md:mt-14 uppercase translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:500ms]"
                         >
                             <MagicButton title="Besoin d'un devis ?" position="left" />
                         </Link>

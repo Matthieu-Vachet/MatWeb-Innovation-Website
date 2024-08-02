@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 export function FeaturesSection() {
     return (
         <div className="relative z-10 max-w-[90vw] mx-auto">
-            <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide md:snap-none space-x-4 md:space-x-0">
+            <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide md:snap-none space-x-4 p-5 md:p-0 md:space-x-0">
                 {items.map((feature, index) => (
                     <Feature key={feature.id} {...feature} index={index} />
                 ))}
@@ -38,7 +38,7 @@ const Feature = ({
             {index >= 4 && (
                 <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-purple-100 dark:from-purple-100/70 to-transparent pointer-events-none rounded-3xl md:rounded-none" />
             )}
-            <div className="mb-4 text-xl relative z-10 px-10 text-purple group-hover/feature:text-white transition-all duration-500">
+            <div className="mb-4 mt-2 text-xl relative z-10 px-10 text-purple group-hover/feature:text-white transition-all duration-500">
                 {icon}
             </div>
             <div className="composant-title-size font-semibold mb-2 relative z-10 px-10">
