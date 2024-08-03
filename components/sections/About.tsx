@@ -1,8 +1,6 @@
 "use client";
-
-import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-
+import { AnimatePresence, motion } from "framer-motion";
 import { Features } from "@/components/Feature";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import GaugeCircle from "@/components/ui/GaugeCircle";
@@ -13,7 +11,6 @@ import BlurIn from "../ui/BlurIn";
 
 const About = () => {
     const [hovered, setHovered] = React.useState(false);
-
     const valueYears = 2;
     const valueProjets = 8;
     const valueClients = 2;
@@ -121,7 +118,6 @@ const About = () => {
                             )}
                         </AnimatePresence>
                     </div>
-
                     <BlurIn className="grid grid-cols-1 md:grid-cols-3 pt-14 md:pt-24 imac:pt-32 gap-14 imac:gap-40">
                         <div className="flex flex-col justify-center items-center">
                             <GaugeCircle

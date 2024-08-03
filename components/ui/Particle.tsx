@@ -1,14 +1,9 @@
 "use client";
-
+import { CircleProps, MousePositionProps, ParticlesProps } from "@/data/TypesComponents";
 import React, { useEffect, useRef, useState } from "react";
 
-interface MousePosition {
-    x: number;
-    y: number;
-}
-
-function MousePosition(): MousePosition {
-    const [mousePosition, setMousePosition] = useState<MousePosition>({
+function MousePosition(): MousePositionProps {
+    const [mousePosition, setMousePosition] = useState<MousePositionProps>({
         x: 0,
         y: 0,
     });
@@ -28,17 +23,6 @@ function MousePosition(): MousePosition {
     return mousePosition;
 }
 
-interface ParticlesProps {
-    className?: string;
-    quantity?: number;
-    staticity?: number;
-    ease?: number;
-    size?: number;
-    refresh?: boolean;
-    color?: string;
-    vx?: number;
-    vy?: number;
-}
 function hexToRgb(hex: string): number[] {
     hex = hex.replace("#", "");
 
@@ -116,19 +100,6 @@ const Particles: React.FC<ParticlesProps> = ({
         }
     };
 
-    type Circle = {
-        x: number;
-        y: number;
-        translateX: number;
-        translateY: number;
-        size: number;
-        alpha: number;
-        targetAlpha: number;
-        dx: number;
-        dy: number;
-        magnetism: number;
-    };
-
     const resizeCanvas = () => {
         if (canvasContainerRef.current && canvasRef.current && context.current) {
             circles.current.length = 0;
@@ -142,7 +113,7 @@ const Particles: React.FC<ParticlesProps> = ({
         }
     };
 
-    const circleParams = (): Circle => {
+    const circleParams = (): CircleProps => {
         const x = Math.floor(Math.random() * canvasSize.current.w);
         const y = Math.floor(Math.random() * canvasSize.current.h);
         const translateX = 0;
@@ -169,7 +140,7 @@ const Particles: React.FC<ParticlesProps> = ({
 
     const rgb = hexToRgb(color);
 
-    const drawCircle = (circle: Circle, update = false) => {
+    const drawCircle = (circle: CircleProps, update = false) => {
         if (context.current) {
             const { x, y, translateX, translateY, size, alpha } = circle;
             context.current.translate(translateX, translateY);
@@ -213,7 +184,7 @@ const Particles: React.FC<ParticlesProps> = ({
 
     const animate = () => {
         clearContext();
-        circles.current.forEach((circle: Circle, i: number) => {
+        circles.current.forEach((circle: CircleProps, i: number) => {
             // Handle the alpha value
             const edge = [
                 circle.x + circle.translateX - circle.size, // distance from left edge

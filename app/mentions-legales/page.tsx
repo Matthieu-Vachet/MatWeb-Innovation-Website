@@ -1,5 +1,4 @@
 "use client";
-// app/mentions-legales.tsx
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import Image from "next/image";
@@ -9,7 +8,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { ShootingStars } from "@/components/ui/ShootingStars";
 import { StarsBackground } from "@/components/ui/StarsBackground";
 import BlurIn from "@/components/ui/BlurIn";
-import AnimatedElement from "@/components/ui/AnimatedElement";
 
 const MentionsLegales = () => {
     return (
@@ -43,8 +41,7 @@ const MentionsLegales = () => {
                                 Mentions légales
                             </h1>
                         </BlurIn>
-
-                        <AnimatedElement delay={0.5} duration={0.5} className="mt-10 text-start">
+                        <div className="mt-10 text-start">
                             <section>
                                 <h2 className="subtitle-size text-gradient font-semibold mb-5">
                                     <span className="text-purple text-3xl md:text-4xl imac:text-5xl">
@@ -110,7 +107,6 @@ const MentionsLegales = () => {
                                     </li>
                                 </ul>
                             </section>
-
                             <section className="mt-10">
                                 <h2 className="subtitle-size text-gradient font-semibold mb-5">
                                     <span className="text-purple text-3xl md:text-4xl imac:text-5xl">
@@ -250,7 +246,7 @@ const MentionsLegales = () => {
                                     la compétence des tribunaux français.
                                 </p>
                             </section>
-                        </AnimatedElement>
+                        </div>
                         <div className="mt-10 mb-16 flex items-center justify-center">
                             <Link
                                 href="/"
@@ -272,10 +268,6 @@ const MentionsLegales = () => {
             <StarsBackground />
             <ScrollToTop />
         </main>
-
-        //
-
-        // </Container>
     );
 };
 

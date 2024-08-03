@@ -1,9 +1,15 @@
 "use client";
-
 import React, { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { cn } from "@/utils/cn";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import {
+    CanvasRevealEffectProps,
+    DotMatrixProps,
+    Uniforms,
+    ShaderMaterialProps,
+    ShaderProps,
+} from "@/data/TypesComponents";
 
 export const CanvasRevealEffect = ({
     animationSpeed = 0.5,
@@ -12,18 +18,7 @@ export const CanvasRevealEffect = ({
     containerClassName,
     dotSize,
     showGradient = false,
-}: {
-    /**
-     * 0.1 - slower
-     * 1.0 - faster
-     */
-    animationSpeed?: number;
-    opacities?: number[];
-    colors?: number[][];
-    containerClassName?: string;
-    dotSize?: number;
-    showGradient?: boolean;
-}) => {
+}: CanvasRevealEffectProps) => {
     return (
         <div className={cn("h-full relative bg-white w-full", containerClassName)}>
             <div className="h-full w-full">
@@ -46,15 +41,6 @@ export const CanvasRevealEffect = ({
         </div>
     );
 };
-
-interface DotMatrixProps {
-    colors?: number[][];
-    opacities?: number[];
-    totalSize?: number;
-    dotSize?: number;
-    shader?: string;
-    center?: ("x" | "y")[];
-}
 
 const DotMatrix: React.FC<DotMatrixProps> = ({
     colors = [[0, 0, 0]],
@@ -149,22 +135,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
     );
 };
 
-type Uniforms = {
-    [key: string]: {
-        value: number[] | number[][] | number;
-        type: string;
-    };
-};
-const ShaderMaterial = ({
-    source,
-    uniforms,
-    maxFps = 60,
-}: {
-    source: string;
-    hovered?: boolean;
-    maxFps?: number;
-    uniforms: Uniforms;
-}) => {
+const ShaderMaterial = ({ source, uniforms, maxFps = 60 }: ShaderMaterialProps) => {
     const { size } = useThree();
     const ref = useRef<THREE.Mesh>();
     let lastFrameTime = 0;
@@ -268,13 +239,3 @@ const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
         </Canvas>
     );
 };
-interface ShaderProps {
-    source: string;
-    uniforms: {
-        [key: string]: {
-            value: number[] | number[][] | number;
-            type: string;
-        };
-    };
-    maxFps?: number;
-}

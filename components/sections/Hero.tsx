@@ -1,11 +1,8 @@
 "use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-import { socialMedias } from "@/data/HeroData";
-
+import { socialMedias, HeroPresences } from "@/data/Constants";
 import MagicButton from "@/components/MagicButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import BlurIn from "../ui/BlurIn";
@@ -28,7 +25,7 @@ const Hero = () => {
                     layout="responsive"
                 />
                 <Image
-                    src="/background/map.png"
+                    src="/background/map.webp"
                     alt="Image background hero"
                     width={1300}
                     height={1300}
@@ -41,14 +38,12 @@ const Hero = () => {
                         <p className="uppercase tracking-widest text-sm md:text-lg text-center text-white-200 translate-y-[-1rem] animate-fade-in opacity-0">
                             Matthieu Vachet
                         </p>
-
                         <h1 className="text-center font-semibold text-4xl md:text-7xl imac:text-8xl pt-5 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:100ms] lg:max-w-[75vw]">
                             Développeur Web Front-End{" "}
                             <span className="bg-gradient-to-r from-purple to-white-200 bg-clip-text text-transparent">
                                 Indépendant
                             </span>
                         </h1>
-
                         <h2 className="text-xl md:text-4xl lg:text-4xl pt-5 md:pt-16 imac:pt-20 font-normal text-white-200 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                             Création de sites et d&apos;applications Web
                         </h2>
@@ -116,63 +111,31 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <BlurIn className="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-32 z-30">
+                <BlurIn
+                    delay={1}
+                    className="flex flex-col w-full items-center mt-10 md:mt-16 lg:mt-32 z-30"
+                >
                     <p className="text-sm md:text-lg lg:text-xl text-white-200/50 font-semibold">
                         Ma présence en ligne
                     </p>
                     <div className="flex gap-3 md:gap-10 lg:gap-14 items-center justify-center flex-wrap md:-mt-5">
-                        <Link
-                            href="https://fr.fiverr.com/matthieu_vachet/developpeur-web-certifie-creation-de-sites-modernes-avec-react-et-next-js"
-                            title="Voir le profil Fiverr de Matthieu Vachet"
-                            aria-label="Lien vers le profil Fiverr de Matthieu Vachet"
-                        >
-                            <Image
-                                src="/logo/logo-Fiverr.svg"
-                                alt="Logo de Fiverr"
-                                width={150}
-                                height={150}
-                                className="w-[60px] h-[60px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] opacity-50 hover:opacity-100 transition-opacity duration-500"
-                            />
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/matthieu-vachet-46b7231b0/"
-                            title="Voir le profil LinkedIn de Matthieu Vachet"
-                            aria-label="Lien vers le profil LinkedIn de Matthieu Vachet"
-                        >
-                            <Image
-                                src="/logo/logo-LinkedIn.svg"
-                                alt="Logo de LinkedIn"
-                                width={230}
-                                height={200}
-                                className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[60px] opacity-50 hover:opacity-100 transition-opacity duration-500"
-                            />
-                        </Link>
-                        <Link
-                            href="https://www.malt.fr"
-                            title="Voir le site de Malt"
-                            aria-label="lien vers le site de Malt"
-                        >
-                            <Image
-                                src="/logo/logo-Malt.svg"
-                                alt="Logo de Malt"
-                                width={200}
-                                height={200}
-                                className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
-                            />
-                        </Link>
-                        <Link
-                            href="https://www.pylote.com"
-                            title="Voir le site de Pylote"
-                            aria-label="Lien vers le site de Pylote"
-                        >
-                            <Image
-                                src="/logo/logo-Pylote.svg"
-                                alt="Logo de Pylote"
-                                width={200}
-                                height={200}
-                                className="w-[80px] h-[80px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] opacity-50 hover:opacity-100 transition-opacity duration-500"
-                            />
-                        </Link>
+                        {HeroPresences.map((presence, index) => (
+                            <Link
+                                href={presence.href}
+                                title={presence.title}
+                                aria-label={presence.ariaLabel}
+                                key={presence.id + index}
+                                className={presence.className}
+                            >
+                                <Image
+                                    src={presence.src}
+                                    alt={presence.alt}
+                                    width={presence.width}
+                                    height={presence.height}
+                                    className={presence.className}
+                                />
+                            </Link>
+                        ))}
                     </div>
                 </BlurIn>
             </div>

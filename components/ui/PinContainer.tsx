@@ -1,8 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { PinContainerProps, PinPerspectiveProps } from "@/data/TypesComponents";
 
 export const PinContainer = ({
     children,
@@ -10,13 +10,7 @@ export const PinContainer = ({
     href,
     className,
     containerClassName,
-}: {
-    children: React.ReactNode;
-    title?: string;
-    href?: string;
-    className?: string;
-    containerClassName?: string;
-}) => {
+}: PinContainerProps) => {
     const [transform, setTransform] = useState("translate(-50%,-50%) rotateX(0deg)");
 
     const onMouseEnter = () => {
@@ -53,7 +47,7 @@ export const PinContainer = ({
     );
 };
 
-export const PinPerspective = ({ title, href }: { title?: string; href?: string }) => {
+export const PinPerspective = ({ title, href }: PinPerspectiveProps) => {
     return (
         <motion.div className="pointer-events-none  w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
             <div className=" w-full h-full -mt-7 flex-none  inset-0">
@@ -66,11 +60,9 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                         <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5 text-center">
                             {title}
                         </span>
-
                         <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40 "></span>
                     </a>
                 </div>
-
                 <div
                     style={{
                         perspective: "1000px",
@@ -89,7 +81,6 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                             animate={{
                                 opacity: [0, 1, 0.5, 0],
                                 scale: 1,
-
                                 z: 0,
                             }}
                             transition={{
@@ -129,7 +120,6 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                             animate={{
                                 opacity: [0, 1, 0.5, 0],
                                 scale: 1,
-
                                 z: 0,
                             }}
                             transition={{
@@ -141,7 +131,6 @@ export const PinPerspective = ({ title, href }: { title?: string; href?: string 
                         ></motion.div>
                     </>
                 </div>
-
                 <>
                     <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-purple-500 translate-y-[14px] w-px h-20 group-hover/pin:h-40 blur-[2px]" />
                     <motion.div className="absolute right-1/2 bottom-1/2 bg-gradient-to-b from-transparent to-purple-500 translate-y-[14px] w-px h-20 group-hover/pin:h-40  " />

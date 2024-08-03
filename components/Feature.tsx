@@ -1,16 +1,10 @@
 "use client";
-
 import React from "react";
 import classNames from "classnames";
 import { useInView } from "react-intersection-observer";
 import { Container } from "./Container";
 import AnimatedElement from "./ui/AnimatedElement";
-
-type FeaturesProps = {
-    children: React.ReactNode;
-    color: string;
-    colorDark: string;
-};
+import { FeaturesProps, MainFeatureProps } from "@/data/TypesComponents";
 
 export const Features = ({ children, color, colorDark }: FeaturesProps) => {
     const { ref, inView } = useInView({ threshold: 0.6, triggerOnce: true });
@@ -34,13 +28,6 @@ export const Features = ({ children, color, colorDark }: FeaturesProps) => {
             <div className="relative mt-[3rem] w-full md:mt-[25.2rem]">{children}</div>
         </div>
     );
-};
-
-type MainFeatureProps = {
-    text?: React.ReactNode;
-    title: React.ReactNode;
-    paragraphes?: React.ReactNode;
-    imageSize?: "small" | "large";
 };
 
 const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeatureProps) => {

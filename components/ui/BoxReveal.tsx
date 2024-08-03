@@ -1,15 +1,7 @@
 "use client";
-
 import React, { useEffect, useRef } from "react";
-
 import { motion, useAnimation, useInView } from "framer-motion";
-
-interface BoxRevealProps {
-    children: JSX.Element;
-    width?: "fit-content" | "100%";
-    boxColor?: string;
-    duration?: number;
-}
+import { BoxRevealProps } from "@/data/TypesComponents";
 
 export const BoxReveal = ({
     children,
@@ -46,7 +38,6 @@ export const BoxReveal = ({
             >
                 {children}
             </motion.div>
-
             <motion.div
                 variants={{
                     hidden: { left: 0 },

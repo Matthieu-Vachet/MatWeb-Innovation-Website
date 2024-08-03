@@ -1,14 +1,7 @@
 import React, { useEffect } from "react";
-
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-type AnimatedElementProps = {
-    children: React.ReactNode;
-    delay: number;
-    duration?: number;
-    className?: string;
-};
+import { AnimatedElementProps } from "@/data/TypesComponents";
 
 export default function AnimatedElement({
     children,

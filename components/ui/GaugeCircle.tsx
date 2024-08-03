@@ -1,14 +1,5 @@
 import { cn } from "@/utils/cn";
-
-interface Props {
-    max: number;
-    value: number;
-    min: number;
-    gaugePrimaryColor: string;
-    gaugeSecondaryColor: string;
-    className?: string;
-    label?: string;
-}
+import { GaugeCircleProps } from "@/data/TypesComponents";
 
 export default function GaugeCircle({
     max = 100,
@@ -17,7 +8,7 @@ export default function GaugeCircle({
     gaugePrimaryColor,
     gaugeSecondaryColor,
     className,
-}: Props) {
+}: GaugeCircleProps) {
     const circumference = 2 * Math.PI * 45;
     const percentPx = circumference / 100;
     const currentPercent = ((value - min) / (max - min)) * 100;

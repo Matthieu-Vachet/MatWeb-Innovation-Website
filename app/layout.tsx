@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "./provider";
+import { ThemeProvider } from "./themeProvider";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
