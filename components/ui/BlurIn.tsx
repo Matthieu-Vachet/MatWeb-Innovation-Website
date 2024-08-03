@@ -1,20 +1,7 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
-import { cn } from "@/utils/cn";
-
-interface BlurIntProps {
-    children: React.ReactNode;
-    className?: string;
-    variant?: {
-        hidden: { filter: string; opacity: number };
-        visible: { filter: string; opacity: number };
-    };
-    duration?: number;
-    delay?: number;
-}
+import { BlurIntProps } from "@/data/TypesComponents";
 
 const BlurIn = ({ children, className, variant, duration = 1, delay = 0 }: BlurIntProps) => {
     const defaultVariants = {
@@ -24,8 +11,8 @@ const BlurIn = ({ children, className, variant, duration = 1, delay = 0 }: BlurI
     const combinedVariants = variant || defaultVariants;
 
     const { ref, inView } = useInView({
-        triggerOnce: false, // Trigger the animation only once when it first comes into view
-        threshold: 0.5, // Percentage of the component that needs to be visible to trigger the animation
+        triggerOnce: true,
+        threshold: 0.5,
     });
 
     return (

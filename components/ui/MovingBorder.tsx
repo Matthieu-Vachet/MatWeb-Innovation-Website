@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useRef } from "react";
 import { cn } from "@/utils/cn";
 import {
@@ -9,6 +8,7 @@ import {
     useMotionValue,
     useTransform,
 } from "framer-motion";
+import { ButtonProps, MovingBorderProps } from "@/data/TypesComponents";
 
 export function Button({
     borderRadius = "1.75rem",
@@ -19,16 +19,7 @@ export function Button({
     duration,
     className,
     ...otherProps
-}: {
-    borderRadius?: string;
-    children: React.ReactNode;
-    as?: any;
-    containerClassName?: string;
-    borderClassName?: string;
-    duration?: number;
-    className?: string;
-    [key: string]: any;
-}) {
+}: ButtonProps) {
     return (
         <Component
             className={cn(
@@ -53,7 +44,6 @@ export function Button({
                     />
                 </MovingBorder>
             </div>
-
             <div
                 className={cn(
                     "relative bg-slate-900/[0.] backdrop-blur-xl border border-slate-800  text-white flex items-center justify-center w-full h-full text-sm antialiased",
@@ -75,13 +65,7 @@ export const MovingBorder = ({
     rx,
     ry,
     ...otherProps
-}: {
-    children: React.ReactNode;
-    duration?: number;
-    rx?: string;
-    ry?: string;
-    [key: string]: any;
-}) => {
+}: MovingBorderProps) => {
     const pathRef = useRef<any>();
     const progress = useMotionValue<number>(0);
 

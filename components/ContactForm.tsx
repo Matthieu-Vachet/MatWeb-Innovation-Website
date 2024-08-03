@@ -1,12 +1,11 @@
 "use client";
-
 import React, { useState } from "react";
 import { cn } from "@/utils/cn";
-
 import { Label } from "@/components/ui/Label";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { toast } from "sonner";
+import { ChangeEvent, Email, LabelInputContainerProps, SubmitEvent } from "@/data/TypesComponents";
 
 export function ContactForm() {
     const [firstName, setFirstName] = useState("");
@@ -35,14 +34,10 @@ export function ContactForm() {
     const [sujetSuccessShown, setSujetSuccessShown] = useState(false);
     const [messageSuccessShown, setMessageSuccessShown] = useState(false);
 
-    type Email = string;
-
     const validateEmail = (email: Email) => {
         const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         return pattern.test(email);
     };
-
-    type ChangeEvent = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
     const handleChange = (e: ChangeEvent) => {
         const { name, value } = e.target;
@@ -157,8 +152,6 @@ export function ContactForm() {
         const body = `Email: ${email}%0D%0A%0D%0A${message}`;
         window.location.href = `mailto:vachet.matthieu@icloud.com?subject=${subject}&body=${body}`;
     };
-
-    type SubmitEvent = React.FormEvent<HTMLFormElement>;
 
     const handleSubmit = (e: SubmitEvent) => {
         e.preventDefault();
@@ -291,12 +284,6 @@ const BottomGradient = () => {
     );
 };
 
-const LabelInputContainer = ({
-    children,
-    className,
-}: {
-    children: React.ReactNode;
-    className?: string;
-}) => {
+const LabelInputContainer = ({ children, className }: LabelInputContainerProps) => {
     return <div className={cn("flex flex-col space-y-2 w-full", className)}>{children}</div>;
 };

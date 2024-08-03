@@ -1,18 +1,7 @@
+import { MagicButtonProps } from "@/data/TypesComponents";
 import React from "react";
 
-const MagicButton = ({
-    title,
-    icon,
-    position,
-    handleClick,
-    otherClasses,
-}: {
-    title: string;
-    icon?: React.ReactNode;
-    position: string;
-    handleClick?: () => void;
-    otherClasses?: string;
-}) => {
+const MagicButton = ({ title, icon, position, handleClick, otherClasses }: MagicButtonProps) => {
     return (
         <div
             role="button"

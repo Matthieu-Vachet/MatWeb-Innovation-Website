@@ -1,17 +1,6 @@
 "use client";
-
+import { ShineBorderProps } from "@/data/TypesComponents";
 import { cn } from "@/utils/cn";
-
-type TColorProp = string | string[];
-
-interface ShineBorderProps {
-    borderRadius?: number;
-    borderWidth?: number;
-    duration?: number;
-    color?: TColorProp;
-    className?: string;
-    children: React.ReactNode;
-}
 
 /**
  * @name Shine Border

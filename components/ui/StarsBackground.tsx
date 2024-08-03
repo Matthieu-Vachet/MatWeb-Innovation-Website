@@ -1,14 +1,7 @@
 "use client";
+import { StarProps, StarsBackgroundProps } from "@/data/TypesComponents";
 import { cn } from "@/utils/cn";
 import React, { useState, useEffect, useRef, RefObject, useCallback } from "react";
-
-interface StarProps {
-    x: number;
-    y: number;
-    radius: number;
-    opacity: number;
-    twinkleSpeed: number | null;
-}
 
 export const Star: React.FC<StarProps> = ({ x, y, radius, opacity, twinkleSpeed }) => (
     <circle cx={x} cy={y} r={radius} fill="white" opacity={opacity}>
@@ -22,15 +15,6 @@ export const Star: React.FC<StarProps> = ({ x, y, radius, opacity, twinkleSpeed 
         )}
     </circle>
 );
-
-interface StarsBackgroundProps {
-    starDensity?: number;
-    allStarsTwinkle?: boolean;
-    twinkleProbability?: number;
-    minTwinkleSpeed?: number;
-    maxTwinkleSpeed?: number;
-    className?: string;
-}
 
 export const StarsBackground: React.FC<StarsBackgroundProps> = ({
     starDensity = 0.00015,

@@ -1,14 +1,10 @@
 "use client";
-
 import Image from "next/image";
-
 import { FaGithub, FaGlobe } from "react-icons/fa6";
-
 import { Features } from "@/components/Feature";
 import { PinContainer } from "../ui/PinContainer";
 import Particles from "../ui/Particle";
-
-import { projets } from "@/data/ProjetsData";
+import { projets } from "@/data/Constants";
 import BlurIn from "../ui/BlurIn";
 
 const Projets = () => {
@@ -76,7 +72,6 @@ const Projets = () => {
                                 >
                                     {item.des}
                                 </p>
-
                                 <div className="flex items-center justify-between mt-7 mb-3">
                                     <div className="flex items-center">
                                         {item.iconLists.map((icon, index) => (
@@ -98,7 +93,6 @@ const Projets = () => {
                                             </div>
                                         ))}
                                     </div>
-
                                     <div className="flex justify-center items-center text-center">
                                         <a
                                             href={item.link}

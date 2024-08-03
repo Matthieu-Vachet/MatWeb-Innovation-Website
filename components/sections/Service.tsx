@@ -1,19 +1,18 @@
 "use client";
-
-import Link from "next/link";
-
+import ChevronAnimation from "@/components/ChevronAnimation";
 import { Features } from "@/components/Feature";
 import { HoverEffect } from "@/components/ui/HoverEffect";
 import IconCloud from "@/components/ui/IconCloud";
 import WordRotate from "@/components/ui/WordRotate";
-import AnimatedElement from "../ui/AnimatedElement";
-import BlurIn from "../ui/BlurIn";
-
-import { Processus, slugs } from "@/data/ServicesData";
+import { Processus } from "@/data/Constants";
+import { slugs } from "@/data/TypesDatas";
+import Link from "next/link";
 import { FeaturesSection } from "../FeaturesSection";
 import MagicButton from "../MagicButton";
+import AnimatedElement from "../ui/AnimatedElement";
+import BlurIn from "../ui/BlurIn";
+import { Elypse } from "../ui/Elypse";
 import Particles from "../ui/Particle";
-import ChevronAnimation from "@/components/ChevronAnimation";
 
 const Service = () => {
     return (
@@ -44,30 +43,12 @@ const Service = () => {
                 <div className="relative flex flex-col items-center justify-center mx-auto px-4 max-w-[95vw] imac:max-w-[70vw] -mt-16 md:-mt-0">
                     <div className="hidden lg:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8 ">
                         <div className="relative mt-6 opacity-50">
-                            <svg
-                                viewBox="0 0 1208 1024"
-                                className="absolute opacity-50 left-1/2 -z-8 h-[80rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] md:-top-20 lg:-top-[20rem]"
-                            >
-                                <ellipse
-                                    cx={604}
-                                    cy={512}
-                                    fill="url(#id6d1bd035-0dd1-437e-93fa-59d316231eb0)"
-                                    rx={604}
-                                    ry={512}
-                                />
-                                <defs>
-                                    <radialGradient id="id6d1bd035-0dd1-437e-93fa-59d316231eb0">
-                                        <stop offset={0} stopColor="#905BF4" />
-                                        <stop offset={1} stopColor="#594199" />
-                                    </radialGradient>
-                                </defs>
-                            </svg>
+                            <Elypse className="absolute opacity-50 left-1/2 -z-8 h-[80rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] md:-top-20 lg:-top-[20rem]" />
                         </div>
                     </div>
                     <div className="md:hidden flex justify-end items-end w-full mt-5 mb-5">
                         <ChevronAnimation />
                     </div>
-
                     <BlurIn>
                         <FeaturesSection />
                     </BlurIn>
@@ -98,11 +79,16 @@ const Service = () => {
                     <div className="md:hidden flex justify-end items-end w-full mb-5">
                         <ChevronAnimation />
                     </div>
-                    <BlurIn className="max-w-[95vw] mx-auto">
+                    <BlurIn className="max-w-[95vw] mx-auto z-30">
                         <div>
                             <HoverEffect items={Processus} />
                         </div>
                     </BlurIn>
+                    <div className="hidden lg:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8 ">
+                        <div className="relative opacity-50">
+                            <Elypse className="absolute opacity-50 left-1/2 -z-8 h-[80rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] md:-top-20 lg:-top-[58rem]" />
+                        </div>
+                    </div>
                     <BlurIn>
                         <div className="relative flex items-center justify-center lg:justify-between overflow-hidden bg-transparent gap-1  flex-wrap mt-20 lg:mt-36  ">
                             <div className="flex max-w-[90vw] lg:max-w-[50%] flex-col items-center gap-5">

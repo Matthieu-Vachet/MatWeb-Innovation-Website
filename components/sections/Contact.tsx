@@ -1,9 +1,7 @@
 "use client";
-
 import { ContactForm } from "@/components/ContactForm";
 import { Features } from "@/components/Feature";
 import { BoxReveal } from "@/components/ui/BoxReveal";
-
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { IoIosPin } from "react-icons/io";
 import { IoMailSharp, IoPerson, IoTime } from "react-icons/io5";

@@ -1,4 +1,5 @@
-import { items } from "@/data/ServicesData";
+import { items } from "@/data/Constants";
+import { FeaturesSectionProps } from "@/data/TypesComponents";
 import { cn } from "@/utils/cn";
 
 export function FeaturesSection() {
@@ -13,17 +14,7 @@ export function FeaturesSection() {
     );
 }
 
-const Feature = ({
-    title,
-    description,
-    icon,
-    index,
-}: {
-    title: string;
-    description: string;
-    icon: React.ReactNode;
-    index: number;
-}) => {
+const Feature = ({ title, description, icon, index }: FeaturesSectionProps) => {
     return (
         <div
             className={cn(

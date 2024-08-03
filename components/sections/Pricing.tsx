@@ -3,12 +3,13 @@ import { useState } from "react";
 import Link from "next/link";
 import SparklesText from "@/components/ui/SparklesText";
 import MagicButton from "../MagicButton";
-import { tiers } from "@/data/PricingData";
+import { tiers } from "@/data/Constants";
 import { FaArrowRight } from "react-icons/fa";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import AnimatedElement from "../ui/AnimatedElement";
 import ChevronAnimation from "@/components/ChevronAnimation";
 import NumberTicker from "../NumberTicker";
+import { Elypse } from "../ui/Elypse";
 
 const Pricing = () => {
     const [tierSelected, setTierSelected] = useState("Intégration");
@@ -33,7 +34,6 @@ const Pricing = () => {
                         </span>
                     </h3>
                 </AnimatedElement>
-
                 <div className="flex justify-center space-x-4 mb-8">
                     <button
                         className={`px-4 py-2 rounded-md ${
@@ -56,31 +56,13 @@ const Pricing = () => {
                         Développement
                     </button>
                 </div>
-
                 <div className="mx-auto max-w-[95vw] lg:max-w-[100vw] imac:max-w-[60vw] mt-26 lg:mt-20">
                     <div className="lg:hidden flex justify-end items-end w-full mb-5">
                         <ChevronAnimation />
                     </div>
                     <div className="hidden lg:block mx-auto lg:max-w-7xl px-6 text-center lg:px-8">
                         <div className="relative mt-6 opacity-50">
-                            <svg
-                                viewBox="0 0 1208 1024"
-                                className="absolute opacity-50 left-1/2 -z-8 h-[50rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:top-[10rem]"
-                            >
-                                <ellipse
-                                    cx={604}
-                                    cy={512}
-                                    fill="url(#id6d1bd035-0dd1-437e-93fa-59d316231eb0)"
-                                    rx={604}
-                                    ry={512}
-                                />
-                                <defs>
-                                    <radialGradient id="id6d1bd035-0dd1-437e-93fa-59d316231eb0">
-                                        <stop offset={0} stopColor="#905BF4" />
-                                        <stop offset={1} stopColor="#594199" />
-                                    </radialGradient>
-                                </defs>
-                            </svg>
+                            <Elypse className="absolute opacity-50 left-1/2 -z-8 h-[50rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:top-[10rem]" />
                         </div>
                     </div>
                     <div className="flow-root z-20 bg-transparent">

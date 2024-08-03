@@ -1,28 +1,7 @@
 "use client";
+import { ShootingStar, ShootingStarsProps } from "@/data/TypesComponents";
 import { cn } from "@/utils/cn";
 import React, { useEffect, useState, useRef } from "react";
-
-interface ShootingStar {
-    id: number;
-    x: number;
-    y: number;
-    angle: number;
-    scale: number;
-    speed: number;
-    distance: number;
-}
-
-interface ShootingStarsProps {
-    minSpeed?: number;
-    maxSpeed?: number;
-    minDelay?: number;
-    maxDelay?: number;
-    starColor?: string;
-    trailColor?: string;
-    starWidth?: number;
-    starHeight?: number;
-    className?: string;
-}
 
 const getRandomStartPoint = () => {
     const side = Math.floor(Math.random() * 4);

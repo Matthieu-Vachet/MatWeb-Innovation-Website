@@ -1,30 +1,24 @@
 "use strict";
-
 import React, { useState } from "react";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
-
+import {
+    CardDescriptionProps,
+    CardIconsProps,
+    CardProps,
+    CardSubtitleProps,
+    CardTitleProps,
+    HoverEffectProps,
+} from "@/data/TypesComponents";
 import { PiNotePencilFill, PiCoffeeBold, PiPencil, PiCodeBold } from "react-icons/pi";
 import { BsSendCheck } from "react-icons/bs";
 import { SiTestinglibrary } from "react-icons/si";
 
-export const HoverEffect = ({
-    items,
-    className,
-}: {
-    items: {
-        title: string;
-        subtitle: string;
-        description: string;
-        link?: string;
-        icon?: any;
-    }[];
-    className?: string;
-}) => {
+export const HoverEffect = ({ items, className }: HoverEffectProps) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <div className={cn("relative z-10 max-w-[90vw] mx-auto", className)}>
+        <div className={cn("relative z-30 max-w-[90vw] mx-auto", className)}>
             <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide md:snap-none space-x-4 md:space-x-0">
                 {items.map((item, index) => (
                     <div
@@ -106,13 +100,7 @@ export const HoverEffect = ({
     );
 };
 
-export const Card = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
+export const Card = ({ className, children }: CardProps) => {
     return (
         <div
             className={cn(
@@ -126,13 +114,7 @@ export const Card = ({
         </div>
     );
 };
-export const CardTitle = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
+export const CardTitle = ({ className, children }: CardTitleProps) => {
     return (
         <p className={cn("text-purple text-3xl md:text-4xl font-normal tracking-wide", className)}>
             {children}
@@ -140,23 +122,11 @@ export const CardTitle = ({
     );
 };
 
-export const CardIcons = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
+export const CardIcons = ({ className, children }: CardIconsProps) => {
     return <div className={cn("flex justify-center", className)}>{children}</div>;
 };
 
-export const CardSubtitle = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
+export const CardSubtitle = ({ className, children }: CardSubtitleProps) => {
     return (
         <p
             className={cn(
@@ -169,13 +139,7 @@ export const CardSubtitle = ({
     );
 };
 
-export const CardDescription = ({
-    className,
-    children,
-}: {
-    className?: string;
-    children: React.ReactNode;
-}) => {
+export const CardDescription = ({ className, children }: CardDescriptionProps) => {
     return (
         <p
             className={cn(

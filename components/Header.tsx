@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,71 +8,8 @@ import { HamburgerIcon } from "@/components/icons/Hamburger";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
+import { HeaderLinks } from "@/data/Constants";
 
-interface Links {
-    name: string;
-    title: string;
-    href: string;
-    className?: string;
-    arialabel?: string;
-}
-
-const HeaderLinks: Links[] = [
-    {
-        name: "Accueil",
-        title: "Retour à l'accueil",
-        href: "#Home",
-        arialabel: "Retour à l'accueil",
-    },
-    {
-        name: "Services",
-        title: "Voir les services proposés",
-        href: "#mes-service",
-        arialabel:
-            "Voir la liste des services que je propose en développement web ou en intégration",
-    },
-    {
-        name: "Compétences",
-        title: "Consulter mes compétences",
-        href: "#mes-competences",
-        className: "md:hidden lg:block",
-        arialabel: "Consulter mes compétences en développement web ou en intégration",
-    },
-    {
-        name: "Projets",
-        title: "Voir mes projets",
-        href: "#mes-projets",
-        className: "md:hidden lg:block",
-        arialabel: "Voir les projets que j'ai réalisés",
-    },
-    {
-        name: "À propos",
-        title: "En savoir plus sur moi",
-        href: "#a-propos-de-moi",
-        className: "md:hidden lg:block",
-        arialabel: "En savoir plus sur moi",
-    },
-    {
-        name: "Offres",
-        title: "Découvrir mes tarifs",
-        href: "#mes-tarifs",
-        arialabel:
-            "Découvrir les tarifs pour les services que je propose en developpement web ou en intégration",
-    },
-    {
-        name: "Contact",
-        title: "Me contacter",
-        href: "#Contact",
-        arialabel: "Contacter Matthieu Vachet via le formulaire de contact",
-    },
-    {
-        name: "F.A.Q",
-        title: "Voir les questions freéquentes",
-        href: "#Faqs",
-        className: "md:hidden lg:block",
-        arialabel: "Voir les questions freéquentes",
-    },
-];
 export const Header = () => {
     const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
 
@@ -124,7 +60,6 @@ export const Header = () => {
                     />
                     <p className="hidden md:flex">Matweb-Innovation</p>
                 </Link>
-
                 <div
                     className={classNames(
                         "transition-[visibility] md:visible",
@@ -145,7 +80,6 @@ export const Header = () => {
                                 onClick={() => setHamburgerMenuIsOpen(false)}
                             />
                         </div>
-
                         <ul
                             className={classNames(
                                 "flex h-full flex-col items-end pr-5 md:pr-none md:flex-row md:items-center md:[&_li]:border-none text-3xl",

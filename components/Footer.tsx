@@ -1,54 +1,7 @@
 import Link from "next/link";
-import { TwitchIcon } from "lucide-react";
 import Image from "next/image";
+import { QUICK_LINKS, SOCIAL_MEDIAS } from "@/data/Constants";
 
-type LinkFooterType = {
-    id: string;
-    title: string;
-    link?: string;
-    targetBlank?: boolean;
-};
-
-const QUICK_LINKS: LinkFooterType[] = [
-    { id: "Acceuil-link", title: "Acceuil", link: "#Home", targetBlank: false },
-    { id: "Service-link", title: "Service", link: "#mes-service", targetBlank: false },
-    { id: "Tarifs-link", title: "Tarifs", link: "#mes-tarifs", targetBlank: false },
-    { id: "Contact-link", title: "Contact", link: "#Contact", targetBlank: false },
-    { id: "Faq-link", title: "F.A.Q", link: "#Faqs", targetBlank: false },
-];
-type SocialMediaLink = {
-    id: string;
-    icon: () => JSX.Element;
-    link: string;
-    title: string;
-    index?: number;
-};
-const SOCIAL_MEDIAS: SocialMediaLink[] = [
-    {
-        id: "Twitter-link",
-        icon: (...props) => <TwitterIcon />,
-        link: "https://twitter.com/matweb_innov/",
-        title: "Voir le profil Twitter de Matthieu Vachet",
-    },
-    {
-        id: "Facebook-link",
-        icon: (...props) => <FacebookIcon />,
-        link: "https://www.facebook.com/profile.php?id=61561295637110",
-        title: "Voir la page Facebook de Matthieu Vachet",
-    },
-    {
-        id: "Linkedin-link",
-        icon: (...props) => <LinkedinIcon />,
-        link: "https://www.linkedin.com/in/matthieu-vachet-46b7231b0/",
-        title: "Voir le profil LinkedIn de Matthieu Vachet",
-    },
-    {
-        id: "Instagram-link",
-        icon: (...props) => <InstagramIcon />,
-        link: "https://www.instagram.com/matthieuvachet02/",
-        title: "Voir le profil Instagram de Matthieu Vachet",
-    },
-];
 export default function Footer() {
     return (
         <footer className="bg-gradient-to-tr from-transparent via-black-100/15 to-black-100 py-0 text-gray-400 backdrop-blur-lg lg:py-12 ">
@@ -60,7 +13,6 @@ export default function Footer() {
                 loading="lazy"
                 className="w-full h-full md:h-[70vh] opacity-80 imac:opacity-50 absolute left-0 bottom-0 min-h-96 -z-50 "
             />
-
             <div className="flex flex-col items-center max-w-[95vw] lg:max-w-[45vw] mx-auto mb-16">
                 <p className="bg-clip-text text-center text-lg [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-lg [.is-visible_&]:translate-y-0 mt-14"></p>
             </div>
@@ -124,104 +76,5 @@ export default function Footer() {
                 </Link>
             </div>
         </footer>
-    );
-}
-
-function FacebookIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-        </svg>
-    );
-}
-
-function InstagramIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-        </svg>
-    );
-}
-
-function LinkedinIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect width="4" height="12" x="2" y="9" />
-            <circle cx="4" cy="4" r="2" />
-        </svg>
-    );
-}
-
-function MountainIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-        </svg>
-    );
-}
-
-function TwitterIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-        </svg>
     );
 }
