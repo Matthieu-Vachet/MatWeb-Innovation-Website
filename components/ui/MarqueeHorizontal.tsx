@@ -12,16 +12,16 @@ const ReviewCard = ({ img, name, username, body }: ReviewCardProps) => {
                 // light styles
                 "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
                 // dark styles
-                "dark:[border:1px_solid_rgba(255,255,255,.1)] dark:bg-transparent/10 dark:hover:bg-purple/[.10]",
+                "[border:1px_solid_rgba(255,255,255,.1)] bg-transparent/10 hover:bg-purple/[.10]",
             )}
         >
             <div className="flex flex-row items-center gap-5">
                 <Image src={img} alt={name} width={32} height={32} className="rounded-full" />
                 <div className="flex flex-col">
-                    <figcaption className="composant-title-size font-medium dark:text-white">
+                    <figcaption className="composant-title-size font-medium text-white">
                         {name}
                     </figcaption>
-                    <p className="text-md font-medium dark:text-white/40">{username}</p>
+                    <p className="text-md font-medium text-white/40">{username}</p>
                 </div>
             </div>
             <blockquote className="mt-2 text-sm md:text-md">{body}</blockquote>
@@ -37,8 +37,8 @@ export default function MarqueeHorizontal() {
                     <ReviewCard key={index} {...review} />
                 ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-black-100"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-black-100"></div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black-100"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-black-100"></div>
         </div>
     );
 }

@@ -25,7 +25,7 @@ const Hero = () => {
                     layout="responsive"
                 />
                 <Image
-                    src="/background/map.png"
+                    src="/background/map.webp"
                     alt="Image background hero"
                     width={1300}
                     height={1300}
