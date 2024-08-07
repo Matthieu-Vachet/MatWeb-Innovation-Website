@@ -9,7 +9,7 @@ import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import AnimatedElement from "../ui/AnimatedElement";
 import ChevronAnimation from "@/components/ChevronAnimation";
 import NumberTicker from "../NumberTicker";
-import { Elypse } from "../ui/Elypse";
+import  Elypse  from "../ui/Elypse";
 
 const Pricing = () => {
     const [tierSelected, setTierSelected] = useState("Intégration");

@@ -84,7 +84,7 @@
         @apply text-gradient translate-y-[40%] text-center text-4xl [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:text-5xl [.is-visible_&]:translate-y-0 mt-16 md:mt-14 mb-28 md:mb-40;
     }
     .subtitle {
-        @apply bg-clip-text text-start md:text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-5;
+        @apply bg-clip-text text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-5;
     }
     .heading-bottom-spacing {
         @apply pb-[2rem] md:pb-[4rem] pt-[2rem] md:pt-[10rem];
@@ -101,14 +101,10 @@
     .composant-title-size {
         @apply text-lg md:text-2xl;
     }
-
-    /* .text-gradient {
-        @apply pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-semibold leading-none text-transparent from-white to-slate-900/30;
-    } */
 }
 
 .progress-bar {
-    background: linear-gradient(to right, #8e2de2, /* Violet */ #6062e8 /* Bleu */);
+    background: linear-gradient(to right, #8e2de2, #6062e8);
 }
 
 .text-gradient {
@@ -126,15 +122,13 @@
 }
 
 .scrollbar-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Chevron */
-/* styles/globals.css ou un fichier CSS spécifique */
 @layer utilities {
     .chevron {
-        @apply relative -mx-5; /* Réduit l'espacement horizontal entre les chevrons */
+        @apply relative -mx-5;
         opacity: 0;
         transform: translateX(0) scale(1);
     }
@@ -159,7 +153,7 @@
         }
         50% {
             opacity: 1;
-            transform: translateX(0.5rem) scale(1); /* Réduit la translation pour les rapprocher */
+            transform: translateX(0.5rem) scale(1);
         }
     }
 }

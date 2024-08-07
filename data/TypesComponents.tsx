@@ -426,7 +426,7 @@ export interface NumberTickerProps {
 }
 
 /*´:°•.°+.*•´.*:˚.°*.˚•´.°:°•.°•.*•´.*:˚.°*.˚•´.°:°•.°+.*•´.*:*/
-/*                      Elypse.tsx                       */
+/*                         Elypse.tsx                         */
 /*.•°:°.´+˚.*°.˚:*.´•*.+°.•°:´*.´•*.•°.•°:°.´:•˚°.*°.˚:*.´+°.•*/
 export interface ElypseProps {
     className?: string;
@@ -434,4 +434,8 @@ export interface ElypseProps {
     stopColor2?: string;
     offset1?: number;
     offset2?: number;
+    cx?: number;
+    cy?: number;
+    rx?: number;
+    ry?: number;
 }

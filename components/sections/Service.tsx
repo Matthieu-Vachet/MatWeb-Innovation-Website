@@ -11,7 +11,7 @@ import { FeaturesSection } from "../FeaturesSection";
 import MagicButton from "../MagicButton";
 import AnimatedElement from "../ui/AnimatedElement";
 import BlurIn from "../ui/BlurIn";
-import { Elypse } from "../ui/Elypse";
+import Elypse from "../ui/Elypse";
 import Particles from "../ui/Particle";
 
 const Service = () => {
@@ -69,7 +69,7 @@ const Service = () => {
                         </Link>
                     </div>
                     <AnimatedElement delay={0.5} duration={0.5}>
-                        <h3 className="w-[90vw] md:w-full text-gradient text-2xl md:text-4xl imac:text-5xl translate-y-[40%] text-start md:text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-14 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
+                        <h3 className="w-[90vw] md:w-full text-gradient text-2xl md:text-4xl imac:text-5xl translate-y-[40%] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] [.is-visible_&]:translate-y-0 mt-14 md:mt-14 lg:mt-36 mb-24 md:mb-34 lg:mb-28 flex flex-col">
                             Processus de Conception et Développement
                             <span className="text-purple subtitle text-lg md:text-2xl">
                                 Les étapes clés qui vous séparent de votre site internet
