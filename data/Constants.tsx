@@ -495,14 +495,17 @@ export const CompetencesList: Competence[] = [
 /*                     PROJET SECTION                         */
 /*.•°:°.´+˚.*°.˚:*.´•*.+°.•°:´*.´•*.•°.•°:°.´:•˚°.*°.˚:*.´+°.•*/
 
-export const projets: Projet[] = [
+export const DataProjets = [
     {
         id: 1,
-        title: "Portfolio",
-        alt: "Image du projet Portfolio",
-        cat: "Portfolio",
-        des: "Portfolio personnel développé avec React, Vite.js et Framer Motion, offrant une expérience immersive et dynamique. Intégration web et animation mises en valeur.",
-        img: "/images-projets/projet-1-portfolio.svg",
+        srcMockup: "/images-projets/projet-1-Mockup.webp",
+        src1: "/images-projets/projet-1-screen-1.webp",
+        src2: "/images-projets/projet-1-screen-2.webp",
+        title: "MatWeb-Innovation",
+        category: "Portfolio",
+        date: 2023,
+        description:
+            "Portfolio personnel développé pour le dernier projet OpenClassrooms, dans le cadre de la validation du RNCP 5. Il offre une expérience immersive et dynamique, avec une intégration web et des animations mises en valeur",
         iconLists: [
             "/logo/logo-Sass.svg",
             "/logo/logo-React.svg",
@@ -513,14 +516,28 @@ export const projets: Projet[] = [
             "/logo/logo-FramerMotion.svg",
         ],
         link: "https://matthieu-vachet-portfolio.vercel.app",
+        devList: [
+            "Développement et gestion du portfolio dans sa globalité",
+            "Développement spécifique (API REST, gestion de la modification et de la suppression de projets) directement via le site",
+            "Développement avec React.js et Vite.js",
+            "Gestion des bases de données (MongoDB, Express.js, Node.js)",
+            "Gestion du CSS avec Sass",
+            "Gestion des animations avec Framer Motion et GSAP",
+            "Référencement naturel (SEO)",
+            "Site responsive (compatible avec tous les supports)",
+            "Internationalisation (i18n), thèmes sombre et clair",
+        ],
     },
     {
         id: 2,
+        srcMockup: "/images-projets/projet-2-Mockup.webp",
+        src1: "/images-projets/projet-2-screen-1.webp",
+        src2: "/images-projets/projet-2-screen-2.webp",
         title: "Projet 724Events",
-        alt: "Image du projet 724Events",
-        cat: "Débuguage",
-        des: "Analyser et résoudre les problèmes d'un site d'agence événementielle, finaliser le code et compléter le cahier de recettes avec des tests.",
-        img: "/images-projets/projet-2-724events.svg",
+        category: "Debugage",
+        date: 2023,
+        description:
+            "Analyser et résoudre les problèmes d'un site d'agence événementielle, finaliser le code et compléter le cahier de recettes avec des tests.",
         iconLists: [
             "/logo/logo-Css.svg",
             "/logo/logo-Html.svg",
@@ -531,24 +548,43 @@ export const projets: Projet[] = [
             "/logo/logo-TestingLibrary.svg",
         ],
         link: "https://projet-10-openclassrooms-debuggez-une-application-react.vercel.app",
+        devList: [
+            "Déboguer un site web grâce aux Chrome DevTools",
+            "Installer et utiliser React Developer Tools",
+            "Écrire et exécuter des tests avec le framework de test Jest",
+            "Comprendre les méthodes BDD et TDD",
+            "Edition du cahier de recette",
+        ],
     },
     {
         id: 3,
+        srcMockup: "/images-projets/projet-3-Mockup.webp",
+        src1: "/images-projets/projet-3-screen-1.webp",
+        src2: "/images-projets/projet-3-screen-2.webp",
         title: "Projet Nina",
-        alt: "Image du projet Nina",
-        cat: "Optimisation, SEO",
-        des: "Optimiser complètement le site web en termes de performances, SEO, référencement local, métadonnées pour les réseaux sociaux et accessibilité, avec un rapport.",
-        img: "/images-projets/projet-3-nina.svg",
+        category: "Optimisation, SEO",
+        date: 2023,
+        description:
+            "Optimiser complètement le site web en termes de performances, SEO, référencement local, métadonnées pour les réseaux sociaux et accessibilité, avec un rapport.",
         iconLists: ["/logo/logo-Css.svg", "/logo/logo-Html.svg", "/logo/logo-Javascript.svg"],
         link: "https://matthieu-vachet.github.io/Projet-9-Openclassrooms-Projet-Optimisation-Nina-Carducci",
+        devList: [
+            "Appliquer les techniques de base pour améliorer le SEO d'un site",
+            "Appliquer les règles et les normes de l'accessibilité pour rendre les contenus numériques accessibles à tous",
+            "Utilisation des outils tels que Lighthouse et Wave pour auditer la performance d'un site web",
+            "Mettre en place le rapport d'optimisation et de SEO pour le site web",
+        ],
     },
     {
         id: 4,
+        srcMockup: "/images-projets/projet-4-Mockup.webp",
+        src1: "/images-projets/projet-4-screen-1.webp",
+        src2: "/images-projets/projet-4-screen-2.webp",
         title: "Projet Kasa",
-        alt: "Image du projet Kasa",
-        cat: "Site Web",
-        des: "Application React complète pour Kasa, permettant la location d'appartements entre particuliers.",
-        img: "/images-projets/projet-4-kasa.svg",
+        category: "Site Web",
+        date: 2023,
+        description:
+            "Application React complète pour Kasa, permettant la location d'appartements entre particuliers.",
         iconLists: [
             "/logo/logo-Css.svg",
             "/logo/logo-Html.svg",
@@ -557,15 +593,25 @@ export const projets: Projet[] = [
             "/logo/logo-React.svg",
             "/logo/logo-ViteJs.svg",
         ],
+        devList: [
+            "Développement d'une application moderne en utilisant React.js pour construire des interfaces utilisateur réactives et dynamiques, tout en tirant parti de Vite.js pour des temps de construction rapides et un chargement instantané.",
+            "Mise en œuvre d'une navigation fluide et cohérente à travers les différentes pages de l'application en utilisant React Router, garantissant une expérience utilisateur intuitive et sans friction.",
+            "Conception et intégration d'éléments d'interface utilisateur via des composants React, permettant une gestion modulaire et efficace des différentes parties de l'application tout en assurant une cohérence visuelle.",
+            "Application de Sass pour gérer les styles de l'application, facilitant l'organisation et la personnalisation des feuilles de style pour un rendu visuel attrayant et homogène.",
+            "Ajout d'animations interactives à l'application en utilisant JavaScript, enrichissant l'expérience utilisateur avec des effets visuels engageants et dynamiques.",
+        ],
         link: "https://projet-8-openclassrooms-projet-kasa.vercel.app",
     },
     {
         id: 5,
+        srcMockup: "/images-projets/projet-5-Mockup.webp",
+        src1: "/images-projets/projet-5-screen-1.webp",
+        src2: "/images-projets/projet-5-screen-2.webp",
         title: "Projet Sophie Bluel",
-        alt: "Image du projet Sophie Bluel",
-        cat: "Portfolio",
-        des: "Créer une page web dynamique avec JavaScript, présentant les travaux d'un architecte, une page de connexion pour l'administrateur du site, et une modale pour télécharger de nouveaux médias.",
-        img: "/images-projets/projet-5-sophie-bluel.svg",
+        category: "Portfolio",
+        date: 2023,
+        description:
+            "Créer une page web dynamique avec JavaScript, présentant les travaux d'un architecte, une page de connexion pour l'administrateur du site, et une modale pour télécharger de nouveaux médias.",
         iconLists: [
             "/logo/logo-Css.svg",
             "/logo/logo-Html.svg",
@@ -573,16 +619,30 @@ export const projets: Projet[] = [
             "/logo/logo-Javascript.svg",
         ],
         link: "https://github.com/Matthieu-Vachet/Projet-6-openclassrooms-Portfolio-Javascript",
+        devList: [
+            "Gestion des événements utilisateurs avec JavaScript.",
+            "Manipulation des éléments du DOM avec JavaScript.",
+            "Récupération des données utilisateurs dans JavaScript via des formulaires.",
+            "Communication avec une API pour récupérer, modifier et ajouter des données.",
+        ],
     },
     {
         id: 6,
+        srcMockup: "/images-projets/projet-6-Mockup.webp",
+        src1: "/images-projets/projet-6-screen-1.webp",
+        src2: "/images-projets/projet-6-screen-2.webp",
         title: "Projet Booki",
-        alt: "Image du projet Booki",
-        cat: "Site Web",
-        des: "Développer un site Internet pour la société Booki, permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
-        img: "/images-projets/projet-6-booki.svg",
+        category: "Site Web",
+        date: 2023,
+        description:
+            "Développer un site Internet pour la société Booki, permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix.",
         iconLists: ["/logo/logo-Css.svg", "/logo/logo-Html.svg"],
         link: "https://matthieu-vachet.github.io/Projet-3-openclassrooms-Integrateur_Web-/#",
+        devList: [
+            "Comprendre les détails d'une maquette et l'utilisation de Figma.",
+            "Comprendre la responsivité et les breakpoints.",
+            "Utilisation de Grid et Flexbox pour créer des mises en page responsives et flexibles.",
+        ],
     },
 ];
 

@@ -21,10 +21,7 @@ const panelVariants = {
 
 const Faqs = () => {
     return (
-        <section
-            className="relative bg-gradient-to-b from-black-100 via-blue-100/20 to-black-100 z-30"
-            id="Faqs"
-        >
+        <section className="relative z-30" id="Faqs">
             <div className="relative max-w-[100vw] lg:max-w-[80vw] imac:max-w-[60vw] mx-auto lg:flex px-4 md:px-6">
                 <div className="flex-1">
                     <BlurIn>

@@ -143,6 +143,11 @@ const config = {
                         transform: "translateY(-10px)",
                     },
                 },
+                "border-beam": {
+                    "100%": {
+                        "offset-distance": "100%",
+                    },
+                },
             },
 
             animation: {
@@ -152,6 +157,7 @@ const config = {
                 scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
                 marquee: "marquee var(--duration) linear infinite",
                 "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+                "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
             },
         },
     },

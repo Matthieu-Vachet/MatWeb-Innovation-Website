@@ -7,7 +7,7 @@ import AnimatedElement from "./ui/AnimatedElement";
 import { FeaturesProps, MainFeatureProps } from "@/data/TypesComponents";
 
 export const Features = ({ children, color, colorDark }: FeaturesProps) => {
-    const { ref, inView } = useInView({ threshold: 0.6, triggerOnce: true });
+    const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
 
     return (
         <div
@@ -40,7 +40,7 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
                         imageSize === "small" ? "w-[78rem]" : "w-[102.4rem]",
                     )}
                 >
-                    <h1 className="relative text-gradient mb-5 md:mb-11 translate-y-none md:translate-y-[100%] pt-[10rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0">
+                    <h1 className="relative text-gradient mb-5 md:mb-11 translate-y-none md:translate-y-[100%] opacity-0 pt-[10rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0 [.is-visible_&]:opacity-100">
                         {title}
                     </h1>
                 </Container>
