@@ -498,7 +498,7 @@ export const CompetencesList: Competence[] = [
 export const DataProjets = [
     {
         id: 1,
-        srcMockup: "/images-projets/projet-astral-Mockup.webp",
+        srcMockup: "/images-projets/projet-astral-mockup.webp",
         src1: "/images-projets/projet-astral-screen-1.webp",
         src2: "/images-projets/projet-astral-screen-2.webp",
         title: "Astral",
@@ -514,11 +514,11 @@ export const DataProjets = [
         ],
         link: "https://astra-integration-landing-page.vercel.app/",
         devList: [
-            "Next.js : Utilisé pour construire le site web basé sur React, facilitant le rendu côté serveur et les fonctionnalités avancées",
-            "TailwindCSS : Appliqué pour le stylage du site avec une approche CSS utilitaire-first, permettant une personnalisation rapide et efficace",
-            "Shadcn UI : Utilisé pour fournir des composants d'interface utilisateur modernes et réactifs",
-            "Magic UI : Intégré pour offrir des composants d'interface utilisateur élégants et fonctionnels",
-            "Clerk : Déployé pour la gestion de l'authentification des utilisateurs, assurant une connexion sécurisée et fluide",
+            "Next.js: Utilisé pour construire le site web basé sur React, facilitant le rendu côté serveur et les fonctionnalités avancées",
+            "TailwindCSS: Appliqué pour le stylage du site avec une approche CSS utilitaire-first, permettant une personnalisation rapide et efficace",
+            "Shadcn UI: Utilisé pour fournir des composants d'interface utilisateur modernes et réactifs",
+            "Magic UI: Intégré pour offrir des composants d'interface utilisateur élégants et fonctionnels",
+            "Clerk: Déployé pour la gestion de l'authentification des utilisateurs, assurant une connexion sécurisée et fluide",
         ],
     },
     {
