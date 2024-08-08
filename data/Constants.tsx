@@ -523,6 +523,29 @@ export const DataProjets = [
     },
     {
         id: 2,
+        srcMockup: "/images-projets/projet-IaChat-Mockup.webp",
+        src1: "/images-projets/projet-IaChat-screen-1.webp",
+        src2: "/images-projets/projet-IaChat-screen-2.webp",
+        title: "IaChat",
+        category: "Intégration Web, Landing Page",
+        date: 2024,
+        description:
+            "Landing page pour la plateforme IaChat : IA générative conçue pour les créateurs",
+        iconLists: [
+            "/logo/logo-React.svg",
+            "/logo/logo-ViteJs.svg",
+            "/logo/logo-TailwindCss.svg",
+            "/logo/logo-FramerMotion.svg",
+        ],
+        link: "https://iachat-integration.vercel.app/",
+        devList: [
+            "Construction du site avec React.js et Vite.js",
+            "TailwindCSS: Appliqué pour le stylage du site avec une approche CSS utilitaire-first, permettant une personnalisation rapide et efficace",
+            "Framer Motion: Intégration pour offrir des animations et des effets graphiques",
+        ],
+    },
+    {
+        id: 3,
         srcMockup: "/images-projets/projet-Matweb-Mockup.webp",
         src1: "/images-projets/projet-Matweb-screen-1.webp",
         src2: "/images-projets/projet-Matweb-screen-2.webp",
@@ -554,7 +577,7 @@ export const DataProjets = [
         ],
     },
     {
-        id: 3,
+        id: 4,
         srcMockup: "/images-projets/projet-724Events-Mockup.webp",
         src1: "/images-projets/projet-724Events-screen-1.webp",
         src2: "/images-projets/projet-724Events-screen-2.webp",
@@ -582,7 +605,7 @@ export const DataProjets = [
         ],
     },
     {
-        id: 4,
+        id: 5,
         srcMockup: "/images-projets/projet-Nina-Mockup.webp",
         src1: "/images-projets/projet-Nina-screen-1.webp",
         src2: "/images-projets/projet-Nina-screen-2.webp",
@@ -601,7 +624,7 @@ export const DataProjets = [
         ],
     },
     {
-        id: 5,
+        id: 6,
         srcMockup: "/images-projets/projet-Kasa-Mockup.webp",
         src1: "/images-projets/projet-Kasa-screen-1.webp",
         src2: "/images-projets/projet-Kasa-screen-2.webp",
@@ -628,7 +651,7 @@ export const DataProjets = [
         link: "https://projet-8-openclassrooms-projet-kasa.vercel.app",
     },
     {
-        id: 6,
+        id: 7,
         srcMockup: "/images-projets/projet-Sophie-Mockup.webp",
         src1: "/images-projets/projet-Sophie-screen-1.webp",
         src2: "/images-projets/projet-Sophie-screen-2.webp",
@@ -652,7 +675,7 @@ export const DataProjets = [
         ],
     },
     {
-        id: 7,
+        id: 8,
         srcMockup: "/images-projets/projet-Booki-Mockup.webp",
         src1: "/images-projets/projet-Booki-screen-1.webp",
         src2: "/images-projets/projet-Booki-screen-2.webp",
