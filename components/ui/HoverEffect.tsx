@@ -13,12 +13,19 @@ import {
 import { PiNotePencilFill, PiCoffeeBold, PiPencil, PiCodeBold } from "react-icons/pi";
 import { BsSendCheck } from "react-icons/bs";
 import { SiTestinglibrary } from "react-icons/si";
+import Particles from "./Particle";
 
 export const HoverEffect = ({ items, className }: HoverEffectProps) => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <div className={cn("relative z-30 max-w-[90vw] mx-auto", className)}>
+        <div
+            className={cn(
+                "relative z-30 max-w-[90vw] mx-auto md:border md:border-white-100/10 md:rounded-3xl md:shadow-[0px_5px_30px_5px_rgba(79,57,136,_0.30)]",
+                className,
+            )}
+        >
+            <Particles className="hidden md:block absolute inset-0 overflow-hidden" />
             <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide md:snap-none space-x-4 md:space-x-0">
                 {items.map((item, index) => (
                     <div
@@ -104,7 +111,7 @@ export const Card = ({ className, children }: CardProps) => {
     return (
         <div
             className={cn(
-                "flex flex-col rounded-2xl min-h-[300px] h-full w-full p-6 overflow-visible backdrop-blur-sm border border-white-100/15 group-hover:border-white-100/20 relative z-30 shadow-lg",
+                "flex flex-col rounded-2xl  min-h-[300px] h-full w-full p-6 overflow-visible backdrop-blur-sm md:backdrop-blur-none border border-white-100/15 md:border-none group-hover:border-white-100/20 relative z-30 shadow-lg md:shadow-none",
                 className,
             )}
         >

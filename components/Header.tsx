@@ -9,6 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { HeaderLinks } from "@/data/Constants";
+import DoubleUnderline from "@/components/ui/DoubleUnderline";
 
 export const Header = () => {
     const [hamburgerMenuIsOpen, setHamburgerMenuIsOpen] = useState(false);
@@ -89,14 +90,16 @@ export const Header = () => {
                         >
                             {HeaderLinks.map((link, index) => (
                                 <li className={link.className} key={link.name + index}>
-                                    <Link
-                                        href={link.href}
-                                        onClick={handleLinkClick}
-                                        title={link.title}
-                                        aria-label={link.arialabel}
-                                    >
-                                        {link.name}
-                                    </Link>
+                                    <DoubleUnderline>
+                                        <Link
+                                            href={link.href}
+                                            onClick={handleLinkClick}
+                                            title={link.title}
+                                            aria-label={link.arialabel}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </DoubleUnderline>
                                 </li>
                             ))}
                         </ul>
