@@ -20,7 +20,7 @@ const About = () => {
             id="a-propos-de-moi"
             className="relative bg-gradient-to-b from-black-100 via-purple-600/15 to-black-100 mb-[5rem] md:mb-[20rem]"
         >
-            <Features color="79, 57, 136" colorDark="79, 57, 136">
+            <Features color="39, 35, 92" colorDark="39, 35, 92">
                 <Features.Main title="À propos de moi" />
             </Features>
             <div className="relative">

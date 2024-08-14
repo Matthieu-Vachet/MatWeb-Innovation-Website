@@ -11,7 +11,7 @@ const Projets = () => {
             id="mes-projets"
             className="relative bg-gradient-to-b from-black-100 via-purple-500/15 to-black-100"
         >
-            <Features color="69, 50, 119" colorDark="69, 50, 119">
+            <Features color="30, 11, 67" colorDark="30, 11, 67">
                 <Features.Main
                     title="Mes réalisations"
                     text={

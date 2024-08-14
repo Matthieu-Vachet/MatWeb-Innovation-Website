@@ -40,7 +40,7 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
                         imageSize === "small" ? "w-[78rem]" : "w-[102.4rem]",
                     )}
                 >
-                    <h1 className="relative text-gradient mb-5 md:mb-11 translate-y-none md:translate-y-[100%] opacity-0 pt-[10rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0 [.is-visible_&]:opacity-100">
+                    <h1 className="relative text-gradient mb-5 translate-y-none md:translate-y-[100%] opacity-0 pt-[10rem] text-center [transition:transform_1000ms_cubic-bezier(0.3,_1.17,_0.55,_0.99)_0s] md:pt-0 title-size [.is-visible_&]:translate-y-0 [.is-visible_&]:opacity-100">
                         {title}
                     </h1>
                 </Container>
@@ -48,14 +48,13 @@ const MainFeature = ({ text, title, paragraphes, imageSize = "small" }: MainFeat
             <AnimatedElement
                 delay={0.5}
                 duration={0.5}
-                className="w-full md:w-[78rem] md:max-w-[90%] mx-auto text-center"
+                className="w-full md:w-[78rem] md:max-w-[90%] mx-auto text-center mb-[5rem]"
             >
-                <h2 className="relative mx-auto my-5 md:my-10 lg:my-16 leading-tight text-white-100 md:w-[80%] subtitle-size">
+                <h2 className="relative mx-auto my-5 md:my-10 leading-tight text-white-100 md:w-[80%] subtitle-size">
                     {text}
                 </h2>
-                <p className="relative my-5 md:my-10 lg:my-16 text-sm md:text-2xl">{paragraphes}</p>
+                <p className="relative my-5 md:my-10 text-sm md:text-2xl">{paragraphes}</p>
             </AnimatedElement>
-            <hr className="mb-[5rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.2)_50%,transparent)]" />
         </>
     );
 };

@@ -10,7 +10,7 @@ const Competences = () => {
             id="mes-competences"
             className=" relative bg-gradient-to-b from-black-100 via-purple-400/15 to-black-100"
         >
-            <Features color="120, 89, 171" colorDark="59, 42, 102">
+            <Features color="79, 57, 136" colorDark="79, 57, 136">
                 <Features.Main
                     title="Mes compétences"
                     text={
